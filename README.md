@@ -43,33 +43,33 @@
 │ │ ╰─  ArcTheme<br>
 │ ├─  Code<br>
 │ │ ╰─  User<br>
-│ │   ├─  keybindings.json<br>
-│ │   ├─  settings.json<br>
-│ │   ├─  snippets<br>
-│ │   │ ╰─  snippet.code-snippets<br>
-│ │   ╰─  vsc.css<br>
+│ │   ├─  keybindings.json<br>
+│ │   ├─  settings.json<br>
+│ │   ├─  snippets<br>
+│ │   │ ╰─  snippet.code-snippets<br>
+│ │   ╰─  vsc.css<br>
 │ ├─  Dash to Dock<br>
 │ │ ╰─  dash-to-dock<br>
 │ ├─  fish<br>
 │ │ ├─  config.fish<br>
 │ │ ├─  fish_variables<br>
 │ │ ╰─  functions<br>
-│ │   ├─  __bass.py<br>
-│ │   ├─  bass.fish<br>
-│ │   ╰─  nvm.fish<br>
+│ │   ├─  __bass.py<br>
+│ │   ├─  bass.fish<br>
+│ │   ╰─  nvm.fish<br>
 │ ├─  nvim<br>
 │ │ ╰─  init.vim<br>
 │ ╰─  starship.toml<br>
 ├─  .icons<br>
 │ ╰─  default<br>
-│   ├─  index.theme<br>
-│   ├─  vsc-back.svg<br>
-│   ╰─  vsc.svg<br>
+│   ├─  index.theme<br>
+│   ├─  vsc-back.svg<br>
+│   ╰─  vsc.svg<br>
 ├─  .local<br>
 │ ╰─  share<br>
-│   ├─  arcmenu<br>
-│   │ ╰─  stylesheet.css<br>
-│   ╰─  fonts<br>
+│  ├─  arcmenu<br>
+│  │ ╰─  stylesheet.css<br>
+│  ╰─  fonts<br>
 │    ├─  Algerian.ttf<br>
 │    ├─  Anzelia.ttf<br>
 │    ├─  CascadiaCodePL.ttf<br>
@@ -94,14 +94,14 @@
 ├─  package.txt<br>
 ├─  README.md<br>
 ╰─  usr<br>
-  ╰─  share<br>
-   ├─  gedit<br>
-   │ ╰─  styles<br>
-   │   ╰─  dracula.xml<br>
-   ╰─  sushi<br>
-     ╰─  gtksourceview-4<br>
-      ╰─  styles<br>
-        ╰─  builder-dark.style-scheme.xml<br>
+  ╰─  share<br>
+    ├─  gedit<br>
+    │ ╰─  styles<br>
+    │   ╰─  dracula.xml<br>
+    ╰─  sushi<br>
+      ╰─  gtksourceview-4<br>
+        ╰─  styles<br>
+          ╰─  builder-dark.style-scheme.xml<br>
 
 
 1) ArcMenu configs can be imported from it's settings. Menu Layout is `Ubuntu Dash Style`. `Dotfiles/.local/share/arcmenu/stylesheet.css` is basically the layout CSS. Should be placed in `~/.local/share/arcmenu/stylesheet.css`.<br><br>
