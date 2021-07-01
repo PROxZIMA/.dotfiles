@@ -1,0 +1,251 @@
+{
+    "workbench.colorCustomizations": {
+        "[Chromodynamics]": {
+            "terminal.background": "#060606",
+            "terminal.foreground": "#e0e0e0",
+            "terminal.selectionBackground": "#555555",
+
+            "titleBar.activeBackground": "#020202",
+            "titleBar.activeForeground": "#e0e0e0",
+            "titleBar.inactiveBackground": "#020202",
+            "titleBar.inactiveForeground": "#e0e0e0",
+
+            "tab.inactiveBackground": "#0b0b0b",
+
+            "editor.background": "#060606",
+            "editor.findMatchBorder": "#0c0c0d",
+            "editor.findMatchHighlightBorder": "#0c0c0d",
+            "editor.lineHighlightBackground": "#060606",
+            "editor.selectionBackground": "#222222",
+            "editor.selectionHighlightBackground": "#e4dddd",
+            "editor.selectionHighlightBorder": "#0c0c0d",
+            "editorGroupHeader.tabsBackground": "#0b0b0b",
+            "editorGutter.background": "#000000",
+
+            "sideBar.background": "#060606",
+            "sideBarSectionHeader.background": "#0b0b0b",
+            "statusBar.background": "#060606"
+        }
+    },
+
+    "editor.tokenColorCustomizations": {
+        "[Chromodynamics]": {
+            "textMateRules": [
+                {
+                    "scope": [
+                        "constant.language.python",
+                        "variable.parameter.function.language.special.self.python",
+                    ],
+                    "settings": {
+                        "foreground": "#66D9EF",
+                    }
+                },
+                {
+                    "scope": [
+                        "entity.name.function.operator",
+                        "keyword.operator"
+                    ],
+                    "settings": {
+                        "foreground": "#E8364F",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": [
+                        "punctuation.definition.template-expression.begin.js",
+                        "punctuation.definition.template-expression.end.js"
+                    ],
+                    "settings": {
+                        "foreground": "#da70d6",
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": [
+                        "variable.other.readwrite.js"
+                    ],
+                    "settings": {
+                        "foreground": "#c6c6c6",
+                        "fontStyle": ""
+                    }
+                },
+            ]
+        },
+        "textMateRules": [
+            {
+                "scope": [
+                    "entity.name.type.class",
+                    "storage.type.class",
+                    "storage.modifier",
+                    "storage.type",
+                    "constant",
+                    "comment",
+                    "keyword",
+                    "invalid",
+                ],
+                "settings": {
+                "fontStyle": "italic"
+                }
+            }
+        ]
+    },
+
+
+    // Window Settings
+    "window.menuBarVisibility": "toggle",
+    "window.newWindowDimensions": "maximized",
+    "window.title": "${activeEditorShort}${separator}${rootName}",
+    "window.titleBarStyle": "custom",
+    "window.titleSeparator": " ・☣・ ",
+    "window.zoomLevel": -0.5,
+
+
+    // Workbench Settings
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Sweet Dracula",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.showTabs": true,
+    "workbench.editor.tabCloseButton": "right",
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.list.smoothScrolling": true,
+    "workbench.panel.defaultLocation": "right",
+    "workbench.startupEditor": "none",
+    "workbench.statusBar.visible": true,
+
+
+    // Editor Settings
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorWidth": 1,
+    "editor.detectIndentation": false,
+    "editor.fontFamily": "'Hack Nerd Font Mono', 'FiraCode Nerd Font', 'JetBrainsMono Nerd Font'",
+    "editor.fontLigatures": "'ss01'",
+    "editor.fontSize": 12.5,
+    "editor.insertSpaces": true,
+    "editor.fontWeight": "normal",
+    "editor.matchBrackets": "never",
+    "editor.maxTokenizationLineLength": 99999999,
+    "editor.minimap.enabled": false,
+    "editor.occurrencesHighlight": false,
+    "editor.renderControlCharacters": true,
+    "editor.renderLineHighlight": "gutter",
+    "editor.renderWhitespace": "none",
+    "editor.selectionHighlight": false,
+    "editor.smoothScrolling": true,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "on",
+    "editor.tabSize": 4,
+    "editor.wordBasedSuggestions": true,
+    "editor.wordWrap": "on",
+
+
+    // Explorer Settings
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+
+
+    // Customize UI
+    "customizeUI.listRowHeight": 20,
+    "customizeUI.font.monospace": "FantasqueSansMono Nerd Font Mono",
+    "customizeUI.font.regular": "FantasqueSansMono Nerd Font",
+    "customizeUI.fontSizeMap": {
+        // "13px": "12px",
+        "monospace": "12px"
+    },
+    "customizeUI.stylesheet": {
+        ".monaco-workbench .part.titlebar>.window-controls-container, .monaco-workbench .part.editor>.content>.watermark, .monaco-action-bar .actions-container .menu-entry": "display: none !important",
+        ".monaco-workbench.linux .part.titlebar>.window-title": "font-size: 12.5px !important",
+        ".monaco-workbench .part.titlebar .window-appicon>.home-bar-icon-badge, .monaco-workbench .part.titlebar>.window-appicon:not(.codicon)": "background-image: url(file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/vsc.svg) !important",
+        ".monaco-workbench .part.editor > .content .editor-group-container.empty .editor-group-letterpress": "background-image: url(file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/vsc-back.svg) !important",
+        ".monaco-workbench .part.editor.has-watermark>.content.empty .editor-group-container>.editor-group-letterpress": "background-position-y: 50% !important",
+    },
+
+
+    // Terminal Settings
+    "terminal.integrated.altClickMovesCursor": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "underline",
+    "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Hack Nerd Font Mono', 'JetBrainsMono Nerd Font'",
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.lineHeight": 1,
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.profiles.linux": {
+        "zsh": {
+            "path": "/usr/bin/zsh"
+        }
+    },
+    "terminal.integrated.tabs.enabled": false,
+
+
+    // Python Settings
+    "python.autoComplete.addBrackets": true,
+    "python.autoComplete.showAdvancedMembers": true,
+    "python.autoUpdateLanguageServer": true,
+    "python.insidersChannel": "off",
+    "python.languageServer": "Microsoft",
+    "python.linting.ignorePatterns": [
+        ".vscode/*.py",
+        "**/site-packages/**/*.py",
+        ".git"
+    ],
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.pythonPath": "/usr/bin/python",
+    "python.showStartPage": false,
+    "python.workspaceSymbols.enabled": true,
+    "python.workspaceSymbols.exclusionPatterns": [],
+    "vsintellicode.features.python.deepLearning": "enabled",
+    "vsintellicode.python.completionsEnabled": true,
+    "[python]": {
+        "editor.semanticHighlighting.enabled": false,
+        "editor.suggest.insertMode": "replace",
+        "editor.wordBasedSuggestions": true
+    },
+
+
+    // C++ Settings
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.codeFolding": "Enabled",
+    "C_Cpp.updateChannel": "Default",
+    "[cpp]": {
+        "editor.semanticHighlighting.enabled": false,
+        "editor.suggest.insertMode": "replace",
+        "editor.wordBasedSuggestions": true
+    },
+
+
+    // Empty-Indent Extension
+    "emptyIndent.highlightColor": "rgba(246,36,89,0.6)",
+    "emptyIndent.highlightIndent": false,
+    "emptyIndent.removeIndent": false,
+    "emptyIndent.exclude": [".txt"],
+
+
+    // General Setting
+    "bracket-pair-colorizer-2.forceIterationColorCycle": false,
+    "debug.onTaskErrors": "showErrors",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "extensions.ignoreRecommendations": false,
+    "files.autoSave": "onFocusChange",
+    "git.autofetch": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "search.exclude": {
+        "**/bower_components": false,
+        "**/*.code-search": false,
+        "**/node_modules": false
+    },
+    "files.exclude": {
+        "**/.DS_Store": false,
+        "**/.git": false,
+        "**/.svn": false,
+        "**/.hg": false,
+        "**/CVS": false
+    },
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+}

@@ -1,0 +1,221 @@
+[
+    {
+        "key": "ctrl+shift+r",
+        "command": "workbench.action.reloadWindow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "resourceExtname == .py",
+        "args": {
+            "text": "/usr/bin/python \"${file}\" < ./i\n"
+        }
+    },
+    {
+        "key": "f5",
+        "command": "python.execInTerminal",
+        "when": "resourceExtname == .py",
+    },
+    {
+        "key": "f5",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "resourceExtname == .js",
+        "args": {
+            "text": "node \"${file}\"\n"
+        }
+    },
+    {
+        "key": "f5",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "resourceExtname == .cpp",
+        "args": {
+            "text": "g++ -g \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}\" && \"${fileDirname}/${fileBasenameNoExtension}\"\n"
+        }
+    },
+    {
+        "key": "f5",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "resourceExtname == .c",
+        "args": {
+            "text": "gcc -g \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}\" && \"${fileDirname}/${fileBasenameNoExtension}\"\n"
+        }
+    },
+    {
+        "key": "f5",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "resourceExtname == .asm",
+        "args": {
+            "text": "nasm -f elf64 \"${file}\" && ld -o \"${fileDirname}/${fileBasenameNoExtension}\" \"${fileDirname}/${fileBasenameNoExtension}.o\" && \"${fileDirname}/${fileBasenameNoExtension}\"\n"
+        }
+    },
+    {
+        "key": "ctrl+i",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "resourceExtname == .cpp",
+        "args": {
+            "text": "g++ -g \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}\" && \"${fileDirname}/${fileBasenameNoExtension}\" < ./i\n"
+        }
+    },
+    {
+        "key": "ctrl+g",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "resourceExtname == .cpp",
+        "args": {
+            "text": "g++ -g \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}\" -lgraph -lGL -lGLU -lglut && \"${fileDirname}/${fileBasenameNoExtension}\" 2>/dev/null\n"
+        }
+    },
+    // {
+    //     "key": "f5",
+    //     "command": "workbench.action.tasks.runTask",
+    //     "when": "resourceExtname == .cpp",
+    //     "args": "Build and Run C++"
+    // },
+    {
+        "key": "shift+f5",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "resourceExtname == .cpp",
+        "args": {
+            "text": "g++ -g \"${fileDirname}/*.cpp\" -o \"${fileDirname}/${fileBasenameNoExtension}\" && \"${fileDirname}/${fileBasenameNoExtension}\"\n"
+        }
+    },
+    // {
+    //     "key": "shift+f5",
+    //     "command": "workbench.action.tasks.runTask",
+    //     "when": "resourceExtname == .cpp",
+    //     "args": "Build and Run C++ (Multiple cpp files)"
+    // },
+    {
+        "key": "f4",
+        "command": "workbench.action.debug.continue",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "f4",
+        "command": "workbench.action.debug.start",
+        "when": "!inDebugMode"
+    },
+    {
+        "key": "f4",
+        "command": "workbench.action.debug.start",
+        "when": "debuggersAvailable && !inDebugMode"
+    },
+    {
+        "key": "f5",
+        "command": "-workbench.action.debug.continue",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "f5",
+        "command": "-workbench.action.debug.start",
+        "when": "!inDebugMode"
+    },
+    {
+        "key": "f5",
+        "command": "-workbench.action.debug.start",
+        "when": "debuggersAvailable && !inDebugMode"
+    },
+    {
+        "key": "shift+f4",
+        "command": "workbench.action.debug.stop",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "shift+f5",
+        "command": "-workbench.action.debug.stop",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "workbench.action.terminal.paste",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-workbench.action.terminal.paste",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+alt+up",
+        "command": "editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+down",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+alt+up",
+        "command": "-editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+alt+down",
+        "command": "-editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+,",
+        "command": "-workbench.action.openSettings"
+    },
+    {
+        "key": "ctrl+,",
+        "command": "workbench.action.openSettingsJson"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "-editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "workbench.action.terminal.copySelection",
+        "when": "terminalFocus && terminalProcessSupported && terminalTextSelected && terminalTextSelected"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "-workbench.action.terminal.copySelection",
+        "when": "terminalFocus && terminalProcessSupported && terminalTextSelected && terminalTextSelected"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalIsOpen && terminalFocus"
+    },
+    {
+        "key": "delete",
+        "command": "-workbench.action.terminal.killInstance",
+        "when": "terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "-editor.action.formatDocument.none",
+        "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "-notebook.formatCell",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "editor.action.formatDocument",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "-editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "workbench.action.toggleDevTools",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "-workbench.action.toggleDevTools",
+        "when": "isDevelopment"
+    }
+]

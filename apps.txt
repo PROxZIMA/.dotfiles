@@ -1,0 +1,31 @@
+Audacity
+Dconf
+Firefox
+Gimp
+Gnome Tweaks
+Gparted
+Gpick
+LibreOffice
+Meld
+Microsoft Teams
+Neovim
+OBS
+PulseAudio
+Qalculate!
+Syncthing
+Telegram
+Timeshift
+TLP
+VLC
+VSCodium
+
+Gnome Extensions:
+ArcMenu
+Clipboard Indicator
+Dash to Panel
+Emoji Selector 
+GSConnect
+Net speed Simplified
+Panel OSD
+Unite
+User Themes

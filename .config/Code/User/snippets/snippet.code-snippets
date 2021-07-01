@@ -1,0 +1,52 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	"if name is main": {
+		"scope": "python",
+		"prefix": "ifn",
+		"body": [
+			"if __name__ == '__main__':",
+			"\t$0"
+		],
+		"description": ""
+	},
+	"for in": {
+		"scope": "python",
+		"prefix": "fori",
+		"body": [
+			"for ${1:item} in ${2:items}:",
+			"\t$0"
+		],
+		"description": ""
+	},
+	"for in range": {
+		"scope": "python",
+		"prefix": "forr",
+		"body": [
+			"for ${1:i} in range($2):",
+			"\t$0"
+		],
+		"description": ""
+	},
+	"lambda": {
+		"scope": "python",
+		"prefix": "lamb",
+		"body": [
+			"lambda ${1:arg} : $0",
+		],
+		"description": ""
+	},
+	"map input": {
+		"scope": "python",
+		"prefix": "mapi",
+		"body": [
+			"map(${1:func}, input($2).split())"
+		],
+		"description": ""
+	},
+}

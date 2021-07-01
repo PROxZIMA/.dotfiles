@@ -1,0 +1,147 @@
+[line_break]
+disabled = true
+
+## FIRST LINE/ROW: Info & Status
+# First param ─┌
+[username]
+format = " [╭─$user]($style)@"
+style_user = "bold red"
+style_root = "bold red"
+show_always = true
+
+# Second param
+[hostname]
+format = "[$hostname]($style) in "
+style = "bold dimmed red"
+trim_at = "-"
+ssh_only = false
+disabled = false
+
+# Third param
+[directory]
+style = "purple"
+truncation_length = 0
+truncate_to_repo = true
+truncation_symbol = "repo: "
+
+# Before all the version info (python, nodejs, php, etc.)
+[git_status]
+style = "white"
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+deleted = "x"
+
+# Last param in the first line/row
+[cmd_duration]
+min_time = 1
+format = "took [$duration]($style)"
+disabled = false
+
+
+# Somethere at the beginning
+[battery]
+full_symbol = " "
+charging_symbol = " "
+discharging_symbol = " "
+unknown_symbol = " "
+empty_symbol = " "
+format = " \\[[$symbol$percentage]($style)\\]\n"
+disabled = false
+
+[[battery.display]]
+threshold = 15
+style = "bold red"
+
+[[battery.display]]
+threshold = 50
+style = "bold yellow"
+
+[[battery.display]]
+threshold = 101
+style = "bold green"
+
+# Prompt: optional param 1
+[time]
+format = " 🕙 $time($style)\n"
+time_format = "%T"
+style = "bright-white"
+disabled = true
+
+
+## SECOND LINE/ROW: Prompt
+# Prompt: param 2 └─
+[character]
+success_symbol = " [╰─☣](bold red)"
+error_symbol = " [╰─✗](bold red)"
+# success_symbol = " [╰─λ](bold red)"
+
+# SYMBOLS
+[status]
+symbol = "🔴"
+format = '[\[$symbol$status_common_meaning$status_signal_name$status_maybe_int\]]($style)'
+map_symbol = true
+disabled = true
+
+[aws]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[swift]
+symbol = "ﯣ "
