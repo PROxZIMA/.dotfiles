@@ -37,7 +37,7 @@ canvas.decorationsOverviewRuler,
     border-radius: 7px !important;
 }
 .monaco-scrollable-element>.scrollbar>.slider.active {
-    background: #bd93f9 !important /* #c50ed2 */
+    background: #bd93f9 !important; /* #c50ed2 */
 }
 
 
