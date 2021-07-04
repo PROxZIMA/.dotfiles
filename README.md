@@ -20,7 +20,7 @@
 <p align="center"><img src="./assets/terminal.png"></p>
 
 <h3 align="center">VS Codium</h3>
-<p align="center"><img src="./assets/vscodium.png"></p>
+<p align="center"><img src="./assets/vscode.png"></p>
 
 <h3 align="center">Firefox</h3>
 <p align="center"><img src="./assets/firefox.png"></p>
