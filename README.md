@@ -57,6 +57,10 @@
 │ │   ├─  __bass.py<br>
 │ │   ├─  bass.fish<br>
 │ │   ╰─  nvm.fish<br>
+│ ├─  htop<br>
+│ │ ╰─  htoprc<br>
+│ ├─  neofetch<br>
+│ │ ╰─  config.conf<br>
 │ ├─  nvim<br>
 │ │ ╰─  init.vim<br>
 │ ╰─  starship.toml<br>
@@ -122,11 +126,12 @@
     - `Dotfiles/.zshrc` should be placed in `~/`. Some aliases in-there are linked to the scripts I use. Can be found [here](https://github.com/PROxZIMA/My-Scripts).<br><br>
 5) I don't use `fish` as my default shell but yeah I used to. So it's config is included too.<br><br>
 6) I use `Dash to Dock` extensions so I've included it's config too. Import it from the extension settings.<br><br>
-7) `Neovim` is love. I use [junegunn/vim-plug](https://github.com/junegunn/vim-plug) as my Vim plugin manager. Along with extensions mentioned in `Dotfiles/.config/nvim/init.vim`.<br><br>
-8) `Dotfiles/.local/share/fonts` include some famous open-source ttf/otf.<br><br>
-9) `Dotfiles/usr/share/gedit/styles/dracula.xml` is dracula based theme for Gedit.<br><br>
-10) `Dotfiles/usr/share/sushi/gtksourceview-4/styles/builder-dark.style-scheme.xml` is `[sushi](https://gitlab.gnome.org/GNOME/sushi)` (A GNOME file previewer) style scheme derived from `dracula.xml`.<br><br>
-11) `Dotfiles/apps.txt` and `Dotfiles/package.txt` are simply applications and packages I use.<br><br>
+7) System info in 1st screenshot is displayed using neofetch. I use `FiraCode Nerd Font` so I've added some glyphs before each info line in the config. So `Dotfiles/.config/neofetch/config.conf` goes in `~/.config/neofetch/config.conf`.<br><br>
+8) `Neovim` is love. I use [junegunn/vim-plug](https://github.com/junegunn/vim-plug) as my Vim plugin manager. Along with extensions mentioned in `Dotfiles/.config/nvim/init.vim`.<br><br>
+9) `Dotfiles/.local/share/fonts` include some famous open-source ttf/otf.<br><br>
+10) `Dotfiles/usr/share/gedit/styles/dracula.xml` is dracula based theme for Gedit.<br><br>
+11) `Dotfiles/usr/share/sushi/gtksourceview-4/styles/builder-dark.style-scheme.xml` is `[sushi](https://gitlab.gnome.org/GNOME/sushi)` (A GNOME file previewer) style scheme derived from `dracula.xml`.<br><br>
+12) `Dotfiles/apps.txt` and `Dotfiles/package.txt` are simply applications and packages I use.<br><br>
 
 Sooo that's it for now. I'll update this repo time to time. Feel free to raise an issue if something is wrong. See ya!!!<br><br>
 ___

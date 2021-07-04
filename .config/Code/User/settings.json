@@ -172,7 +172,7 @@
     "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Hack Nerd Font Mono', 'JetBrainsMono Nerd Font'",
     "terminal.integrated.fontSize": 13,
     "terminal.integrated.lineHeight": 1,
-    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.gpuAcceleration": "auto",
     "terminal.integrated.profiles.linux": {
         "zsh": {
             "path": "/usr/bin/zsh"
