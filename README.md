@@ -70,6 +70,7 @@
 ├─  .icons<br>
 │ ╰─  default<br>
 │   ├─  index.theme<br>
+│   ├─  peek.png<br>
 │   ├─  vsc-back.svg<br>
 │   ╰─  vsc.svg<br>
 ├─  .local<br>
@@ -79,21 +80,26 @@
 │  ╰─  fonts<br>
 │    ├─  Algerian.ttf<br>
 │    ├─  Anzelia.ttf<br>
-│    ├─  CascadiaCodePL.ttf<br>
-│    ├─  Caveat-VariableFont_wght.ttf<br>
-│    ├─  Fira Code Regular Nerd Font Complete.ttf<br>
-│    ├─  Hack Regular Nerd Font Ligature.ttf<br>
-│    ├─  JetBrains Mono Regular Nerd Font.ttf<br>
-│    ├─  lmroman10-regular.otf<br>
-│    ├─  lmromandemi10-regular.otf<br>
-│    ├─  MesloLGS NF Regular.ttf<br>
-│    ├─  optima.ttf<br>
+│    ├─  Cascadia Code PL.ttf<br>
+│    ├─  Caveat.ttf<br>
+│    ├─  FantasqueSansMono Nerd Font Mono.ttf<br>
+│    ├─  FantasqueSansMono Nerd Font.ttf<br>
+│    ├─  FiraCode Nerd Font.ttf<br>
+│    ├─  Hack Nerd Font Mono.ttf<br>
+│    ├─  JetBrainsMono Nerd Font.ttf<br>
+│    ├─  LM Roman 10.otf<br>
+│    ├─  LM Roman Demi 10.otf<br>
+│    ├─  MesloLGS NF.ttf<br>
+│    ├─  Operator Mono SSm Lig Book.otf<br>
+│    ├─  Optima.ttf<br>
 │    ╰─  Shorelines Script Bold.otf<br>
 ├─  .p10k.zsh<br>
 ├─  .zshrc<br>
 ├─  apps.txt<br>
 ├─  assets<br>
-│ ├─  ArcMenu.png<br>
+│ ├─  arcMenu.png<br>
+│ ├─  bpytop.png<br>
+│ ├─  firefox.png<br>
 │ ├─  gedit.png<br>
 │ ├─  neovim.png<br>
 │ ├─  terminal.png<br>
