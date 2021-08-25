@@ -1,208 +1,173 @@
-
 :root {
-    --row-height: 20px;
-    --tab-height: 25px;
+  --tab-height: 25px;
+  --tab-radius: 6px;
 }
 .monaco-workbench .part.titlebar>.window-controls-container,
 .monaco-workbench .part.editor>.content>.watermark,
 .monaco-action-bar .actions-container .menu-entry {
-    display: none !important;
+  display: none !important;
 }
 .monaco-workbench.linux .part.titlebar>.window-title {
-    font-size: 12.5px !important;
+  font-size: 12.5px !important;
 }
 .monaco-workbench .part.titlebar .window-appicon>.home-bar-icon-badge,
 .monaco-workbench .part.titlebar>.window-appicon:not(.codicon) {
-    background-image: url(file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/vsc.svg) !important;
+  background-image: url(/usr/share/vscodium-bin/resources/app/out/vs/workbench/vsc.svg) !important;
 }
 .monaco-workbench .part.editor>.content .editor-group-container.empty .editor-group-letterpress {
-    background-image: url(file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/vsc-back.svg) !important;
+  background-image: url(/usr/share/vscodium-bin/resources/app/out/vs/workbench/vsc-back.svg) !important;
 }
 .monaco-workbench .part.editor.has-watermark>.content.empty .editor-group-container>.editor-group-letterpress {
-    background-position-y: 50% !important;
+  background-position-y: 50% !important;
 }
 .mac, .windows, .linux {
-    font-family: "FantasqueSansMono Nerd Font" !important;
-    --monaco-monospace-font: "FantasqueSansMono Nerd Font Mono" !important;
+  font-family: "FantasqueSansMono Nerd Font" !important;
+  --monaco-monospace-font: "FantasqueSansMono Nerd Font Mono" !important;
 }
 
+/* Editor Background */
+.monaco-editor, .split-view-view .monaco-editor-background {
+  background: url(/usr/share/vscodium-bin/resources/app/out/vs/workbench/peek.png) bottom right / 10% auto no-repeat scroll;
+  /*background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url(/usr/share/vscodium-bin/resources/app/out/vs/workbench/bg.jpg) center center / auto 100vh no-repeat scroll;*/
+}
 
 /* Scrollbar */
-canvas.decorationsOverviewRuler,
-.monaco-scrollable-element>.scrollbar {
-    width: 7px !important;
-}
 .monaco-scrollable-element>.scrollbar>.slider {
-    width: 7px !important;
-    border-radius: 7px !important;
+  border-radius: 7px !important;
 }
 .monaco-scrollable-element>.scrollbar>.slider.active {
-    background: #bd93f9 !important; /* #c50ed2 */
+  background: #bd93f9 !important; /* #c50ed2 */
 }
-
-
-/* Row height */
-.monaco-workbench .debug-viewlet .monaco-list-row .expression,
-.monaco-workbench .debug-hover-widget .monaco-list-row .expression,
-.monaco-workbench .debug-viewlet .monaco-list-row .expression,
-.monaco-workbench .debug-hover-widget .monaco-list-row .expression,
-.monaco-workbench.mac .debug-viewlet .monaco-list-row .expression,
-.monaco-workbench.mac .debug-hover-widget .monaco-list-row .expression {
-    font-size: 12px !important;
+canvas.decorationsOverviewRuler,
+.monaco-scrollable-element>.scrollbar.vertical,
+.monaco-scrollable-element>.scrollbar.vertical>.slider {
+  width: 7px !important;
 }
-body.row-height-lte20 .monaco-workbench .debug-viewlet .monaco-list-row .expression,
-body.row-height-lte20 .monaco-workbench .debug-hover-widget .monaco-list-row .expression,
-body.row-height-lte20 .monaco-workbench .debug-viewlet .monaco-list-row .expression,
-body.row-height-lte20 .monaco-workbench .debug-hover-widget .monaco-list-row .expression,
-body.row-height-lte20 .monaco-workbench.mac .debug-viewlet .monaco-list-row .expression,
-body.row-height-lte20 .monaco-workbench.mac .debug-hover-widget .monaco-list-row .expression {
-    font-size: 12px !important;
+.monaco-scrollable-element>.scrollbar.horizontal,
+.monaco-scrollable-element>.scrollbar.horizontal>.slider {
+  height: 7px !important;
 }
-.customview-tree .monaco-tree .monaco-tree-row .custom-view-tree-node-item>.custom-view-tree-node-item-icon {
-    height: var(--row-height) !important;
+.monaco-scrollable-element>.scrollbar.horizontal>.slider {
+  width: 135px !important;
 }
-
-.monaco-panel-view .panel>.panel-header>.actions .action-label.icon {
-    height: var(--row-height) !important;
-}
-.customview-tree .monaco-tree .monaco-tree-row .custom-view-tree-node-item {
-    height: var(--row-height) !important;
-    line-height: var(--row-height) !important;
-}
-.customview-tree .monaco-tree .monaco-tree-row .custom-view-tree-node-item>.custom-view-tree-node-item-icon {
-    height: var(--row-height) !important;
-}
-.debug-viewlet .monaco-list-row {
-    line-height: var(--row-height) !important;
-}
-.scm-view .monaco-list-row {
-    line-height: var(--row-height) !important;
-}
-.scm-view .monaco-list-row .resource>.name>.monaco-icon-label>.actions .action-label.codicon {
-    line-height: var(--row-height) !important;
-}
-.scm-view .monaco-list-row .scm-input {
-    line-height: 22px !important;
-}
-.monaco-pane-view .pane>.pane-header {
-    height: var(--row-height) !important;
-}
-.monaco-pane-view .pane>.pane-header>.actions .action-label.icon,
-.monaco-pane-view .pane>.pane-header>.actions .action-label.codicon {
-    height: var(--row-height) !important;
-}
-.explorer-viewlet .explorer-item,
-.explorer-viewlet .explorer-item::before,
-.explorer-viewlet .open-editor,
-.explorer-viewlet .editor-group {
-    height: var(--row-height) !important;
-    line-height: var(--row-height) !important;
-}
-.explorer-viewlet .explorer-open-editors .monaco-list .monaco-list-row>.monaco-action-bar .close-editor-action {
-    height: var(--row-height) !important;
-}
-.monaco-workbench .debug-pane .monaco-action-bar .action-item>.action-label {
-    height: var(--row-height) !important;
-}
-.monaco-workbench.linux .explorer-viewlet .explorer-item .monaco-inputbox,
-.monaco-workbench.mac .explorer-viewlet .explorer-item .monaco-inputbox {
-    height: var(--row-height) !important;
-}
-.search-view .filematch {
-    line-height: var(--row-height) !important;
-}
-.search-view .linematch {
-    line-height: var(--row-height) !important;
-}
-.monaco-panel-view .panel>.panel-header>.actions .action-label.icon {
-    background-size: calc(0.90909 * 16px) !important;
-}
-.monaco-workbench .symbol-ic on.inline {
-    background-size: calc(0.90909 * 16px) calc(0.90909 * 16px) !important;
-}
-
 
 /* Active tab border */
+.tab:first-child {
+  margin-left: calc(var(--tab-radius) - 2px) !important;
+}
+.tab:last-child {
+  margin-right: calc(var(--tab-radius) - 2px) !important;
+}
 .tab.active {
-    border: 3px solid #bd93f9 !important;
-    background-color: transparent !important; /* rgb(20, 24, 34) */
-    border-radius: 6px 6px 0 0 !important;
-    border-bottom: 3px solid #0c0e14 !important;
-    z-index: 1 !important;
+  border: 2px solid #bd93f9 !important;
+  background-color: transparent !important; /* rgb(20, 24, 34) */
+  border-radius: var(--tab-radius) var(--tab-radius) 0 0 !important;
+  border-bottom: 2px solid #0c0e14 !important;
+  z-index: 1 !important;
+}
+/* Border bottom radius */
+.tab.active::before,
+.tab.active::after {
+    content: '' !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    position: absolute !important;
+    z-index: 999999;
+    width: var(--tab-radius) !important;
+    height: var(--tab-radius) !important;
+    bottom: -2px !important;
+    pointer-events: none !important;
+    border-bottom: 2px solid #bd93f9 !important;
+}
+
+.tab.active::before {
+    border-bottom-right-radius: var(--tab-radius) !important;
+    left: 0 !important;
+    transform: translateX(calc(0px - var(--tab-radius))) !important;
+    border-right: 2px solid #bd93f9 !important;
+    box-shadow: 2px 2px 0 2px #0c0e14 !important;
+}
+
+.tab.active::after {
+    border-bottom-left-radius: var(--tab-radius) !important;
+    right: 0 !important;
+    transform: translateX(calc(var(--tab-radius))) !important;
+    border-left: 2px solid #bd93f9 !important;
+    box-shadow: -2px 2px 0 2px #0c0e14 !important;
 }
 .tabs-container:before {
-    content: '' !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    background: linear-gradient(90deg, rgb(12,14,20),rgb(189, 172, 255),rgb(189,147,249),rgb(189,147,249),rgb(189,147,249),rgb(189,172,249), rgb(12,14,20)) !important;
-    clip: rect(33px, 2600px, 33px, 0px) !important;
-    position: absolute !important;
+  content: '' !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(90deg, rgb(12,14,20),rgb(189, 172, 255),rgb(189,147,249),rgb(189,147,249),rgb(189,147,249),rgb(189,172,249), rgb(12,14,20)) !important;
+  clip: rect(33px, 2600px, 33px, 0px) !important;
+  position: absolute !important;
 }
 .tabs-container:after {
-    content: '' !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    background: linear-gradient(90deg, rgb(12,14,20),rgb(189, 172, 255),rgb(189,147,249),rgb(189,147,249),rgb(189,147,249),rgb(189,172,249), rgb(12,14,20)) !important;
-    clip: rect(33px, 2600px, 35px, 0px) !important;
-    position: absolute !important;
+  content: '' !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(90deg, rgb(12,14,20),rgb(189, 172, 255),rgb(189,147,249),rgb(189,147,249),rgb(189,147,249),rgb(189,172,249), rgb(12,14,20)) !important;
+  clip: rect(33px, 2600px, 35px, 0px) !important;
+  position: absolute !important;
 }
 .tab-label > .monaco-icon-label-container::after {
-    background: transparent !important;
+  background: transparent !important;
 }
 
 
 /* Tab height (Won't work perfectly cuz along with this js is required to adjust editor's height)
 .monaco-workbench .part>.title {
-    height: var(--tab-height) !important;
+  height: var(--tab-height) !important;
 }
 .monaco-workbench .part>.title>.title-label {
-    line-height: var(--tab-height) !important;
+  line-height: var(--tab-height) !important;
 }
 .monaco-workbench .part>.title>.title-actions {
-    height: var(--tab-height) !important;
+  height: var(--tab-height) !important;
 }
 .monaco-workbench .activitybar .menubar,
 .monaco-workbench .activitybar .menubar.compact .toolbar-toggle-more {
-    height: var(--tab-height) !important;
+  height: var(--tab-height) !important;
 }
 .monaco-workbench .part.editor>.content .editor-group-container>.editor-group-container-toolbar {
-    height: var(--tab-height) !important;
+  height: var(--tab-height) !important;
 }
 .monaco-workbench .part.editor>.content .editor-group-container>.title>.label-container {
-    height: var(--tab-height) !important;
+  height: var(--tab-height) !important;
 }
 .monaco-workbench .part.editor>.content .editor-group-container>.title>.label-container>.title-label {
-    line-height: var(--tab-height) !important;
+  line-height: var(--tab-height) !important;
 }
 .monaco-workbench .part.editor>.content .editor-group-container>.title>.title-actions {
-    height: var(--tab-height) !important;
+  height: var(--tab-height) !important;
 }
 .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container {
-    height: var(--tab-height) !important;
+  height: var(--tab-height) !important;
 }
 .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab {
-    height: var(--tab-height) !important;
+  height: var(--tab-height) !important;
 }
 .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab .tab-label {
-    line-height: var(--tab-height) !important;
+  line-height: var(--tab-height) !important;
 }
 .monaco-workbench .part.editor>.content .editor-group-container>.title .editor-actions {
-    height: var(--tab-height) !important;
+  height: var(--tab-height) !important;
 }
 .monaco-workbench .part.editor>.content .editor-group-container>.title .monaco-icon-label:before {
-    height: var(--tab-height) !important;
+  height: var(--tab-height) !important;
 }
 .monaco-workbench>.notifications-center>.notifications-center-header {
-    height: var(--tab-height) !important;
+  height: var(--tab-height) !important;
 }
 .monaco-workbench .part.panel .composite.title {
-    height: var(--tab-height); !important;
+  height: var(--tab-height); !important;
 }
 .monaco-workbench .part.panel>.composite.title>.panel-switcher-container>.monaco-action-bar {
-    line-height: 17px !important;
-    height: var(--tab-height) !important;
+  line-height: 17px !important;
+  height: var(--tab-height) !important;
 }*/

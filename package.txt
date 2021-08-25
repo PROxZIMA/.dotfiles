@@ -4,6 +4,7 @@ auto-cpufreq
 baobab
 bash-completion
 beautyline
+bpytop
 c-lolcat
 chaotic-keyring
 chaotic-mirrorlist
@@ -13,13 +14,6 @@ downgrade
 eog
 evince
 firefox
-garuda-boot-options
-garuda-browser-settings
-garuda-common-settings
-garuda-fish-config
-garuda-gnome-settings
-garuda-hooks
-garuda-icons
 gcc
 geary
 gedit

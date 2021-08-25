@@ -217,5 +217,17 @@
         "key": "ctrl+shift+i",
         "command": "-workbench.action.toggleDevTools",
         "when": "isDevelopment"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "-workbench.action.showAllSymbols"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.action.files.newUntitledFile"
     }
 ]

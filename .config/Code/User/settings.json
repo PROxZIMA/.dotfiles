@@ -97,14 +97,14 @@
     "window.title": "${activeEditorShort}${separator}${rootName}",
     "window.titleBarStyle": "custom",
     "window.titleSeparator": " ・☣・ ",
-    "window.zoomLevel": -0.5,
+    "window.zoomLevel": 0,
 
 
     // Workbench Settings
     "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Sweet Dracula",
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.highlightModifiedTabs": false,
     "workbench.editor.showTabs": true,
     "workbench.editor.tabCloseButton": "right",
     "workbench.editor.tabSizing": "shrink",
@@ -114,18 +114,22 @@
     "workbench.panel.defaultLocation": "right",
     "workbench.startupEditor": "none",
     "workbench.statusBar.visible": true,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
 
 
     // Editor Settings
     "editor.acceptSuggestionOnEnter": "on",
+    "editor.autoClosingBrackets": "always",
     "editor.cursorSmoothCaretAnimation": true,
     "editor.cursorWidth": 1,
     "editor.detectIndentation": false,
-    "editor.fontFamily": "'Hack Nerd Font Mono', 'FiraCode Nerd Font', 'JetBrainsMono Nerd Font'",
+    "editor.fontFamily": "'Operator Mono SSm Lig Book', 'FiraCode Nerd Font', 'Hack Nerd Font Mono', 'JetBrainsMono Nerd Font'",
     "editor.fontLigatures": "'ss01'",
-    "editor.fontSize": 12.5,
-    "editor.insertSpaces": true,
+    "editor.fontSize": 11.5,
     "editor.fontWeight": "normal",
+    "editor.insertSpaces": true,
     "editor.matchBrackets": "never",
     "editor.maxTokenizationLineLength": 99999999,
     "editor.minimap.enabled": false,
@@ -133,6 +137,8 @@
     "editor.renderControlCharacters": true,
     "editor.renderLineHighlight": "gutter",
     "editor.renderWhitespace": "none",
+    "editor.scrollbar.horizontal": "auto",
+    "editor.scrollbar.vertical": "auto",
     "editor.selectionHighlight": false,
     "editor.smoothScrolling": true,
     "editor.suggestSelection": "first",
@@ -157,19 +163,30 @@
         "monospace": "12px"
     },
     "customizeUI.stylesheet": {
+        ":root" : "--tab-radius: 6px;",
         ".monaco-workbench .part.titlebar>.window-controls-container, .monaco-workbench .part.editor>.content>.watermark, .monaco-action-bar .actions-container .menu-entry": "display: none !important;",
         ".monaco-workbench.linux .part.titlebar>.window-title": "font-size: 12.5px !important;",
         ".monaco-workbench .part.titlebar .window-appicon>.home-bar-icon-badge, .monaco-workbench .part.titlebar>.window-appicon:not(.codicon)": "background-image: url(file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/vsc.svg) !important;",
         ".monaco-workbench .part.editor > .content .editor-group-container.empty .editor-group-letterpress": "background-image: url(file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/vsc-back.svg) !important;",
         ".monaco-workbench .part.editor.has-watermark>.content.empty .editor-group-container>.editor-group-letterpress": "background-position-y: 50% !important;",
 
+        // Background
+        ".monaco-editor, .split-view-view .monaco-editor-background" : "background: url(/usr/share/vscodium-bin/resources/app/out/vs/workbench/peek.png) bottom right / 10% auto no-repeat scroll;",
+
         // Scrollbar
-        "canvas.decorationsOverviewRuler, .monaco-scrollable-element>.scrollbar": "width: 7px !important;",
-        ".monaco-scrollable-element>.scrollbar>.slider": "width: 7px !important; border-radius: 7px !important;",
+        ".monaco-scrollable-element>.scrollbar>.slider": "border-radius: 7px !important;",
         ".monaco-scrollable-element>.scrollbar>.slider.active": "background: #bd93f9 !important;",
+        "canvas.decorationsOverviewRuler,.monaco-scrollable-element>.scrollbar.vertical,.monaco-scrollable-element>.scrollbar.vertical>.slider": "width: 7px !important;",
+        ".monaco-scrollable-element>.scrollbar.horizontal,.monaco-scrollable-element>.scrollbar.horizontal>.slider": "height: 7px !important;",
+        ".monaco-scrollable-element>.scrollbar.horizontal>.slider": "width: 135px !important;",
 
         // Active tab border
-        ".tab.active": "border: 3px solid #bd93f9 !important; background-color: transparent !important; border-radius: 6px 6px 0 0 !important; border-bottom: 3px solid #0c0e14 !important; z-index: 1 !important;",
+        ".tab:first-child" : "margin-left: calc(var(--tab-radius) - 2px) !important;",
+        ".tab:last-child" : "margin-right: calc(var(--tab-radius) - 2px) !important;",
+        ".tab.active" : "border: 2px solid #bd93f9 !important; background-color: transparent !important; border-radius: var(--tab-radius) var(--tab-radius) 0 0 !important; border-bottom: 2px solid #0c0e14 !important; z-index: 1 !important;",
+        ".tab.active::before, .tab.active::after" : "content: '' !important; display: block !important; box-sizing: border-box !important; position: absolute !important; z-index: 999999; width: var(--tab-radius) !important; height: var(--tab-radius) !important; bottom: -2px !important; pointer-events: none !important; border-bottom: 2px solid #bd93f9 !important;",
+        ".tab.active::before" : "border-bottom-right-radius: var(--tab-radius) !important; left: 0 !important; transform: translateX(calc(0px - var(--tab-radius))) !important; border-right: 2px solid #bd93f9 !important; box-shadow: 2px 2px 0 2px #0c0e14 !important;",
+        ".tab.active::after" : "border-bottom-left-radius: var(--tab-radius) !important; right: 0 !important; transform: translateX(calc(var(--tab-radius))) !important; border-left: 2px solid #bd93f9 !important; box-shadow: -2px 2px 0 2px #0c0e14 !important;",
         ".tabs-container:before": "content: '' !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background: linear-gradient(90deg, rgb(12,14,20),rgb(189, 172, 255),rgb(189,147,249),rgb(189,147,249),rgb(189,147,249),rgb(189,172,249), rgb(12,14,20)) !important; clip: rect(33px, 2600px, 33px, 0px) !important; position: absolute !important;",
         ".tabs-container:after": "content: '' !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background: linear-gradient(90deg, rgb(12,14,20),rgb(189, 172, 255),rgb(189,147,249),rgb(189,147,249),rgb(189,147,249),rgb(189,172,249), rgb(12,14,20)) !important; clip: rect(33px, 2600px, 35px, 0px) !important; position: absolute !important;",
         ".tab-label > .monaco-icon-label-container::after": "background: transparent !important;",
@@ -180,16 +197,15 @@
     "terminal.integrated.altClickMovesCursor": true,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "underline",
-    "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Hack Nerd Font Mono', 'JetBrainsMono Nerd Font'",
-    "terminal.integrated.fontSize": 13,
-    "terminal.integrated.lineHeight": 1,
+    "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Hack Nerd Font Mono', 'JetBrainsMono Nerd Font', 'Operator Mono SSm Lig Book'",
+    "terminal.integrated.fontSize": 12,
     "terminal.integrated.gpuAcceleration": "auto",
+    "terminal.integrated.tabs.enabled": false,
     "terminal.integrated.profiles.linux": {
         "zsh": {
             "path": "/usr/bin/zsh"
         }
     },
-    "terminal.integrated.tabs.enabled": false,
 
 
     // Python Settings
@@ -197,7 +213,7 @@
     "python.autoComplete.showAdvancedMembers": true,
     "python.autoUpdateLanguageServer": true,
     "python.insidersChannel": "off",
-    "python.languageServer": "Microsoft",
+    "python.languageServer": "Jedi",
     "python.linting.ignorePatterns": [
         ".vscode/*.py",
         "**/site-packages/**/*.py",
@@ -229,11 +245,24 @@
     },
 
 
+    "[html]": {
+        "editor.tabSize": 2
+    },
+
+    "[css]": {
+        "editor.tabSize": 2
+    },
+
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+
+
     // Empty-Indent Extension
     "emptyIndent.highlightColor": "rgba(246,36,89,0.6)",
     "emptyIndent.highlightIndent": false,
-    "emptyIndent.removeIndent": false,
-    "emptyIndent.exclude": [".txt"],
+    "emptyIndent.removeIndent": true,
+
 
 
     // General Setting
@@ -245,18 +274,37 @@
     "git.autofetch": true,
     "liveServer.settings.donotShowInfoMsg": true,
     "search.exclude": {
-        "**/bower_components": false,
-        "**/*.code-search": false,
-        "**/node_modules": false
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "**/node_modules": true,
+        "**/env": true,
+        "**/venv": true
     },
     "files.exclude": {
-        "**/.DS_Store": false,
-        "**/.git": false,
-        "**/.svn": false,
-        "**/.hg": false,
-        "**/CVS": false
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true
     },
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
+    "files.watcherExclude": {
+        "**/.DS_Store/**": true,
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/.svn/**": true,
+        "**/.hg/**": true,
+        "**/CVS/**": true,
+        "**/node_modules/**": true,
+        "**/env/**": true,
+        "**/venv/**": true,
+        "env-*": true
     },
+    "liveServer.settings.donotVerifyTags": true,
+    "github.copilot.autocomplete.enable": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false
+    }
 }

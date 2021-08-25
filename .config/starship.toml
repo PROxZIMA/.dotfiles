@@ -46,7 +46,7 @@ charging_symbol = " "
 discharging_symbol = " "
 unknown_symbol = " "
 empty_symbol = " "
-format = " \\[[$symbol$percentage]($style)\\]\n"
+format = " \\[[$symbol$percentage]($style)\\]"
 disabled = false
 
 [[battery.display]]
@@ -72,9 +72,9 @@ disabled = true
 ## SECOND LINE/ROW: Prompt
 # Prompt: param 2 └─
 [character]
-success_symbol = " [╰─☣](bold red)"
-error_symbol = " [╰─✗](bold red)"
-# success_symbol = " [╰─λ](bold red)"
+success_symbol = "\n [╰─☣](bold red)"
+error_symbol = "\n [╰─✗](bold red)"
+# success_symbol = "\n [╰─λ](bold red)"
 
 # SYMBOLS
 [status]
