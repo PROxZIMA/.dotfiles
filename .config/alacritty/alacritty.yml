@@ -1,0 +1,122 @@
+live_config_reload: true
+
+shell:
+  program: /usr/bin/zsh
+
+env:
+  TERM: xterm-256color
+
+
+window:
+  title: PROxZIMA 🐉
+
+  dynamic_title: false
+
+  decorations: full
+
+  startup_mode: Windowed
+
+  gtk_theme_variant: dark
+
+  padding:
+    x: 0
+    y: 0
+
+  dimensions:
+    columns: 128
+    lines: 39
+
+
+background_opacity: 0.9
+
+
+scrolling:
+  history: 20000
+
+
+font:
+  normal:
+    family: FiraCode Nerd Font
+    style: Regular
+ 
+  size: 11.0
+
+  use_thin_strokes: true 
+
+
+draw_bold_text_with_bright_colors: true
+
+
+colors:
+  primary:
+    background: '0x0C0E14'
+    foreground: '0xf8f8f2'
+  cursor:
+    text: CellBackground
+    cursor: CellForeground
+  vi_mode_cursor:
+    text: CellBackground
+    cursor: CellForeground
+  search:
+    matches:
+      foreground: '0x44475a'
+      background: '0x50fa7b'
+    focused_match:
+      foreground: '0x44475a'
+      background: '0xffb86c'
+    bar:
+      background: '0x282a36'
+      foreground: '0xf8f8f2'
+  line_indicator:
+    foreground: None
+    background: None
+  selection:
+    text: CellForeground
+    background: '0x44475a'
+  normal:
+    black:   '0x000000'
+    red:     '0xff5555'
+    green:   '0x50fa7b'
+    yellow:  '0xf1fa8c'
+    blue:    '0xbd93f9'
+    magenta: '0xff79c6'
+    cyan:    '0x8be9fd'
+    white:   '0xbfbfbf'
+  bright:
+    black:   '0x4d4d4d'
+    red:     '0xff6e67'
+    green:   '0x5af78e'
+    yellow:  '0xE9AD0C'
+    blue:    '0xcaa9fa'
+    magenta: '0xff92d0'
+    cyan:    '0x9aedfe'
+    white:   '0xe6e6e6'
+  dim:
+    black:   '0x14151b'
+    red:     '0xff2222'
+    green:   '0x1ef956'
+    yellow:  '0xebf85b'
+    blue:    '0x4d5b86'
+    magenta: '0xff46b0'
+    cyan:    '0x59dffc'
+    white:   '0xe6e6d1'
+
+
+selection:
+  save_to_clipboard: false
+
+
+cursor:
+  style:
+    shape: Beam
+    blinking: On
+
+  blink_interval: 500
+
+
+key_bindings:
+  - { key: V,     mods: Control,        action: Paste     }
+  - { key: C,     mods: Control,        action: Copy      }
+  - { key: C,     mods: Control|Shift,  chars: "\x03"     }
+  - { key: C,     mods: Control,        mode: Search,     action: SearchCancel          }
+  - { key: Back,  mods: Control,        chars: "\x1b\x7f" }
