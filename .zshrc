@@ -1,4 +1,4 @@
-neofetch | lolcat
+neofetch --source ~/.config/ascii.txt | lolcat
 
 # Different terminal theme for VSCode and rest
 if [ "$TERM_PROGRAM" = "vscode" ]; then
@@ -7,7 +7,7 @@ if [ "$TERM_PROGRAM" = "vscode" ]; then
   fi
   ZSH_THEME="powerlevel10k/powerlevel10k"
   [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-elif [[ -x "$(command -v starship)" ]]; then 
+elif [[ -x "$(command -v starship)" ]]; then
   # Starship prompt
   eval "$(starship init zsh --print-full-init)"
 else
@@ -41,7 +41,6 @@ else
 fi
 
 
-# Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(zsh-autosuggestions zsh-syntax-highlighting)
@@ -95,6 +94,8 @@ DISABLE_AUTO_UPDATE="true"
 export PYTHONDONTWRITEBYTECODE=1
 export PROMPT_EOL_MARK=""
 export GPG_TTY='tty'
+export WINEARCH=win64
+export JDK_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 
 # colorize man pages
 export LESS_TERMCAP_mb=$'\e[1;32m'
@@ -106,14 +107,15 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 export LESSHISTFILE=-
 
+export BAT_PAGER="less -RF"
 
 # aliases
 alias sudo='sudo '
-alias snautilus='sudo -b dbus-launch nohup nautilus / 2>/dev/null'
+alias python='python3'
+alias snautilus='sudo -b dbus-launch nohup nautilus 2>/dev/null'
 alias nautilus='nohup nautilus 2>/dev/null & disown'
 alias sedit='sudo -b dbus-launch nohup gedit 2>/dev/null'
 alias cls='clear'
-export BAT_PAGER="less -RF"
 alias cat='bat -p'
 alias gitd='~/Documents/Scripts/gitDownload.sh'
 alias wttr='curl "wttr.in/Pune?0qM"'
@@ -125,6 +127,8 @@ alias pdfcrop='python ~/Documents/Scripts/pdfCrop.py'
 alias pdfshrink='~/Documents/Scripts/pdfShrink.sh'
 alias pacdiff='sudo -H DIFFPROG=meld pacdiff'
 alias pashare='~/Documents/Scripts/pashare'
+alias pamic='~/Documents/Scripts/pamic'
+alias codium-features='~/Documents/Scripts/codium-features.sh'
 alias ls='lsd -a'
 alias ll='lsd -ahl'
 alias lst='lsd -a --tree -I .git'
@@ -185,7 +189,9 @@ asm() {b=$1; b=$(echo "${b%.*}"); nasm -f elf64 "$1"; ld -o $b $b.o; rm -f $b.o;
 
 myip() {json=$(curl -s https://ipinfo.io/);echo " Local IP : $(hostname -i | awk '{print $1}')\n Public IP: $(echo $json | grep -Po '(?<=ip\": \").*?(?=\")'), $(echo $json | grep -Po '(?<=city\": \").*?(?=\")'), $(echo $json | grep -Po '(?<=region\": \").*?(?=\")'), $(echo $json | grep -Po '(?<=country\": \").*?(?=\")')"}
 
-ff() {firefox -P app --new-window "data:text/html,<script>(function(){open('"$1"','','top=50,left=200,width=900px,height=660px,directories=0,titlebar=0,toolbar=0,location=0,status=0,menubar=0');})();window.close()</script>" 2>/dev/null & disown}
+# ff() {firefox -width 5 -height 5 -P app --private-window "data:text/html,<script>window.open('"$1"','_blank','top=50,left=200,width=900px,height=660px,directories=0,titlebar=0,toolbar=0,location=0,status=0,menubar=0');window.close()</script>" 2>/dev/null & disown}
+
+ff() {firefox -width 900 -height 600 -P app "$1" 2>/dev/null & disown}
 
 ydl() {youtube-dl -ix --audio-format mp3 --audio-quality 0 -o '~/Downloads/songs/%(title)s.%(ext)s' "$1"}
 
