@@ -1,30 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
- This file is part of GtkSourceView
+The MIT License (MIT)
 
- Copyright (C) 2007 GtkSourceView team
- Author: Paolo Borelli <pborelli@gnome.org>
+Copyright (c) 2020-present PROxZIMA
 
- GtkSourceView is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 2.1 of the License, or (at your option) any later version.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
- GtkSourceView is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Lesser General Public License for more details.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
- You should have received a copy of the GNU Lesser General Public
- License along with this library; if not, write to the Free Software
- Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 -->
 
-<style-scheme id="builder-dark" name="Builder Dark" version="1.0">
+<style-scheme id="builder-dark" name="Dark Dracula" version="1.0">
 
-    <author>Paolo Borelli, Christian Hergert</author>
+    <author>PROxZIMA</author>
     <description>Dark color scheme for Builder using the Tango color palette</description>
 
     <!-- Dracula Palette -->
@@ -41,7 +43,7 @@
 
     <color name="dark1"                         value="#1e1e1e"/>
     <color name="dark2"                         value="#303030"/>
-    <color name="background"                    value="#0d0f16"/>
+    <color name="background"                    value="#11131C"/>
     <color name="current-line"                  value="#44475a"/>
     <color name="selection"                     value="#282a32"/>
     <color name="foreground"                    value="#f8f8f2"/>
@@ -93,7 +95,7 @@
     <style name="right-margin"                  foreground="#484749" background="#484749"/>
 
     <!-- Search Matching -->
-    <style name="search-match"                  foreground="aluminium" background="chameleon"/>
+    <style name="search-match"                  foreground="bone-white" background="selection"/>
     <style name="quick-highlight-match"         background="#rgba(78,154,6,.25)"/>
 
     <!-- Search Shadow -->
