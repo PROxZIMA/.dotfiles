@@ -67,7 +67,7 @@ font-size:10pt;
 border-color:rgb(63,62,64);
 border-width: 1px;
 color:rgb(240,240,240);
-background-color:rgb(25,27,36);
+background-color:rgba(17,19,28,0.959732);
 }
 
 .arc-search-entry:focus{
@@ -90,6 +90,9 @@ padding: 7px 9px;
 min-height: 0px;
 border-radius: 18px;
 padding: 7px 12px;
+}
+
+.arc-menu-panel-menu:active{
 }
 
 #arc-menu-launcher-button{
@@ -118,13 +121,13 @@ border-radius: 4px;
  spacing: 0px;
  margin: 0px;
 
-border-bottom-width: 2px;;
+border-top-width: 2px;;
 border-color: transparent;
 }
 
 #arc-menu-plasma-button:active-item, .arc-menu-plasma-button:active{
 background-color: rgba(245, 245, 245, .05);
-border-bottom-width: 2px;
+border-top-width: 2px;
 border-color: rgb(61, 174, 235);
 }
 
@@ -166,8 +169,8 @@ border-color: transparent;
 color:rgba(255,255,255,1);
 background-color:rgb(17,19,28);
 border-width: 1px;
-box-shadow: 0px 0px 1px rgba(15,16,21,1);
-border-color:rgba(15,16,21,1);
+box-shadow: 0px 1px 1px rgba(7,8,12,0.96);
+border-color:rgba(7,8,12,0.96);
 }
 
 .arc-menu-action:active{
@@ -175,7 +178,7 @@ box-shadow: none;
 color:rgba(255,255,255,1);
 background-color:rgba(36,41,60,1);
 border-width: 1px;
-border-color:rgba(4,4,6,1);
+border-color:rgba(36,41,60,0.96);
 }
 
 .arc-menu-menu-item-indicator{
@@ -188,17 +191,17 @@ background-color: rgba(196, 196, 196, 0.3);
 
 .tooltip-menu-item{
 border-radius: 4px;
-box-shadow:0 0 0 1px rgba(46,50,66,1);
+box-shadow:0 0 0 1px rgba(36,41,60,0.96);
 font-size:10pt;
 padding: 2px 5px;
 min-height: 0px;
 color:rgb(240,240,240);
-background-color:rgba(35,38,51,1);
+background-color:rgba(27,30,44,0.96);
 max-width:550px;
 }
 
 .arc-menu{
--boxpointer-gap: -1px;
+-boxpointer-gap: 0px;
 min-width: 15em;
 color: #D3DAE3;
 border-image: none;
@@ -208,7 +211,7 @@ font-size:10pt;
 
 .arc-menu .popup-sub-menu{
 padding-bottom: 1px;
-background-color: rgba(33,36,48,1);
+background-color: rgba(25,28,41,0.96);
 }
 
 .arc-menu .popup-menu-item{
@@ -239,7 +242,7 @@ color:rgba(201,201,201,1);
 
 .arc-menu-boxpointer{ 
 -arrow-border-radius:15px;
--arrow-background-color:rgb(25,27,36);
+-arrow-background-color:rgba(17,19,28,0.959732);
 -arrow-border-color:rgb(41,50,55);
 -arrow-border-width:0px;
 -arrow-base:24px;
@@ -319,8 +322,8 @@ color:rgba(201,201,201,1);
 
 .arc-right-click-boxpointer{ 
 -arrow-border-radius:15px;
--arrow-background-color:rgba(35,38,51,1);
--arrow-border-color:rgba(46,50,66,1);
+-arrow-background-color:rgba(27,30,44,0.96);
+-arrow-border-color:rgba(36,41,60,0.96);
 -arrow-border-width:1px;
 -arrow-base:24px;
 -arrow-rise:12px;
