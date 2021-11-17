@@ -3,7 +3,7 @@
 
 The MIT License (MIT)
 
-Copyright (c) 2016-present Dracula Theme
+Copyright (c) 2020-present PROxZIMA
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -24,9 +24,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
 
-<style-scheme id="dracula" name="Dracula" version="1.0">
-	<author>Ricardo Madriz</author>
-	<_description>A dark theme for Gedit</_description>
+<style-scheme id="dark-dracula" name="Dark Dracula" version="1.0">
+	<author>PROxZIMA</author>
+	<_description>A darker dracula theme for Gedit</_description>
 
 	<!-- Dracula Palette -->
     <color name="butter"                        value="#fce94f"/>
@@ -42,7 +42,7 @@ SOFTWARE.
 
     <color name="dark1"                         value="#1e1e1e"/>
     <color name="dark2"                         value="#303030"/>
-    <color name="background"                    value="#0d0f16"/>
+    <color name="background"                    value="#11131c"/>
     <color name="current-line"                  value="#44475a"/>
     <color name="selection"                     value="#282a32"/>
     <color name="foreground"                    value="#f8f8f2"/>
@@ -64,7 +64,6 @@ SOFTWARE.
     <style name="draw-spaces"                   foreground="aluminium"/>
     <style name="line-numbers"                  foreground="weird-gray" background="background"/>
     <style name="bracket-match"                 foreground="bone-white" background="background" underline="true"/>
-    <style name="search-match"                  foreground="bone-white" background="selection"/>
     <style name="map-overlay"                   background="rgba(136,138,133,0.25)"/>
     <style name="background-pattern"            background="#2f313e"/>
 
@@ -94,7 +93,7 @@ SOFTWARE.
     <style name="right-margin"                  foreground="#484749" background="#484749"/>
 
     <!-- Search Matching -->
-    <style name="search-match"                  foreground="aluminium" background="chameleon"/>
+    <style name="search-match"                  foreground="bone-white" background="selection"/>
     <style name="quick-highlight-match"         background="#rgba(78,154,6,.25)"/>
 
     <!-- Search Shadow -->
