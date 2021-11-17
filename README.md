@@ -25,92 +25,94 @@
 
 ## Folder structure
 
- .<br>
-├─  .config<br>
-│ ├─  alacritty<br>
-│ │ ╰─  alacritty.yml<br>
-│ ├─  ArcMenu<br>
-│ │ ├─  ArcMenu<br>
-│ │ ╰─  ArcTheme<br>
-│ │─  ascii.txt<br>
-│ ├─  Code<br>
-│ │ ╰─  User<br>
-│ │   ├─  keybindings.json<br>
-│ │   ├─  settings.json<br>
-│ │   ├─  snippets<br>
-│ │   │ ╰─  snippet.code-snippets<br>
-│ │   ╰─  vsc.css<br>
-│ ├─  Dash-to-Panel<br>
-│ │ ╰─  dash-to-panel<br>
-│ ├─  fish<br>
-│ │ ├─  config.fish<br>
-│ │ ├─  fish_variables<br>
-│ │ ╰─  functions<br>
-│ │   ├─  __bass.py<br>
-│ │   ├─  bass.fish<br>
-│ │   ╰─  nvm.fish<br>
-│ ├─  htop<br>
-│ │ ╰─  htoprc<br>
-│ ├─  neofetch<br>
-│ │ ╰─  config.conf<br>
-│ ├─  nvim<br>
-│ │ ╰─  init.vim<br>
-│ ╰─  starship.toml<br>
-├─  .fonts.conf<br>
-├─  .icons<br>
-│ ╰─  default<br>
-│   ├─  index.theme<br>
-│   ╰─  vsc<br>
-│     ├─  peek.png<br>
-│     ├─  peek2.png<br>
-│     ├─  peek3.png<br>
-│     ├─  peek4.png<br>
-│     ├─  vsc-back.svg<br>
-│     ╰─  vsc.svg<br>
-├─  .local<br>
-│ ╰─  share<br>
-│   ├─  arcmenu<br>
-│   │ ╰─  stylesheet.css<br>
-│   ╰─  fonts<br>
-│     ├─  Algerian.ttf<br>
-│     ├─  Anzelia.ttf<br>
-│     ├─  Cascadia Code PL.ttf<br>
-│     ├─  Caveat.ttf<br>
-│     ├─  FantasqueSansMono Nerd Font Mono.ttf<br>
-│     ├─  FantasqueSansMono Nerd Font.ttf<br>
-│     ├─  FiraCode Nerd Font.ttf<br>
-│     ├─  Hack Nerd Font Mono.ttf<br>
-│     ├─  JetBrainsMono Nerd Font.ttf<br>
-│     ├─  LM Roman 10.otf<br>
-│     ├─  LM Roman Demi 10.otf<br>
-│     ├─  MesloLGS NF.ttf<br>
-│     ├─  Operator Mono SSm Lig Book Italic.otf<br>
-│     ├─  Operator Mono SSm Lig Book.otf<br>
-│     ├─  Optima.ttf<br>
-│     ╰─  Shorelines Script Bold.otf<br>
-├─  .p10k.zsh<br>
-├─  .zshrc<br>
-├─  apps.txt<br>
-├─  assets<br>
-│ ├─  arcMenu.png<br>
-│ ├─  bpytop.png<br>
-│ ├─  firefox.png<br>
-│ ├─  gedit.png<br>
-│ ├─  neovim.png<br>
-│ ├─  terminal.png<br>
-│ ╰─  vscode.png<br>
-├─  package.txt<br>
-├─  README.md<br>
-╰─  usr<br>
-  ╰─  share<br>
-    ├─  gedit<br>
-    │ ╰─  styles<br>
-    │   ╰─  dracula.xml<br>
-    ╰─  sushi<br>
-      ╰─  gtksourceview-4<br>
-        ╰─  styles<br>
-          ╰─  builder-dark.style-scheme.xml<br>
-
+```css
+ .
+├──  .config
+│  ├──  alacritty
+│  │  └──  alacritty.yml
+│  ├──  ArcMenu
+│  │  ├──  ArcMenu
+│  │  └──  ArcTheme
+│  ├──  ascii.txt
+│  ├──  Code
+│  │  └──  User
+│  │     ├──  keybindings.json
+│  │     ├──  settings.json
+│  │     ├──  snippets
+│  │     │  └──  snippet.code-snippets
+│  │     └──  vsc.css
+│  ├──  Dash-to-Panel
+│  │  └──  dash-to-panel
+│  ├──  fish
+│  │  ├──  config.fish
+│  │  ├──  fish_variables
+│  │  └──  functions
+│  │     ├──  __bass.py
+│  │     ├──  bass.fish
+│  │     └──  nvm.fish
+│  ├──  htop
+│  │  └──  htoprc
+│  ├──  neofetch
+│  │  └──  config.conf
+│  ├──  nvim
+│  │  └──  init.vim
+│  └──  starship.toml
+├──  .fonts.conf
+├──  .icons
+│  └──  default
+│     ├──  index.theme
+│     └──  vsc
+│        ├──  peek.png
+│        ├──  peek2.png
+│        ├──  peek3.png
+│        ├──  peek4.png
+│        ├──  vsc-back.svg
+│        └──  vsc.svg
+├──  .local
+│  └──  share
+│     ├──  arcmenu
+│     │  └──  stylesheet.css
+│     └──  fonts
+│        ├──  Algerian.ttf
+│        ├──  Anzelia.ttf
+│        ├──  Cascadia Code PL.ttf
+│        ├──  Caveat.ttf
+│        ├──  FantasqueSansMono Nerd Font Mono.ttf
+│        ├──  FantasqueSansMono Nerd Font.ttf
+│        ├──  FiraCode Nerd Font.ttf
+│        ├──  Hack Nerd Font Mono.ttf
+│        ├──  JetBrainsMono Nerd Font.ttf
+│        ├──  LM Roman 10.otf
+│        ├──  LM Roman Demi 10.otf
+│        ├──  MesloLGS NF.ttf
+│        ├──  Operator Mono SSm Lig Book Italic.otf
+│        ├──  Operator Mono SSm Lig Book.otf
+│        ├──  Optima.ttf
+│        └──  Shorelines Script Bold.otf
+├──  .p10k.zsh
+├──  .zshrc
+├──  apps.txt
+├──  assets
+│  ├──  arcmenu.png
+│  ├──  bpytop.png
+│  ├──  dots.svg
+│  ├──  firefox.png
+│  ├──  gedit.png
+│  ├──  neovim.png
+│  ├──  terminal.png
+│  └──  vscode.png
+├──  package.txt
+├──  README.md
+└──  usr
+   └──  share
+      ├──  gedit
+      │  └──  styles
+      │     └──  dracula.xml
+      └──  sushi
+         └──  gtksourceview-4
+            └──  styles
+               └──  builder-dark.style-scheme.xml
+```
 
 ## ArcMenu
 
