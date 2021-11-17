@@ -27,9 +27,12 @@
 
  .<br>
 ├─  .config<br>
+│ ├─  alacritty<br>
+│ │ ╰─  alacritty.yml<br>
 │ ├─  ArcMenu<br>
 │ │ ├─  ArcMenu<br>
 │ │ ╰─  ArcTheme<br>
+│ │─  ascii.txt<br>
 │ ├─  Code<br>
 │ │ ╰─  User<br>
 │ │   ├─  keybindings.json<br>
@@ -37,8 +40,8 @@
 │ │   ├─  snippets<br>
 │ │   │ ╰─  snippet.code-snippets<br>
 │ │   ╰─  vsc.css<br>
-│ ├─  Dash to Dock<br>
-│ │ ╰─  dash-to-dock<br>
+│ ├─  Dash-to-Panel<br>
+│ │ ╰─  dash-to-panel<br>
 │ ├─  fish<br>
 │ │ ├─  config.fish<br>
 │ │ ├─  fish_variables<br>
@@ -53,32 +56,38 @@
 │ ├─  nvim<br>
 │ │ ╰─  init.vim<br>
 │ ╰─  starship.toml<br>
+├─  .fonts.conf<br>
 ├─  .icons<br>
 │ ╰─  default<br>
 │   ├─  index.theme<br>
-│   ├─  peek.png<br>
-│   ├─  vsc-back.svg<br>
-│   ╰─  vsc.svg<br>
+│   ╰─  vsc<br>
+│     ├─  peek.png<br>
+│     ├─  peek2.png<br>
+│     ├─  peek3.png<br>
+│     ├─  peek4.png<br>
+│     ├─  vsc-back.svg<br>
+│     ╰─  vsc.svg<br>
 ├─  .local<br>
 │ ╰─  share<br>
-│  ├─  arcmenu<br>
-│  │ ╰─  stylesheet.css<br>
-│  ╰─  fonts<br>
-│    ├─  Algerian.ttf<br>
-│    ├─  Anzelia.ttf<br>
-│    ├─  Cascadia Code PL.ttf<br>
-│    ├─  Caveat.ttf<br>
-│    ├─  FantasqueSansMono Nerd Font Mono.ttf<br>
-│    ├─  FantasqueSansMono Nerd Font.ttf<br>
-│    ├─  FiraCode Nerd Font.ttf<br>
-│    ├─  Hack Nerd Font Mono.ttf<br>
-│    ├─  JetBrainsMono Nerd Font.ttf<br>
-│    ├─  LM Roman 10.otf<br>
-│    ├─  LM Roman Demi 10.otf<br>
-│    ├─  MesloLGS NF.ttf<br>
-│    ├─  Operator Mono SSm Lig Book.otf<br>
-│    ├─  Optima.ttf<br>
-│    ╰─  Shorelines Script Bold.otf<br>
+│   ├─  arcmenu<br>
+│   │ ╰─  stylesheet.css<br>
+│   ╰─  fonts<br>
+│     ├─  Algerian.ttf<br>
+│     ├─  Anzelia.ttf<br>
+│     ├─  Cascadia Code PL.ttf<br>
+│     ├─  Caveat.ttf<br>
+│     ├─  FantasqueSansMono Nerd Font Mono.ttf<br>
+│     ├─  FantasqueSansMono Nerd Font.ttf<br>
+│     ├─  FiraCode Nerd Font.ttf<br>
+│     ├─  Hack Nerd Font Mono.ttf<br>
+│     ├─  JetBrainsMono Nerd Font.ttf<br>
+│     ├─  LM Roman 10.otf<br>
+│     ├─  LM Roman Demi 10.otf<br>
+│     ├─  MesloLGS NF.ttf<br>
+│     ├─  Operator Mono SSm Lig Book Italic.otf<br>
+│     ├─  Operator Mono SSm Lig Book.otf<br>
+│     ├─  Optima.ttf<br>
+│     ╰─  Shorelines Script Bold.otf<br>
 ├─  .p10k.zsh<br>
 ├─  .zshrc<br>
 ├─  apps.txt<br>
@@ -89,7 +98,7 @@
 │ ├─  gedit.png<br>
 │ ├─  neovim.png<br>
 │ ├─  terminal.png<br>
-│ ╰─  vscodium.png<br>
+│ ╰─  vscode.png<br>
 ├─  package.txt<br>
 ├─  README.md<br>
 ╰─  usr<br>
