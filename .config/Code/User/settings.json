@@ -269,6 +269,7 @@
           "path": "/usr/lib/jvm/java-11-openjdk-amd64",
         },
     ],
+    "java.server.launchMode": "LightWeight",
 
     "html.autoClosingTags": true,
     "html.completion.attributeDefaultValue": "singlequotes",
@@ -354,5 +355,7 @@
         "**/env/**": true,
         "**/venv/**": true,
         "env-*": true
-    }
+    },
+    "workbench.activityBar.visible": false,
+    "window.zoomLevel": 1
 }
