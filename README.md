@@ -90,7 +90,9 @@
 │        ├──  Optima.ttf
 │        └──  Shorelines Script Bold.otf
 ├──  .p10k.zsh
+├──  .tmux.conf
 ├──  .zshrc
+├──  .zsh_alias
 ├──  apps.txt
 ├──  assets
 │  ├──  arcmenu.png
