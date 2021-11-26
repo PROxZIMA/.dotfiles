@@ -63,7 +63,7 @@ setopt pushd_ignore_dups
 setopt pushdminus
 
 
-# Completion.
+# Completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
 zstyle ':completion:*' rehash true                              # automatically find new executables in path
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
@@ -71,6 +71,7 @@ zstyle ':completion:*' completer _expand _complete _ignored _approximate
 zstyle ':completion:*' menu select=2
 zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
 zstyle ':completion:*:descriptions' format '%U%F{cyan}%d%f%u'
+zstyle ':completion:*' regular true
 
 # Speed up completions
 zstyle ':completion:*' accept-exact '*(N)'
@@ -110,64 +111,9 @@ export LESSHISTFILE=-
 export BAT_PAGER="less -RF"
 
 # aliases
-alias sudo='sudo '
-alias python='python3'
-alias snautilus='sudo -b dbus-launch nohup nautilus 2>/dev/null'
-alias nautilus='nohup nautilus 2>/dev/null & disown'
-alias sedit='sudo -b dbus-launch nohup gedit 2>/dev/null'
-alias cls='clear'
-alias cat='bat -p'
-alias gitd='~/Documents/Scripts/gitDownload.sh'
-alias wttr='curl "wttr.in/Pune?0qM"'
-alias usage='du -ah -d1 | sort -rn 2>/dev/null'
-alias vim='nvim'
-alias swire='SoundWireServer'
-alias animerelease='python ~/Documents/Scripts/animeRelease.py'
-alias pdfcrop='python ~/Documents/Scripts/pdfCrop.py'
-alias pdfshrink='~/Documents/Scripts/pdfShrink.sh'
-alias pacdiff='sudo -H DIFFPROG=meld pacdiff'
-alias pashare='~/Documents/Scripts/pashare'
-alias pamic='~/Documents/Scripts/pamic'
-alias codium-features='~/Documents/Scripts/codium-features.sh'
-alias ls='lsd -a'
-alias ll='lsd -ahl'
-alias lst='lsd -a --tree -I .git'
-alias llt='lsd -ahl --tree -I .git'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias boot-options='pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY HOME=$HOME garuda-boot-options -style kvantum 2>/dev/null & disown'
-
-# Common use
-alias aup="sudo sh -c 'pamac upgrade --aur; pamac clean -b'"
-alias grubup='sudo update-grub'
-alias fixpacman='sudo rm /var/lib/pacman/db.lck'
-alias tarnow='tar -acf '
-alias untar='tar -zxvf '
-alias wget='wget -c '
-alias psmem='ps auxf | sort -nr -k 4'
-alias psmem10='ps auxf | sort -nr -k 4 | head -10'
-alias reflect='sudo reflector --verbose -f 10 -l 50 -a 2 -p https --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-alias ......='cd ../../../../..'
-alias big="expac -H M '%m\t%n' | sort -h | nl"          # Sort installed packages according to size in MB (expac must be installed)
-alias gitpkg='pacman -Q | grep -i "\-git"'			    # List amount of -git packages
-
-#Cleanup orphaned packages & cache
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
-alias cleancache='sudo pacman -Scc'
-
-#get the error messages from journalctl
-alias jctl='journalctl -p 3 -xb'
-
-#Recent Installed Packages
-alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
-
+if [ -f ~/.zsh_alias ]; then
+. ~/.zsh_alias
+fi
 
 # [ -x /usr/bin/dircolors ] && eval "$(dircolors -b)"
 
@@ -198,3 +144,4 @@ ydl() {youtube-dl -ix --audio-format mp3 --audio-quality 0 -o '~/Downloads/songs
 ydlp() {youtube-dl -icx --yes-playlist --audio-format mp3 --audio-quality 0 -o '~/Downloads/songs/%(playlist)s/%(title)s.%(ext)s' "$1"}
 
 mkfile() {mkdir -p "$(dirname "$1")" && touch "$1";}
+
