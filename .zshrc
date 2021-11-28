@@ -1,4 +1,4 @@
-neofetch --source ~/.config/ascii.txt | lolcat
+neofetch --source ~/Pictures/fubuki.jpg --size 420
 
 # Different terminal theme for VSCode and rest
 if [ "$TERM_PROGRAM" = "vscode" ]; then
@@ -111,8 +111,8 @@ export LESSHISTFILE=-
 export BAT_PAGER="less -RF"
 
 # aliases
-if [ -f ~/.zsh_alias ]; then
-. ~/.zsh_alias
+if [ -f ~/.aliases ]; then
+. ~/.aliases
 fi
 
 # [ -x /usr/bin/dircolors ] && eval "$(dircolors -b)"
