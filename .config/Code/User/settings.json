@@ -96,7 +96,7 @@
     "window.newWindowDimensions": "maximized",
     "window.title": "${activeEditorShort}${separator}${rootName}",
     "window.titleBarStyle": "custom",
-    "window.titleSeparator": " ・☣・ ",
+    "window.titleSeparator": " ・ ・ ",
     "workbench.colorTheme": "Sweet Dracula",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.highlightModifiedTabs": true,
@@ -356,6 +356,5 @@
         "**/venv/**": true,
         "env-*": true
     },
-    "workbench.activityBar.visible": false,
-    "window.zoomLevel": 1
+    "workbench.activityBar.visible": false
 }
