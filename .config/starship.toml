@@ -70,9 +70,9 @@ disabled = true
 
 
 ## SECOND LINE/ROW: Prompt
-# Prompt: param 2 └─
+# Prompt: param 2 └─ ☣
 [character]
-success_symbol = "\n [╰─☣](bold red)"
+success_symbol = "\n [╰─](bold red)"
 error_symbol = "\n [╰─✗](bold red)"
 # success_symbol = "\n [╰─λ](bold red)"
 
