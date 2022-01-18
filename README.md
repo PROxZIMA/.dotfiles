@@ -6,16 +6,18 @@
 <p align="center"><img src="./assets/terminal.png"></p>
 
 <h3 align="center">VS Codium</h3>
-<p align="center"><img src="./assets/vscode.png"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/PROxZIMA/sweet-dracula/master/assets/vscode.png"></p>
 
 <h3 align="center">Firefox</h3>
-<p align="center"><img src="./assets/firefox.png"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/PROxZIMA/sweet-pop/master/assets/preview.png"></p>
 
 <h3 align="center">Gedit</h3>
 <p align="center"><img src="./assets/gedit.png"></p>
 
+<!--
 <h3 align="center">Neovim</h3>
 <p align="center"><img src="./assets/neovim.png"></p>
+-->
 
 <h3 align="center">Resource Monitor</h3>
 <p align="center"><img src="./assets/bpytop.png"></p>
