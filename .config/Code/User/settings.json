@@ -4,14 +4,11 @@
             "terminal.background": "#060606",
             "terminal.foreground": "#e0e0e0",
             "terminal.selectionBackground": "#555555",
-
             "titleBar.activeBackground": "#020202",
             "titleBar.activeForeground": "#e0e0e0",
             "titleBar.inactiveBackground": "#020202",
             "titleBar.inactiveForeground": "#e0e0e0",
-
             "tab.inactiveBackground": "#0b0b0b",
-
             "editor.background": "#060606",
             "editor.findMatchBorder": "#0c0c0d",
             "editor.findMatchHighlightBorder": "#0c0c0d",
@@ -21,23 +18,21 @@
             "editor.selectionHighlightBorder": "#0c0c0d",
             "editorGroupHeader.tabsBackground": "#0b0b0b",
             "editorGutter.background": "#000000",
-
             "sideBar.background": "#060606",
             "sideBarSectionHeader.background": "#0b0b0b",
             "statusBar.background": "#060606"
         }
     },
-
     "editor.tokenColorCustomizations": {
         "[Chromodynamics]": {
             "textMateRules": [
                 {
                     "scope": [
                         "constant.language.python",
-                        "variable.parameter.function.language.special.self.python",
+                        "variable.parameter.function.language.special.self.python"
                     ],
                     "settings": {
-                        "foreground": "#66D9EF",
+                        "foreground": "#66D9EF"
                     }
                 },
                 {
@@ -68,7 +63,7 @@
                         "foreground": "#c6c6c6",
                         "fontStyle": ""
                     }
-                },
+                }
             ]
         },
         "textMateRules": [
@@ -81,22 +76,24 @@
                     "constant",
                     "comment",
                     "keyword",
-                    "invalid",
+                    "invalid"
                 ],
                 "settings": {
-                "fontStyle": "italic"
+                    "fontStyle": "italic"
                 }
             }
         ]
     },
-
-
     // Window Settings
+    "window.commandCenter": false,
+    "window.confirmBeforeClose": "keyboardOnly",
     "window.menuBarVisibility": "toggle",
     "window.newWindowDimensions": "maximized",
+    "window.restoreWindows": "all",
     "window.title": "${activeEditorShort}${separator}${rootName}",
-    "window.titleBarStyle": "custom",
+    "window.titleBarStyle": "native",
     "window.titleSeparator": " ・ ・ ",
+    "window.zoomLevel": 0.4,
     "workbench.colorTheme": "Sweet Dracula",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.highlightModifiedTabs": true,
@@ -104,59 +101,71 @@
     "workbench.editor.tabCloseButton": "right",
     "workbench.editor.tabSizing": "shrink",
     "workbench.editor.untitled.hint": "hidden",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "sweet-vscode-icons",
+    "workbench.layoutControl.type": "menu",
     "workbench.list.smoothScrolling": true,
     "workbench.panel.defaultLocation": "right",
     "workbench.startupEditor": "none",
     "workbench.statusBar.visible": true,
     "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
+        "*.ipynb": "jupyter-notebook"
     },
-
-
     // Editor Settings
     "editor.acceptSuggestionOnEnter": "on",
     "editor.autoClosingBrackets": "always",
     "editor.bracketPairColorization.enabled": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
     "editor.cursorBlinking": "phase",
     "editor.cursorSmoothCaretAnimation": true,
     "editor.cursorStyle": "line-thin",
     "editor.detectIndentation": false,
-    "editor.fontFamily": "'Operator Mono SSm Lig Book', 'FiraCode Nerd Font', 'Hack Nerd Font Mono', 'JetBrainsMono Nerd Font'",
+    "editor.emptySelectionClipboard": false,
+    "editor.fontFamily": "'Operator Mono SSm Lig Book', 'FiraCode Nerd Font', 'Hack Nerd Font Mono', 'JetBrainsMono Nerd Font', 'codicon'",
     "editor.fontLigatures": true,
     "editor.fontSize": 12,
     "editor.fontWeight": "normal",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
     "editor.guides.bracketPairs": "active",
     "editor.guides.bracketPairsHorizontal": "active",
     "editor.guides.highlightActiveBracketPair": true,
     "editor.hover.above": false,
+    "editor.inlayHints.enabled": "offUnlessPressed",
     "editor.inlineSuggest.enabled": true,
     "editor.insertSpaces": true,
+    "editor.linkedEditing": true,
     "editor.matchBrackets": "never",
     "editor.maxTokenizationLineLength": 99999999,
     "editor.minimap.enabled": false,
     "editor.occurrencesHighlight": false,
     "editor.renderControlCharacters": true,
+    "editor.renderFinalNewline": true,
     "editor.renderLineHighlight": "gutter",
     "editor.renderWhitespace": "none",
     "editor.scrollbar.horizontal": "auto",
     "editor.scrollbar.vertical": "auto",
-    "editor.selectionHighlight": false,
+    "editor.selectionHighlight": true,
     "editor.smoothScrolling": true,
     "editor.suggestSelection": "first",
     "editor.suggest.preview": true,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.tabCompletion": "on",
     "editor.tabSize": 4,
     "editor.wordBasedSuggestions": true,
     "editor.wordWrap": "on",
-
-
+    // Emmet Settings
+    "emmet.excludeLanguages": [],
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "markdown": "html",
+        "vue-html": "html"
+    },
     // Explorer Settings
     "explorer.compactFolders": false,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-
-
     // Customize UI
     "customizeUI.listRowHeight": 20,
     "customizeUI.font.monospace": "FantasqueSansMono Nerd Font Mono",
@@ -166,71 +175,69 @@
         "monospace": "12px"
     },
     "customizeUI.stylesheet": {
-        ":root" : "--tab-radius: 6px;--base-color: #bd93f9;--gradient-one: #c50ed2;--gradient-two: #8500f7;--sash-size: 2px !important;--sash-hover-size: 2px !important;",
-        ".monaco-workbench .part.titlebar>.window-controls-container .window-max-restore, .monaco-workbench .part.editor>.content>.watermark, .monaco-action-bar .actions-container .menu-entry": "display: none !important;",
-        ".monaco-workbench .part.titlebar>.window-controls-container": "width: unset !important;",
-        ".monaco-workbench .part.titlebar>.window-controls-container>.window-icon": "width: 30px !important;",
-        ".monaco-workbench.linux .part.titlebar>.window-title": "font-size: 12.5px !important;",
-        ".monaco-workbench .part.titlebar .window-appicon>.home-bar-icon-badge, .monaco-workbench .part.titlebar>.window-appicon:not(.codicon)": "background-image: url(file:///usr/share/code/resources/app/out/vs/workbench/vsc.svg) !important;",
-        ".monaco-workbench .part.editor > .content .editor-group-container.empty .editor-group-letterpress": "background-image: url(file:///usr/share/code/resources/app/out/vs/workbench/vsc-back.svg) !important;",
-        ".monaco-workbench .part.editor.has-watermark>.content.empty .editor-group-container>.editor-group-letterpress": "background-position-y: 50% !important;",
-        ".monaco-sash.hover:before, .monaco-sash.active:before": "background: linear-gradient(to bottom, var(--gradient-one), var(--gradient-two)) !important;",
-
-        // Gradient Tab border
-        ".monaco-workbench .activitybar > .content :not(.monaco-menu) > .monaco-action-bar .action-item.checked .active-item-indicator:before": "border: 0 !important;width: 3px !important;height: 100% !important;position: absolute !important;top: 0 !important;left: 0 !important;background-image: linear-gradient(to top, var(--gradient-one), var(--gradient-two)) !important;",
-        ".monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab>.tab-border-bottom-container, .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab>.tab-border-top-container": "background-image: linear-gradient(to left, var(--gradient-one), var(--gradient-two)) !important;height: 3px !important;",
-        ".monaco-workbench .activitybar > .content :not(.monaco-menu) > .monaco-action-bar .badge .badge-content": "background-image: linear-gradient(90deg, var(--gradient-one), var(--gradient-two)) !important;",
-
-        // Hides dirty tab white dot indicator
-        ".monaco-workbench .part.editor>.content .editor-group-container.active>.title .tabs-container>.tab.dirty>.tab-actions .action-label:not(:hover):before, .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.dirty>.tab-actions .action-label:not(:hover):before": "content: '' !important;",
-
-        // Git icon background
-        ".codicon-git-branch:before": "background: linear-gradient(to bottom, var(--gradient-one), var(--gradient-two)) !important;-webkit-background-clip: text !important;color: rgba(255, 255, 255, 0.4) !important;",
-
-        // Background
-        ".monaco-editor, .split-view-view .monaco-editor-background" : "background: url(/usr/share/code/resources/app/out/vs/workbench/peek.png) bottom right / 10% auto no-repeat scroll;",
-
-        // Scrollbar
-        ".monaco-scrollable-element>.scrollbar>.slider": "border-radius: 7px !important;",
-        ".monaco-scrollable-element>.scrollbar>.slider.active": "background: linear-gradient(to top, var(--gradient-one), var(--gradient-two)) !important;",
-        "canvas.decorationsOverviewRuler,.monaco-scrollable-element>.scrollbar.vertical,.monaco-scrollable-element>.scrollbar.vertical>.slider": "width: 7px !important;",
-        ".monaco-scrollable-element>.scrollbar.horizontal,.monaco-scrollable-element>.scrollbar.horizontal>.slider": "height: 7px !important;",
-        ".monaco-scrollable-element>.scrollbar.horizontal>.slider": "width: 135px !important;",
-
-        // Active tab border (It's a bit cringe)
-        // ".tab:first-child" : "margin-left: calc(var(--tab-radius) - 2px) !important;",
-        // ".tab:last-child" : "margin-right: calc(var(--tab-radius) - 2px) !important;",
-        // ".tab.active" : "border: 2px solid #bd93f9 !important; background-color: transparent !important; border-radius: var(--tab-radius) var(--tab-radius) 0 0 !important; border-bottom: 2px solid #0c0e14 !important; z-index: 1 !important;",
-        // ".tab.active::before, .tab.active::after" : "content: '' !important; display: block !important; box-sizing: border-box !important; position: absolute !important; z-index: 999999; width: var(--tab-radius) !important; height: var(--tab-radius) !important; bottom: -2px !important; pointer-events: none !important; border-bottom: 2px solid #bd93f9 !important;",
-        // ".tab.active::before" : "border-bottom-right-radius: var(--tab-radius) !important; left: 0 !important; transform: translateX(calc(0px - var(--tab-radius))) !important; border-right: 2px solid #bd93f9 !important; box-shadow: 2px 2px 0 2px #0c0e14 !important;",
-        // ".tab.active::after" : "border-bottom-left-radius: var(--tab-radius) !important; right: 0 !important; transform: translateX(calc(var(--tab-radius))) !important; border-left: 2px solid #bd93f9 !important; box-shadow: -2px 2px 0 2px #0c0e14 !important;",
-        // ".tabs-container:before": "content: '' !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background: linear-gradient(90deg, rgb(12,14,20),rgb(189, 172, 255),rgb(189,147,249),rgb(189,147,249),rgb(189,147,249),rgb(189,172,249), rgb(12,14,20)) !important; clip: rect(33px, 2600px, 33px, 0px) !important; position: absolute !important;",
-        // ".tabs-container:after": "content: '' !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background: linear-gradient(90deg, rgb(12,14,20),rgb(189, 172, 255),rgb(189,147,249),rgb(189,147,249),rgb(189,147,249),rgb(189,172,249), rgb(12,14,20)) !important; clip: rect(33px, 2600px, 35px, 0px) !important; position: absolute !important;",
-        // ".tab-label > .monaco-icon-label-container::after": "background: transparent !important;",
+        ":root": "--tab-height: 25px;--tab-radius: 8px;--ui-radius: 6px;--base-color: #bd93f9;--gradient-one: #c50ed2;--gradient-two: #8500f7;--side-pane-color: #232634;--focus-border: #3f4f81;--sash-size: 2px !important;--sash-hover-size: 2px !important; ",
+        ".editor-container": "-webkit-font-smoothing: antialiased; ",
+        ".monaco-workbench .part.titlebar .window-controls-container .window-icon, .monaco-workbench .part.editor > .content > .watermark": "display: none !important; ",
+        ".monaco-workbench .part.titlebar .window-controls-container .layout-dropdown-container": "margin-left: auto !important; ",
+        ".monaco-workbench .part.titlebar > .window-controls-container": "width: unset !important; ",
+        ".monaco-workbench .part.titlebar > .window-controls-container > .window-icon": "width: 30px !important; ",
+        ".monaco-workbench.linux .part.titlebar > .window-title": "font-size: 12.5px !important; ",
+        ".monaco-workbench .part.titlebar > .titlebar-container .window-appicon > .home-bar-icon-badge, .monaco-workbench .part.titlebar > .titlebar-container > .window-appicon:not(.codicon)": "background-image: url(./vsc/vsc.svg) !important; ",
+        ".monaco-workbench .part.editor > .content .editor-group-container.empty .editor-group-letterpress": "background-image: url(./vsc/vsc-back.svg) !important; ",
+        ".monaco-workbench .part.editor.has-watermark > .content.empty .editor-group-container > .editor-group-letterpress": "background-position-y: 50% !important; ",
+        ".mac, .windows, .linux": "font-family: 'FantasqueSansMono Nerd Font' !important;--monaco-monospace-font: 'FantasqueSansMono Nerd Font Mono' !important; ",
+        ".monaco-sash.hover:before, .monaco-sash.active:before": "background: linear-gradient(to bottom, var(--gradient-one), var(--gradient-two)) !important; ",
+        ".monaco-workbench .activitybar > .content :not(.monaco-menu) > .monaco-action-bar .action-item.checked .active-item-indicator:before": "border: 0 !important;width: 3px !important;height: 100% !important;position: absolute !important;top: 0 !important;left: 0 !important;background-image: linear-gradient(to top, var(--gradient-one), var(--gradient-two)) !important; ",
+        ".monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab > .tab-border-bottom-container, .monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab > .tab-border-top-container": "background-image: linear-gradient(to left, var(--gradient-one), var(--gradient-two)) !important;height: 3px !important; ",
+        ".monaco-workbench .activitybar > .content :not(.monaco-menu) > .monaco-action-bar .badge .badge-content": "background-image: linear-gradient(90deg, var(--gradient-one), var(--gradient-two)) !important; ",
+        ".monaco-workbench .part.editor > .content .editor-group-container.active > .title .tabs-container > .tab.dirty > .tab-actions .action-label:not(:hover):before, .monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.dirty > .tab-actions .action-label:not(:hover):before": "content: '' !important; ",
+        ".codicon-git-branch:before": "background: linear-gradient(to bottom, var(--gradient-one), var(--gradient-two)) !important;-webkit-background-clip: text !important;background-clip: text !important;color: rgba(255, 255, 255, 0.4) !important; ",
+        ".monaco-editor, .split-view-view .monaco-editor-background": "background: url(./vsc/pek.png) bottom right / 10% auto no-repeat scroll;",
+        ".monaco-scrollable-element > .scrollbar > .slider": "border-radius: 7px !important; ",
+        ".monaco-scrollable-element > .scrollbar > .slider.active": "background: linear-gradient(to top, var(--gradient-one), var(--gradient-two)) !important; ",
+        "canvas.decorationsOverviewRuler, .monaco-scrollable-element > .scrollbar.vertical, .monaco-scrollable-element > .scrollbar.vertical > .slider": "width: 7px !important; ",
+        ".monaco-scrollable-element > .scrollbar.horizontal, .monaco-scrollable-element > .scrollbar.horizontal > .slider": "height: 7px !important; ",
+        ".monaco-scrollable-element > .scrollbar.horizontal > .slider": "width: 135px !important; ",
+        ".monaco-editor .monaco-hover, .monaco-editor .suggest-widget, .monaco-editor .suggest-details": "border-radius: var(--ui-radius) !important;overflow: hidden !important;box-shadow: rgb(0 0 0 / 36%) 0px 2px calc(var(--ui-radius) + 2px) !important; ",
+        ".pane .pane-body, .pane .pane-body .monaco-list, .pane .pane-body .monaco-list .monaco-scrollable-element, .pane .pane-body .monaco-list .monaco-scrollable-element .monaco-list-rows, .pane .pane-body .monaco-list .monaco-scrollable-element .monaco-list-rows .monaco-list-row": "overflow: visible !important; ",
+        ".open-editors .monaco-list .monaco-list-row": "padding-left: 0px !important; ",
+        ".monaco-list-row:hover, .monaco-list-row.selected, .monaco-list-row.focused": "border-radius: 0 var(--ui-radius) var(--ui-radius) 0 !important; ",
+        ".monaco-workbench .monaco-list:not(.element-focused):focus:before, .monaco-select-box, .monaco-select-box-dropdown-container, .monaco-select-box-dropdown-container .monaco-list-row:hover, .monaco-select-box-dropdown-container .monaco-list-row.selected, .monaco-select-box-dropdown-container .monaco-list-row.focused": "border-radius: var(--ui-radius) !important; ",
+        ".monaco-list-row.selected::before, .monaco-list-row.selected::after": "--ui-radius: 6px;content: '' !important;display: block !important;position: absolute !important;width: var(--ui-radius) !important;height: var(--ui-radius) !important;left: 0 !important;pointer-events: none !important; ",
+        ".monaco-list-row.selected::before": "top: calc(0px - var(--ui-radius)) !important;background: radial-gradient(circle at 100% 0%, transparent 70.71%, var(--side-pane-color) 29.289%) no-repeat;background-position: 100% 0%; ",
+        ".monaco-list-row.selected::after": "bottom: calc(0px - var(--ui-radius)) !important;background: radial-gradient(circle at 100% 100%, transparent 70.71%, var(--side-pane-color) 29.289%) no-repeat;background-position: 100% 100%; ",
+        ".monaco-button.monaco-text-button": "border-radius: var(--ui-radius) !important; ",
+        ".tab:first-child": "margin-left: var(--tab-radius) !important;",
+        ".tab:last-child": "margin-right: var(--tab-radius) !important;",
+        ".tab.active": "border-radius: var(--tab-radius) var(--tab-radius) 0 0 !important;",
+        ".tab.dirty-border-top > .tab-border-top-container": "border-radius: var(--tab-radius) var(--tab-radius) 0 0 !important; ",
+        ".tab.active::before, .tab.active::after": "--tab-radius: 8px;--tab-color: #161925;content: '' !important;display: block !important;box-sizing: border-box !important;position: absolute !important;z-index: 1;width: var(--tab-radius) !important;height: var(--tab-radius) !important;bottom: 0px !important;pointer-events: none !important;",
+        ".tab.active::before": "left: calc(0px - var(--tab-radius)) !important;border-bottom-right-radius: var(--tab-radius) !important;box-shadow: 3px 3px 0 3px var(--tab-color) !important;",
+        ".tab.active::after": "right: 0 !important;transform: translateX(var(--tab-radius)) !important;border-bottom-left-radius: var(--tab-radius) !important;box-shadow: -3px 3px 0 3px var(--tab-color) !important;"
     },
-
-
     // Terminal Settings
     "terminal.integrated.altClickMovesCursor": true,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.customGlyphs": false,
     "terminal.integrated.cursorStyle": "line",
-    "terminal.integrated.scrollback": 20000,
+    "terminal.integrated.scrollback": 200000,
     "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Hack Nerd Font Mono', 'JetBrainsMono Nerd Font', 'Operator Mono SSm Lig Book'",
     "terminal.integrated.fontSize": 12,
-    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.gpuAcceleration": "canvas",
     "terminal.integrated.tabs.enabled": false,
     "terminal.integrated.profiles.linux": {
         "zsh": {
             "path": "/usr/bin/zsh"
         }
     },
-
-
-    // Python Settings
+    // Language Settings
+    "[python]": {
+        "editor.semanticHighlighting.enabled": false,
+        "editor.suggest.insertMode": "replace",
+        "editor.wordBasedSuggestions": true
+    },
     "python.analysis.completeFunctionParens": true,
     "python.formatting.provider": "black",
-    "python.insidersChannel": "off",
     "python.languageServer": "Pylance",
     "python.linting.ignorePatterns": [
         ".vscode/*.py",
@@ -240,88 +247,112 @@
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
     "python.linting.pylintArgs": [
-        "--load-plugins=pylint_django"
+        // "--load-plugins=pylint_django"
     ],
     "python.pythonPath": "/bin/python3",
     "vsintellicode.features.python.deepLearning": "enabled",
     "vsintellicode.python.completionsEnabled": true,
-    "[python]": {
-        "editor.semanticHighlighting.enabled": false,
-        "editor.suggest.insertMode": "replace",
-        "editor.wordBasedSuggestions": true
-    },
-
-
-    // C++ Settings
-    "C_Cpp.autocompleteAddParentheses": true,
-    "C_Cpp.codeFolding": "Enabled",
-    "C_Cpp.updateChannel": "Default",
     "[cpp]": {
         "editor.semanticHighlighting.enabled": false,
         "editor.suggest.insertMode": "replace",
         "editor.wordBasedSuggestions": true
     },
-
-    "java.home": "/usr/lib/jvm/java-11-openjdk-amd64",
-    "java.configuration.runtimes": [
-        {
-          "name": "JavaSE-11",
-          "path": "/usr/lib/jvm/java-11-openjdk-amd64",
-        },
-    ],
-    "java.server.launchMode": "LightWeight",
-
-    "html.autoClosingTags": true,
-    "html.completion.attributeDefaultValue": "singlequotes",
-
-    // JSON Settings
-    "json.maxItemsComputed": 100000,
-
-
-    "[html]": {
-        "editor.tabSize": 2
-    },
-
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.codeFolding": "Enabled",
+    "css.format.enable": true,
+    "css.format.newlineBetweenRules": true,
+    "css.format.newlineBetweenSelectors": true,
+    "css.format.spaceAroundSelectorSeparator": true,
     "[css]": {
         "editor.tabSize": 2
     },
-
+    "java.jdt.ls.java.home": "/usr/lib/jvm/java-11-openjdk-amd64",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-11",
+            "path": "/usr/lib/jvm/java-11-openjdk-amd64"
+        }
+    ],
+    "java.server.launchMode": "LightWeight",
+    "[html]": {
+        "editor.tabSize": 2
+    },
+    "html.autoClosingTags": true,
+    "html.completion.attributeDefaultValue": "singlequotes",
+    "[dart]": {
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    },
     "[javascript]": {
         "editor.tabSize": 2
     },
-
-
+    "javascript.autoClosingTags": true,
+    "javascript.suggest.autoImports": true,
+    "javascript.suggest.completeFunctionCalls": true,
+    "javascript.suggest.enabled": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "javascript.validate.enable": false,
+    "[json]": {
+        "editor.tabSize": 2
+    },
+    "json.maxItemsComputed": 100000,
+    "[scss]": {
+        "editor.tabSize": 2
+    },
+    "[typescript]": {
+        "editor.tabSize": 2
+    },
+    "typescript.autoClosingTags": true,
+    "typescript.suggest.autoImports": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.validate.enable": false,
+    "[typescriptreact]": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": false,
+    },
+    "js/ts.implicitProjectConfig.checkJs": true,
     // Empty-Indent Extension
     "emptyIndent.highlightColor": "rgba(246,36,89,0.6)",
     "emptyIndent.highlightIndent": false,
     "emptyIndent.removeIndent": true,
-
-
     // Github Co-pilot
     "github.copilot.inlineSuggest.enable": true,
     "github.copilot.enable": {
         "*": true,
-        "yaml": false,
         "plaintext": false,
         "markdown": false
     },
-
-
     // Gitlens
     "gitlens.currentLine.enabled": true,
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.codeLens.enabled": false,
     "gitlens.statusBar.enabled": true,
-
-
     // General Setting\
     "debug.onTaskErrors": "showErrors",
-    "diffEditor.ignoreTrimWhitespace": true,
-    "extensions.ignoreRecommendations": false,
-    "files.autoSave": "onFocusChange",
+    "debug.openDebug": "openOnDebugBreak",
+    "eslint.enable": true,
+    "extensions.ignoreRecommendations": true,
+    "files.autoSave": "onWindowChange",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
     "git.autofetch": true,
     "liveServer.settings.donotShowInfoMsg": true,
     "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.https": {
+        "enable": true,
+        "cert": "/home/proxzima/.ssh/cert/cert.pem",
+        "key": "/home/proxzima/.ssh/cert/key.pem",
+        "passphrase": "1234"
+    },
+    "markdown.preview.markEditorSelection": true,
+    "markdown.preview.scrollEditorWithPreview": false,
+    "markdown.preview.scrollPreviewWithEditor": false,
+    "svg.preview.autoOpen": true,
+    "svg.preview.transparencyGrid": true,
+    "svg.preview.boundingBox": true,
     "search.exclude": {
         "**/bower_components": true,
         "**/*.code-search": true,
@@ -331,7 +362,7 @@
     },
     "files.associations": {
         "*.xml": "html",
-        "*.svg": "html",
+        "*.svg": "html"
     },
     "files.exclude": {
         "**/.DS_Store": true,
@@ -355,6 +386,5 @@
         "**/env/**": true,
         "**/venv/**": true,
         "env-*": true
-    },
-    "workbench.activityBar.visible": false
+    }
 }

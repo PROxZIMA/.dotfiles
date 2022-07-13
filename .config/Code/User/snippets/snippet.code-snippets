@@ -1,114 +1,126 @@
 {
-	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
-	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
-	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
-	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
-	// Placeholders with the same ids are connected.
-	// Example:
-	"if name is main": {
-		"scope": "python",
-		"prefix": "ifn",
-		"body": [
-			"if __name__ == '__main__':",
-			"\t$0"
-		],
-		"description": ""
-	},
-	"for in": {
-		"scope": "python",
-		"prefix": "fori",
-		"body": [
-			"for ${1:item} in ${2:items}:",
-			"\t$0"
-		],
-		"description": ""
-	},
-	"for in range": {
-		"scope": "python",
-		"prefix": "forr",
-		"body": [
-			"for ${1:i} in range($2):",
-			"\t$0"
-		],
-		"description": ""
-	},
-	"lambda": {
-		"scope": "python",
-		"prefix": "lamb",
-		"body": [
-			"lambda ${1:arg} : $0",
-		],
-		"description": ""
-	},
-	"map input": {
-		"scope": "python",
-		"prefix": "mapi",
-		"body": [
-			"map(${1:func}, input($2).split())"
-		],
-		"description": ""
-	},
-	"html boiler plate": {
-	    "scope": "html",
-	    "prefix": "html",
-	    "body": [
-	        "<!DOCTYPE html>",
-	        "<html lang=\"en\">",
+    // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+    // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+    // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+    // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+    // Placeholders with the same ids are connected.
+    // Example:
+    "if name is main": {
+        "scope": "python",
+        "prefix": "ifn",
+        "body": [
+            "if __name__ == '__main__':",
+            "\t$0"
+        ],
+        "description": ""
+    },
+    "for in": {
+        "scope": "python",
+        "prefix": "fori",
+        "body": [
+            "for ${1:item} in ${2:items}:",
+            "\t$0"
+        ],
+        "description": ""
+    },
+    "for in range": {
+        "scope": "python",
+        "prefix": "forr",
+        "body": [
+            "for ${1:i} in range($2):",
+            "\t$0"
+        ],
+        "description": ""
+    },
+    "lambda": {
+        "scope": "python",
+        "prefix": "lamb",
+        "body": [
+            "lambda ${1:arg} : $0",
+        ],
+        "description": ""
+    },
+    "map input": {
+        "scope": "python",
+        "prefix": "mapi",
+        "body": [
+            "map(${1:func}, input($2).split())"
+        ],
+        "description": ""
+    },
+    "html boiler plate": {
+        "scope": "html",
+        "prefix": "html",
+        "body": [
+            "<!DOCTYPE html>",
+            "<html lang=\"en\">",
             "",
-	        "<head>",
-	        "  <meta charset=\"utf-8\">",
-	        "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
-	        "",
-	        "  <title>${1:Basic HTML5}</title>",
-	        "  <meta name=\"author\" content=\"${3:Pratik Pingale}\">",
-	        "  <meta name=\"description\" content=\"${2:HTML5 Template}\">",
-	        "",
-	        "  <meta property=\"og:title\" content=\"${4:HTML5 Template}\">",
-	        "  <meta property=\"og:type\" content=\"website\">",
-	        "  <meta property=\"og:url\" content=\"https://$5\">",
-	        "  <meta property=\"og:description\" content=\"${6:HTML5 Template}\">",
-	        "  <meta property=\"og:image\" content=\"${7:./assets/preview.png}\">",
-	        "",
-	        "  <link rel=\"icon\" href=\"${8:./assets/favicon.ico}\">",
-	        "  <link rel=\"icon\" href=\"${9:./assets/favicon.svg}\" type=\"image/svg+xml\">",
-	        "  <link rel=\"apple-touch-icon\" href=\"${10:./assets/apple-touch-icon.png}\">",
-	        "",
-	        "  <link rel=\"stylesheet\" href=\"${11:./css/style.css}\">",
+            "<head>",
+            "  <meta charset=\"utf-8\">",
+            "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+            "",
+            "  <title>${1:Basic HTML5}</title>",
+            "  <meta name=\"author\" content=\"${2:Pratik Pingale}\">",
+            "  <meta name=\"description\" content=\"${3:HTML5 Template}\">",
+            "",
+            "  <meta property=\"og:title\" content=\"${4:HTML5 Template}\">",
+            "  <meta property=\"og:type\" content=\"website\">",
+            "  <meta property=\"og:url\" content=\"https://$5\">",
+            "  <meta property=\"og:description\" content=\"${6:HTML5 Template}\">",
+            "  <meta property=\"og:image\" content=\"${7:./assets/preview.png}\">",
+            "",
+            "  <link rel=\"icon\" href=\"${8:./assets/favicon.ico}\">",
+            "  <link rel=\"icon\" href=\"${9:./assets/favicon.svg}\" type=\"image/svg+xml\">",
+            "  <link rel=\"apple-touch-icon\" href=\"${10:./assets/apple-touch-icon.png}\">",
+            "",
+            "  <link rel=\"stylesheet\" href=\"${11:./css/style.css}\">",
+            "",
+            "</head>",
+            "",
+            "<body>",
+            "  ${0:<!-- your content here... -->}",
             "  <script src=\"${12:./js/main.js}\" defer></script>",
-	        "",
-	        "</head>",
-	        "",
-	        "<body>",
-	        "  ${0:<!-- your content here... -->}",
-	        "</body>",
+            "</body>",
             "",
-	        "</html>",
-	    ],
-	    "description": ""
-	},
+            "</html>",
+        ],
+        "description": ""
+    },
     "css boiler plate": {
         "scope": "css",
         "prefix": "css",
         "body": [
             "html {",
             "  font-family: sans-serif;",
-	        "  font-size: 100%;",
-	        "  box-sizing: border-box;",
-	        "}",
-	        "",
-	        "*, ::before, ::after {",
-	        "  box-sizing: inherit;",
-	        "}",
-	        "",
-	        "html, body {",
-	        "  margin: 0;",
-	        "  padding: 0;",
-	        "  width: 100vw;",
-	        "  min-height: 100%;",
-	        "  text-rendering: optimizeLegibility;",
-	        "}",
+            "  font-size: 100%;",
+            "  box-sizing: border-box;",
+            "}",
+            "",
+            "*, ::before, ::after {",
+            "  box-sizing: inherit;",
+            "}",
+            "",
+            "html, body {",
+            "  margin: 0;",
+            "  padding: 0;",
+            "  width: 100vw;",
+            "  min-height: 100%;",
+            "  text-rendering: optimizeLegibility;",
+            "}",
             ""
         ]
+    },
+    "consoleLog": {
+        "scope": "javascript",
+        "prefix": "clg",
+        "body": "console.log(${1:object});",
+        "description": "Displays a message in the console"
+    },
+    "consoleLogObject": {
+        "scope": "javascript",
+        "prefix": "clo",
+        "body": "console.log('${1:object} :>> ', ${1:object});",
+        "description": "Displays an object in the console with its name"
     }
 }

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/proxzima/Documents/Scripts/enable_autoscrolling.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Enable Autoscrolling
+Name=Enable Autoscrolling
+Comment[en_US]=Enable mouse middle button autoscrolling
+Comment=Enable mouse middle button autoscrolling

@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400">
+  <style>
+    .spacing-bottom-xs {
+      margin-bottom: 0.9375rem;
+    }
+
+    .spacing-bottom-s {
+      margin-bottom: 1.875rem;
+    }
+
+    .spacing-bottom-m {
+      margin-bottom: 3.75rem;
+    }
+
+    .spacing-bottom-l {
+      margin-bottom: 6.25rem;
+    }
+
+    .social-preview-twitter {
+      border: 1px solid #bec9d0;
+      border-radius: 0.42857em;
+      overflow: hidden;
+    }
+
+    .social-preview-twitter--no-card {
+      display: none;
+    }
+
+    .social-preview-twitter--no-image:not(.social-preview-twitter--summary) {
+      border-radius: 6px;
+      overflow: hidden;
+      position: relative;
+      border-color: #e1e8ee;
+    }
+
+    .social-preview-twitter--no-image:not(.social-preview-twitter--summary)::after {
+      display: block;
+      clear: both;
+      content: "";
+    }
+
+    .social-preview-twitter--no-image:not(.social-preview-twitter--summary) .social-preview-twitter__caption {
+      margin-left: 90px;
+      min-height: 90px;
+    }
+
+
+    .social-preview-twitter--summary {
+      border-radius: 6px;
+      overflow: hidden;
+      position: relative;
+      border-color: #e1e8ee;
+    }
+
+    .social-preview-twitter--summary::after {
+      display: block;
+      clear: both;
+      content: "";
+    }
+
+    .social-preview-twitter--summary .social-preview-twitter__caption {
+      margin-left: 90px;
+      min-height: 90px;
+    }
+
+    .social-preview-twitter--summary .social-preview-twitter__image {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 40px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 0;
+      width: 90px;
+      height: 100%;
+      float: left;
+    }
+
+    .social-preview-twitter * {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+      line-height: 1.3em;
+      font-size: 14px;
+      color: #38363b;
+    }
+
+    .social-preview-twitter__title {
+      color: rgb(167, 159, 147) !important;
+      font-weight: bold;
+      margin: 0 0 0.15em;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 14px;
+      line-height: 18.2px;
+      color: #000;
+    }
+
+    .social-preview-twitter__caption {
+      text-align: left;
+      padding: 0.75em;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+
+    .social-preview-twitter__description {
+      color: rgb(167, 159, 147) !important;
+      margin: 0 0 0.15em;
+      font-size: 14px;
+      line-height: 18px;
+      max-height: 36px;
+      overflow: hidden;
+      font-size: 14px;
+      line-height: 18.2px;
+      color: #000;
+    }
+
+    .social-preview-twitter__url {
+      color: rgb(167, 159, 147) !important;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 14px;
+      line-height: 18.2px;
+    }
+
+    .preview-image {
+      position: relative;
+    }
+
+    .preview-image__inner,
+    .preview-image__loading {
+      position: absolute;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .preview-image__inner span,
+    .preview-image__loading span {
+      max-width: 80%;
+      font-weight: 700;
+      margin-top: 0.9375rem;
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .preview-image__loading {
+      opacity: 0.3;
+    }
+
+  </style>
+  <foreignObject class="node" width="600" height="400">
+
+    <body xmlns="http://www.w3.org/1999/xhtml" style="margin:0;padding:0">
+      <div class="social-preview-twitter">
+        <div class="social-preview-twitter__image">
+          <div class="preview-image" style="padding-top: 52.36%;">
+            <div class="preview-image__inner" style="background-image: url('https://i.imgur.com/u3PKcw6.png');">
+            </div>
+          </div>
+        </div>
+        <div class="social-preview-twitter__caption">
+          <div class="social-preview-twitter__title">やℜ々✗¥`𝕊 ᙎ公𝙇𝙇𝕊</div>
+          <div class="social-preview-twitter__description">412 new items · Album by Pratik Pingale</div>
+          <div class="social-preview-twitter__url">photos.google.com</div>
+        </div>
+      </div>
+    </body>
+  </foreignObject>
+</svg>

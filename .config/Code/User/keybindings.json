@@ -20,9 +20,33 @@
     {
         "key": "f5",
         "command": "workbench.action.terminal.sendSequence",
+        "when": "resourceExtname == .dart",
+        "args": {
+            "text": "dart \"${file}\"\n"
+        }
+    },
+    {
+        "key": "f5",
+        "command": "workbench.action.terminal.sendSequence",
         "when": "resourceExtname == .js",
         "args": {
             "text": "node \"${file}\"\n"
+        }
+    },
+    {
+        "key": "f5",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "resourceExtname == .java",
+        "args": {
+            "text": "java \"${file}\"\n"
+        }
+    },
+    {
+        "key": "f5",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "resourceExtname == .sh",
+        "args": {
+            "text": "\"${file}\"\n"
         }
     },
     {
@@ -238,5 +262,13 @@
         "key": "ctrl+shift+m",
         "command": "-workbench.actions.view.problems",
         "when": "workbench.panel.markers.view.active"
+    },
+    {
+        "key": "ctrl+shift+0",
+        "command": "workbench.action.zoomReset"
+    },
+    {
+        "key": "ctrl+numpad0",
+        "command": "-workbench.action.zoomReset"
     }
 ]

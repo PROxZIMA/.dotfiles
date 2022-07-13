@@ -25,10 +25,10 @@ SOFTWARE.
 -->
 
 <style-scheme id="dark-dracula" name="Dark Dracula" version="1.0">
-	<author>PROxZIMA</author>
-	<_description>A darker dracula theme for Gedit</_description>
+    <author>PROxZIMA</author>
+    <_description>A darker dracula theme for Gedit</_description>
 
-	<!-- Dracula Palette -->
+	  <!-- Dracula Palette -->
     <color name="butter"                        value="#fce94f"/>
     <color name="chameleon"                     value="#8ae234"/>
     <color name="skyblue"                       value="#729fcf"/>
@@ -42,7 +42,7 @@ SOFTWARE.
 
     <color name="dark1"                         value="#1e1e1e"/>
     <color name="dark2"                         value="#303030"/>
-    <color name="background"                    value="#11131c"/>
+    <color name="background"                    value="#161925"/>
     <color name="current-line"                  value="#44475a"/>
     <color name="selection"                     value="#282a32"/>
     <color name="foreground"                    value="#f8f8f2"/>
@@ -56,51 +56,51 @@ SOFTWARE.
     <color name="yellow"                        value="#f1fa8c"/>
 
     <!-- Global Settings -->
-    <style name="text"                          foreground="bone-white" background="background"/>
+    <style name="text"                          foreground="bone-white"   background="background"/>
     <style name="selection"                     background="selection"/>
-    <style name="cursor"                        foreground="white" background="white"/>
+    <style name="cursor"                        foreground="white"        background="white"/>
     <style name="current-line"                  foreground="current-line" background="current-line"/>
     <style name="current-line-number"           background="dark2"/>
     <style name="draw-spaces"                   foreground="aluminium"/>
-    <style name="line-numbers"                  foreground="weird-gray" background="background"/>
-    <style name="bracket-match"                 foreground="bone-white" background="background" underline="true"/>
+    <style name="line-numbers"                  foreground="weird-gray"   background="background"/>
+    <style name="bracket-match"                 foreground="bone-white"   background="background" underline="true"/>
     <style name="map-overlay"                   background="rgba(136,138,133,0.25)"/>
     <style name="background-pattern"            background="#2f313e"/>
 
 
     <!-- Diagnostics Underlining -->
-    <style name="diagnostician::deprecated"     underline="error" underline-color="aluminium"/>
-    <style name="diagnostician::error"          underline="error" underline-color="red"/>
-    <style name="diagnostician::note"           underline="error" underline-color="skyblue"/>
-    <style name="diagnostician::warning"        underline="error" underline-color="orange"/>
+    <style name="diagnostician::deprecated"     underline="error"         underline-color="aluminium"/>
+    <style name="diagnostician::error"          underline="error"         underline-color="red"/>
+    <style name="diagnostician::note"           underline="error"         underline-color="skyblue"/>
+    <style name="diagnostician::warning"        underline="error"         underline-color="orange"/>
   
     <!-- Snippets -->
-    <style name="snippet::tab-stop"             background="orange" foreground="aluminium"/>
+    <style name="snippet::tab-stop"             background="orange"       foreground="aluminium"/>
     <style name="snippet::area"                 background="#rgba(86,114,151,.5)"/>
 
     <!-- Debugger -->
-    <style name="debugger::current-breakpoint"  foreground="#2e3436" background="#fcaf3e"/>
-    <style name="debugger::breakpoint"          foreground="#ffffff" background="#204a87"/>
+    <style name="debugger::current-breakpoint"  foreground="#2e3436"      background="#fcaf3e"/>
+    <style name="debugger::breakpoint"          foreground="#ffffff"      background="#204a87"/>
 
     <!-- Hover links -->
-    <style name="action::hover-definition"      background="#41464c" underline="true"/>
+    <style name="action::hover-definition"      background="#41464c"      underline="true"/>
 
     <!-- Bracket Matching -->
     <style name="bracket-match"                 foreground="chocolate"/>
-    <style name="bracket-mismatch"              foreground="aluminium" background="scarletred"/>
+    <style name="bracket-mismatch"              foreground="aluminium"    background="scarletred"/>
 
     <!-- Right Margin -->
-    <style name="right-margin"                  foreground="#484749" background="#484749"/>
+    <style name="right-margin"                  foreground="#484749"      background="#484749"/>
 
     <!-- Search Matching -->
-    <style name="search-match"                  foreground="bone-white" background="selection"/>
+    <style name="search-match"                  foreground="bone-white"   background="selection"/>
     <style name="quick-highlight-match"         background="#rgba(78,154,6,.25)"/>
 
     <!-- Search Shadow -->
     <style name="search-shadow"                 background="#rgba(0,0,0,0.4)"/>
 
     <!-- Spellchecker Matching -->
-    <style name="misspelled-match"              foreground="#000000" background="#b3d4fc"/>
+    <style name="misspelled-match"              foreground="#000000"      background="#b3d4fc"/>
 
     <!-- Comments -->
     <style name="def:comment"                   foreground="comment"/>
@@ -129,9 +129,9 @@ SOFTWARE.
 
     <!-- Others -->
     <style name="def:preprocessor"              foreground="green"/>
-    <style name="def:error"                     foreground="aluminium" background="scarletred"/>
-    <style name="def:note"                      background="butter" foreground="aluminium"/>
-    <style name="def:underlined"                italic="true" underline="true"/>
+    <style name="def:error"                     foreground="aluminium"    background="scarletred"/>
+    <style name="def:note"                      background="butter"       foreground="aluminium"/>
+    <style name="def:underlined"                italic="true"             underline="true"/>
     <style name="def:keyword"                   foreground="pink"/>
     <style name="def:specials"                  foreground="#f8f8f2"/>
 
@@ -147,9 +147,9 @@ SOFTWARE.
     -->
 
     <!-- Language specific -->
-    <style name="diff:added-line"               background="#468410" foreground="#f8f8f2"/>
+    <style name="diff:added-line"               background="#468410"      foreground="#f8f8f2"/>
     <style name="diff:removed-line"             foreground="#8b080b"/>
-    <style name="diff:changed-line"             background="#243a5f" foreground="#f8f8f2"/>
+    <style name="diff:changed-line"             background="#243a5f"      foreground="#f8f8f2"/>
     <style name="diff:diff-file"                foreground="chameleon"/>
     <style name="diff:location"                 foreground="chameleon"/>
     <style name="diff:special-case"             foreground="white"/>
@@ -165,16 +165,29 @@ SOFTWARE.
     <style name="gutter:changed-line"           foreground="butter"/>
     <style name="gutter:removed-line"           foreground="scarletred"/>
 
+    <style name="js:object"                     foreground="green"        bold="true"/>
+
     <style name="latex:command"                 foreground="chameleon"/>
     <style name="latex:include"                 use-style="def:preprocessor"/>
 
+    <style name="xml:attribute-name"            foreground="green"        bold="false"/>
+    <style name="xml:attribute-value"           foreground="yellow"/>
+    <style name="xml:entity"                    foreground="purple"/>
+
+    <style name="java:external"                 foreground="pink"/>
+    <style name="java:scope-declaration"        foreground="pink"/>
+    <style name="java:reserved"                 foreground="pink"/>
+    <style name="java:storage-class"            foreground="pink"/>
+    <style name="java:declaration"              foreground="pink"/>
+
     <!-- Symbol-tree xml-pack coloring -->
-    <style name="symboltree::label"             foreground="#000000" background="#D5E7FC"/>
-    <style name="symboltree::id"                foreground="#000000" background="#D9E7BD"/>
-    <style name="symboltree::style-class"       foreground="#000000" background="#DFCD9B"/>
-    <style name="symboltree::type"              foreground="#000000" background="#F4DAC3"/>
-    <style name="symboltree::parent"            foreground="#000000" background="#DEBECF"/>
-    <style name="symboltree::class"             foreground="#000000" background="#FFEF98"/>
-    <style name="symboltree::attribute"         foreground="#000000" background="#F0E68C"/>
+    <style name="symboltree::label"             foreground="#000000"      background="#D5E7FC"/>
+    <style name="symboltree::id"                foreground="#000000"      background="#D9E7BD"/>
+    <style name="symboltree::style-class"       foreground="#000000"      background="#DFCD9B"/>
+    <style name="symboltree::type"              foreground="#000000"      background="#F4DAC3"/>
+    <style name="symboltree::parent"            foreground="#000000"      background="#DEBECF"/>
+    <style name="symboltree::class"             foreground="#000000"      background="#FFEF98"/>
+    <style name="symboltree::attribute"         foreground="#000000"      background="#F0E68C"/>
 
 </style-scheme>
+

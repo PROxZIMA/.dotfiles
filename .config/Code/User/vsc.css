@@ -1,40 +1,63 @@
 :root {
   --tab-height: 25px;
-  --tab-radius: 6px;
+  --tab-radius: 8px;
+  --ui-radius: 6px;
   --base-color: #bd93f9;
   --gradient-one: #c50ed2;
   --gradient-two: #8500f7;
+  --side-pane-color: #232634;
+  --focus-border: #3f4f81;
   --sash-size: 2px !important;
   --sash-hover-size: 2px !important;
 }
-.monaco-workbench .part.titlebar>.window-controls-container .window-max-restore,
-.monaco-workbench .part.editor>.content>.watermark {
+
+.editor-container {
+  -webkit-font-smoothing: antialiased;
+}
+
+.monaco-workbench .part.titlebar .window-controls-container .window-icon,
+.monaco-workbench .part.editor > .content > .watermark {
   display: none !important;
 }
-.monaco-workbench .part.titlebar>.window-controls-container {
+
+.monaco-workbench .part.titlebar .window-controls-container .layout-dropdown-container {
+  margin-left: auto !important;
+}
+
+.monaco-workbench .part.titlebar > .window-controls-container {
   width: unset !important;
 }
-.monaco-workbench .part.titlebar>.window-controls-container>.window-icon {
+
+.monaco-workbench .part.titlebar > .window-controls-container > .window-icon {
   width: 30px !important;
 }
-.monaco-workbench.linux .part.titlebar>.window-title {
+
+.monaco-workbench.linux .part.titlebar > .window-title {
   font-size: 12.5px !important;
 }
-.monaco-workbench .part.titlebar .window-appicon>.home-bar-icon-badge,
-.monaco-workbench .part.titlebar>.window-appicon:not(.codicon) {
-  background-image: url(/usr/share/code/resources/app/out/vs/workbench/vsc.svg) !important;
+
+.monaco-workbench .part.titlebar > .titlebar-container .window-appicon > .home-bar-icon-badge,
+.monaco-workbench .part.titlebar > .titlebar-container > .window-appicon:not(.codicon) {
+  background-image: url(./vsc/vsc.svg) !important;
 }
-.monaco-workbench .part.editor>.content .editor-group-container.empty .editor-group-letterpress {
-  background-image: url(/usr/share/code/resources/app/out/vs/workbench/vsc-back.svg) !important;
+
+.monaco-workbench .part.editor > .content .editor-group-container.empty .editor-group-letterpress {
+  background-image: url(./vsc/vsc-back.svg) !important;
 }
-.monaco-workbench .part.editor.has-watermark>.content.empty .editor-group-container>.editor-group-letterpress {
+
+.monaco-workbench .part.editor.has-watermark > .content.empty .editor-group-container > .editor-group-letterpress {
   background-position-y: 50% !important;
 }
-.mac, .windows, .linux {
-  font-family: "FantasqueSansMono Nerd Font" !important;
-  --monaco-monospace-font: "FantasqueSansMono Nerd Font Mono" !important;
+
+.mac,
+.windows,
+.linux {
+  font-family: 'FantasqueSansMono Nerd Font' !important;
+  --monaco-monospace-font: 'FantasqueSansMono Nerd Font Mono' !important;
 }
-.monaco-sash.hover:before, .monaco-sash.active:before {
+
+.monaco-sash.hover:before,
+.monaco-sash.active:before {
   background: linear-gradient(to bottom, var(--gradient-one), var(--gradient-two)) !important;
 }
 
@@ -50,7 +73,8 @@
   background-image: linear-gradient(to top, var(--gradient-one), var(--gradient-two)) !important;
 }
 
-.monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab>.tab-border-bottom-container, .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab>.tab-border-top-container {
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab > .tab-border-bottom-container,
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab > .tab-border-top-container {
   background-image: linear-gradient(to left, var(--gradient-one), var(--gradient-two)) !important;
   height: 3px !important;
 }
@@ -61,114 +85,211 @@
 
 
 /* Hides dirty tab white dot indicator */
-.monaco-workbench .part.editor>.content .editor-group-container.active>.title .tabs-container>.tab.dirty>.tab-actions .action-label:not(:hover):before, .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.dirty>.tab-actions .action-label:not(:hover):before {
+.monaco-workbench .part.editor > .content .editor-group-container.active > .title .tabs-container > .tab.dirty > .tab-actions .action-label:not(:hover):before,
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.dirty > .tab-actions .action-label:not(:hover):before {
   content: '' !important;
 }
 
 
 /* Git icon background */
 .codicon-git-branch:before {
-    background: linear-gradient(to bottom, var(--gradient-one), var(--gradient-two)) !important;
-    -webkit-background-clip: text !important;
-    color: rgba(255, 255, 255, 0.4) !important;
+  background: linear-gradient(to bottom, var(--gradient-one), var(--gradient-two)) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: rgba(255, 255, 255, 0.4) !important;
 }
 
 /* Editor Background */
-.monaco-editor, .split-view-view .monaco-editor-background {
-  background: url(/usr/share/code/resources/app/out/vs/workbench/peek.png) bottom right / 10% auto no-repeat scroll;
-  /*background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url(/usr/share/codium/resources/app/out/vs/workbench/bg.jpg) center center / auto 100vh no-repeat scroll;*/
+.monaco-editor,
+.split-view-view .monaco-editor-background {
+  background: url(./vsc/pek.png) bottom right / 10% auto no-repeat scroll;
+  /*background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url(./vsc/bg.jpg) center center / auto 100vh no-repeat scroll;*/
 }
 
 
 /* Scrollbar */
-.monaco-scrollable-element>.scrollbar>.slider {
+.monaco-scrollable-element > .scrollbar > .slider {
   border-radius: 7px !important;
 }
-.monaco-scrollable-element>.scrollbar>.slider.active {
+
+.monaco-scrollable-element > .scrollbar > .slider.active {
   background: linear-gradient(to top, var(--gradient-one), var(--gradient-two)) !important;
 }
+
 canvas.decorationsOverviewRuler,
-.monaco-scrollable-element>.scrollbar.vertical,
-.monaco-scrollable-element>.scrollbar.vertical>.slider {
+.monaco-scrollable-element > .scrollbar.vertical,
+.monaco-scrollable-element > .scrollbar.vertical > .slider {
   width: 7px !important;
 }
-.monaco-scrollable-element>.scrollbar.horizontal,
-.monaco-scrollable-element>.scrollbar.horizontal>.slider {
+
+.monaco-scrollable-element > .scrollbar.horizontal,
+.monaco-scrollable-element > .scrollbar.horizontal > .slider {
   height: 7px !important;
 }
-.monaco-scrollable-element>.scrollbar.horizontal>.slider {
+
+.monaco-scrollable-element > .scrollbar.horizontal > .slider {
   width: 135px !important;
 }
 
 
-/* Active tab border  (It's a bit cringe)
+/* Rounded UI */
+
+
+/* Suggestions */
+.monaco-editor .monaco-hover,
+.monaco-editor .suggest-widget,
+.monaco-editor .suggest-details {
+  border-radius: var(--ui-radius) !important;
+  overflow: hidden !important;
+  box-shadow: rgb(0 0 0 / 36%) 0px 2px calc(var(--ui-radius) + 2px) !important;
+}
+
+/* Left pane selected file */
+.pane .pane-body,
+.pane .pane-body .monaco-list,
+.pane .pane-body .monaco-list .monaco-scrollable-element,
+.pane .pane-body .monaco-list .monaco-scrollable-element .monaco-list-rows,
+.pane .pane-body .monaco-list .monaco-scrollable-element .monaco-list-rows .monaco-list-row {
+  overflow: visible !important;
+}
+
+.open-editors .monaco-list .monaco-list-row {
+  padding-left: 0px !important;
+}
+
+.monaco-list-row:hover,
+.monaco-list-row.selected,
+.monaco-list-row.focused {
+  border-radius: 0 var(--ui-radius) var(--ui-radius) 0 !important;
+}
+
+.monaco-workbench .monaco-list:not(.element-focused):focus:before,
+.monaco-select-box,
+.monaco-select-box-dropdown-container,
+.monaco-select-box-dropdown-container .monaco-list-row:hover,
+.monaco-select-box-dropdown-container .monaco-list-row.selected,
+.monaco-select-box-dropdown-container .monaco-list-row.focused {
+  border-radius: var(--ui-radius) !important;
+}
+
+.monaco-list-row.selected::before,
+.monaco-list-row.selected::after {
+  --ui-radius: 6px;
+  content: '' !important;
+  display: block !important;
+  position: absolute !important;
+  width: var(--ui-radius) !important;
+  height: var(--ui-radius) !important;
+  left: 0 !important;
+  pointer-events: none !important;
+}
+
+.monaco-list-row.selected::before {
+  top: calc(0px - var(--ui-radius)) !important;
+  background: radial-gradient(circle at 100% 0%, transparent 70.71%, var(--side-pane-color) 29.289%) no-repeat;
+  background-position: 100% 0%;
+}
+
+.monaco-list-row.selected::after {
+  bottom: calc(0px - var(--ui-radius)) !important;
+  background: radial-gradient(circle at 100% 100%, transparent 70.71%, var(--side-pane-color) 29.289%) no-repeat;
+  background-position: 100% 100%;
+}
+
+.monaco-button.monaco-text-button {
+  border-radius: var(--ui-radius) !important;
+}
+
+
+/* Active tab (Without border) */
+
 .tab:first-child {
-  margin-left: calc(var(--tab-radius) - 2px) !important;
+  margin-left: var(--tab-radius) !important;
+  /* margin-left: calc(var(--tab-radius) - 2px) !important; */
 }
+
 .tab:last-child {
-  margin-right: calc(var(--tab-radius) - 2px) !important;
+  margin-right: var(--tab-radius) !important;
+  /* margin-right: calc(var(--tab-radius) - 2px) !important; */
 }
+
 .tab.active {
-  border: 2px solid var(--base-color) !important;
-  background-color: transparent !important; /* rgb(20, 24, 34)
+  /* border: 2px solid var(--base-color) !important; */
+  /* background-color: transparent !important; */
+  /* rgb(20, 24, 34) */
   border-radius: var(--tab-radius) var(--tab-radius) 0 0 !important;
-  border-bottom: 2px solid #0c0e14 !important;
-  z-index: 1 !important;
+  /* border-bottom: 2px solid #0c0e14 !important; */
+  /* z-index: 1 !important; */
 }
-/* Border bottom radius
+
+.tab.dirty-border-top > .tab-border-top-container {
+  border-radius: var(--tab-radius) var(--tab-radius) 0 0 !important;
+}
+
+/* Border bottom radius*/
 .tab.active::before,
 .tab.active::after {
-    content: '' !important;
-    display: block !important;
-    box-sizing: border-box !important;
-    position: absolute !important;
-    z-index: 999999;
-    width: var(--tab-radius) !important;
-    height: var(--tab-radius) !important;
-    bottom: -2px !important;
-    pointer-events: none !important;
-    border-bottom: 2px solid var(--base-color) !important;
+  --tab-radius: 8px;
+  --tab-color: #161925;
+  content: '' !important;
+  display: block !important;
+  box-sizing: border-box !important;
+  position: absolute !important;
+  z-index: 1;
+  width: var(--tab-radius) !important;
+  height: var(--tab-radius) !important;
+  bottom: 0px !important;
+  /* bottom: -2px !important; */
+  pointer-events: none !important;
+  /* border-bottom: 2px solid var(--base-color) !important; */
 }
 
 .tab.active::before {
-    border-bottom-right-radius: var(--tab-radius) !important;
-    left: 0 !important;
-    transform: translateX(calc(0px - var(--tab-radius))) !important;
-    border-right: 2px solid var(--base-color) !important;
-    box-shadow: 2px 2px 0 2px #0c0e14 !important;
+  left: calc(0px - var(--tab-radius)) !important;
+  /* transform: translateX(calc(0px - var(--tab-radius))) !important; */
+  /* border-right: 2px solid var(--base-color) !important; */
+  border-bottom-right-radius: var(--tab-radius) !important;
+  box-shadow: 3px 3px 0 3px var(--tab-color) !important;
+  /* background: radial-gradient(circle at 0% 0%, transparent 70.71%, var(--tab-color) 29.289%) no-repeat;
+  background-position: 0% 0%; */
 }
 
 .tab.active::after {
-    border-bottom-left-radius: var(--tab-radius) !important;
-    right: 0 !important;
-    transform: translateX(calc(var(--tab-radius))) !important;
-    border-left: 2px solid var(--base-color) !important;
-    box-shadow: -2px 2px 0 2px #0c0e14 !important;
+  right: 0 !important;
+  transform: translateX(var(--tab-radius)) !important;
+  /* border-left: 2px solid var(--base-color) !important; */
+  border-bottom-left-radius: var(--tab-radius) !important;
+  box-shadow: -3px 3px 0 3px var(--tab-color) !important;
+  /* background: radial-gradient(circle at 100% 0%, transparent 70.71%, var(--tab-color) 29.289%) no-repeat;
+  background-position: 100% 0%; */
 }
-.tabs-container:before {
+
+/* .tabs-container:before {
   content: '' !important;
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  background: linear-gradient(90deg, rgb(12,14,20),rgb(189, 172, 255),rgb(189,147,249),rgb(189,147,249),rgb(189,147,249),rgb(189,172,249), rgb(12,14,20)) !important;
+  background: linear-gradient(90deg, rgb(12, 14, 20), rgb(189, 172, 255), rgb(189, 147, 249), rgb(189, 147, 249), rgb(189, 147, 249), rgb(189, 172, 249), rgb(12, 14, 20)) !important;
   clip: rect(33px, 2600px, 33px, 0px) !important;
   position: absolute !important;
 }
+
 .tabs-container:after {
   content: '' !important;
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  background: linear-gradient(90deg, rgb(12,14,20),rgb(189, 172, 255),rgb(189,147,249),rgb(189,147,249),rgb(189,147,249),rgb(189,172,249), rgb(12,14,20)) !important;
+  background: linear-gradient(90deg, rgb(12, 14, 20), rgb(189, 172, 255), rgb(189, 147, 249), rgb(189, 147, 249), rgb(189, 147, 249), rgb(189, 172, 249), rgb(12, 14, 20)) !important;
   clip: rect(33px, 2600px, 35px, 0px) !important;
   position: absolute !important;
 }
+
 .tab-label > .monaco-icon-label-container::after {
   background: transparent !important;
-}
-*/
+} */
+
 
 
 /* Tab height (Won't work perfectly cuz along with this js is required to adjust editor's height) So not recommended to use this

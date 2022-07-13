@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Exec=bash -c '"/home/proxzima/.local/bin/video-wallpaper.sh" --start  "false"'
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=false
+Name=video-wallpaper

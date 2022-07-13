@@ -1,15 +1,18 @@
 
 alias sudo='sudo '
 alias python='python3'
-alias snautilus='sudo -b dbus-launch nohup nautilus 2>/dev/null'
-alias nautilus='nohup nautilus 2>/dev/null & disown'
-alias sedit='sudo -b dbus-launch nohup gedit 2>/dev/null'
-alias cls='clear'
+alias snaut='sudo gtk-launch org.gnome.Nautilus.desktop'
+alias naut='gtk-launch org.gnome.Nautilus.desktop'
+alias sedit='sudo gtk-launch org.gnome.gedit.desktop'
+alias edit='gtk-launch org.gnome.gedit.desktop'
+alias nvide='nvide --multigrid'
+alias cls="clear && printf '\e[3J'"
 alias cat='bat -p'
 alias gitd='~/Documents/Scripts/gitDownload.sh'
 alias wttr='curl "wttr.in/Pune?0qM"'
 alias usage='du -ah -d1 | sort -rn 2>/dev/null'
 alias vim='nvim'
+alias nf='neofetch --source ~/Pictures/fubuki.jpg --size 360 --yoffset 2'
 alias swire='SoundWireServer'
 alias animerelease='python ~/Documents/Scripts/animeRelease.py'
 alias pdfcrop='python ~/Documents/Scripts/pdfCrop.py'
@@ -30,6 +33,7 @@ alias egrep='egrep --color=auto'
 alias boot-options='pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY HOME=$HOME garuda-boot-options -style kvantum 2>/dev/null & disown'
 
 # Common use
+alias update="sudo sh -c 'apt update && apt full-upgrade && apt autoremove && apt clean'"
 alias aup="sudo sh -c 'pamac upgrade --aur; pamac clean -b'"
 alias grubup='sudo update-grub'
 alias fixpacman='sudo rm /var/lib/pacman/db.lck'

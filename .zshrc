@@ -20,7 +20,7 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/.local/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/.local/bin:$HOME/.local/bin/flutter/bin:$HOME/.local/dex
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -61,7 +61,20 @@ setopt autocd                   # if only directory path is entered, cd there.
 setopt auto_pushd
 setopt pushd_ignore_dups
 setopt pushdminus
+setopt inc_append_history
 
+unsetopt extended_history
+unsetopt EXTENDED_HISTORY
+
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_BEEP
+
+setopt incappendhistorytime
 
 # Completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
@@ -89,14 +102,40 @@ DISABLE_AUTO_UPDATE="true"
 # Exports
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export HISTSIZE=1000000000
+export HISTFILESIZE=1000000000
+export HISTTIMEFORMAT=" "
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
 export PYTHONDONTWRITEBYTECODE=1
+export PYTHONSTARTUP=~/.python_startup.py
 export PROMPT_EOL_MARK=""
 export GPG_TTY='tty'
+export SUBDOMAIN=ftw
+export API_SUBDOMAIN=127.0.0.1
 export WINEARCH=win64
 export JDK_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+export CHROME_EXECUTABLE="/usr/lib/chromium-browser/chromium-browser"
+
+export HADOOP_HOME=/home/proxzima/.local/bin/hadoop
+export HADOOP_INSTALL=$HADOOP_HOME
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export YARN_HOME=$HADOOP_HOME
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/nativ"
+# export HADOOP_OPTS="-Dlog4j.debug=true,-Djava.library.path=$HADOOP_HOME/lib/nativ"
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$HOME/.pub-cache/bin
 
 # colorize man pages
 export LESS_TERMCAP_mb=$'\e[1;32m'
@@ -109,6 +148,8 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 export LESSHISTFILE=-
 
 export BAT_PAGER="less -RF"
+export NVM_DIR="$HOME/.nvm"
+export NODE_PATH="$HOME/.nvm/versions/node/v16.14.2/lib/node_modules/"
 
 # aliases
 if [ -f ~/.aliases ]; then
@@ -119,15 +160,13 @@ fi
 
 # Functions
 lnvm () {
-  source ~/.nvm/nvm.sh
-  source ~/.nvm/bash_completion
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 }
 
 cht() {curl cht.sh/$1}
 
 syu() {sudo sh -c 'SKIP_AUTOSNAP= pacman -Syu; pamac upgrade --aur; pamac clean -b'}
-
-edit() {gedit "$1" 2>/dev/null & disown}
 
 suck() {surf -bDfgIkMnS "$1" 2>/dev/null & disown}
 
@@ -139,9 +178,14 @@ myip() {json=$(curl -s https://ipinfo.io/);echo " Local IP : $(hostname -i | awk
 
 ff() {firefox -width 900 -height 600 -P app "$1" 2>/dev/null & disown}
 
-ydl() {youtube-dl -ix --audio-format mp3 --audio-quality 0 -o '~/Downloads/songs/%(title)s.%(ext)s' "$1"}
+ydl() {yt-dlp -ix --audio-format mp3 --audio-quality 0 -o '~/Downloads/songs/%(title)s.%(ext)s' "$1"}
 
-ydlp() {youtube-dl -icx --yes-playlist --audio-format mp3 --audio-quality 0 -o '~/Downloads/songs/%(playlist)s/%(title)s.%(ext)s' "$1"}
+ydlp() {yt-dlp -icx --yes-playlist --audio-format mp3 --audio-quality 0 -o '~/Downloads/songs/%(playlist)s/%(title)s.%(ext)s' "$1"}
 
 mkfile() {mkdir -p "$(dirname "$1")" && touch "$1";}
 
+# The next line updates PATH for the Google Cloud SDK.
+# if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+# if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-sdk/completion.zsh.inc'; fi

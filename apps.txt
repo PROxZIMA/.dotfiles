@@ -1,3 +1,4 @@
+Android Studio
 Audacity
 Dconf
 Firefox
@@ -6,16 +7,21 @@ Gnome Tweaks
 Gparted
 Gpick
 LibreOffice
+Lite-XL
 Meld
 Microsoft Teams
+MPV Media Player
+Museeks
 Neovim
 OBS
+ProtonVPN
 PulseAudio
-Qalculate!
+Qalculate
+Qbittorrent
+Slack
 Syncthing
-Telegram
 Timeshift
-TLP
+TLP, TLPUI
 VLC
 VSCodium
 
@@ -23,9 +29,13 @@ Gnome Extensions:
 ArcMenu
 Clipboard Indicator
 Dash to Panel
-Emoji Selector 
+Emoji Selector
 GSConnect
 Net speed Simplified
-Panel OSD
+Tiling Assistant
 Unite
 User Themes
+
+Cosmic Workspace
+Pop Cosmic
+Cosmic Shell
