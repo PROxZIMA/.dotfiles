@@ -1,5 +1,5 @@
 <div align="center">
-  <pre><br><br><br><a href='#'><img align="center" width='80%' src="./assets/dots.png" alt="PROXY'S DOTS"></a><br><br><br><br></pre>
+  <br><br><br><a href='#'><img align="center" width='80%' src="./assets/dots.png" alt="PROXY'S DOTS"></a><br><br><br><br>
 </div>
 
 <h3 align="center">Terminal</h3>
@@ -165,7 +165,7 @@
 ```
 
 ## Wallpapers
-[<img src="./assets/photos.png" width="350" title="Wallpapers">](https://photos.app.goo.gl/h7EE46K7qDgLpQUv9)
+[<img src="./assets/photos.png" width="500" title="Wallpapers">](https://photos.app.goo.gl/h7EE46K7qDgLpQUv9)
 
 ## Vscode
 Configs should be placed in `~/.config/[code|vscodium]/User`. Theme used in screenshot is [`Sweet Dracula`](https://marketplace.visualstudio.com/items?itemName=PROxZIMA.sweetdracula) (Made by me 😁)
@@ -179,7 +179,7 @@ Configs should be placed in `~/.config/[code|vscodium]/User`. Theme used in scre
     $ ln -s '/full/path/to/.dotfiles/.icons/default/vsc/' $prefix
     ```
 - Open `$prefix/workbench.html` and add `<link rel="stylesheet" href='vsc.css'>` inside the `<head>` tag.
-- Restart Vscode. Now Vscode will show a popup `Your code installation appears to be corrupt` as you modified a core file. To fix this open command palette and execute `Fix Checksums: Apply`. Restart again.
+- Restart Vscode. Now Vscode will show a popup `Your code installation appears to be corrupt` because a core file is modified. To fix this open command palette and execute `Fix Checksums: Apply`. Restart again.
   - Perform above 2 steps every time vscode is updated.
 - ***Boom!!!***
 - If you don't want to touch the core file (which is not a big deal) you can use [`Customize UI`](https://marketplace.visualstudio.com/items?itemName=iocave.customize-ui).
