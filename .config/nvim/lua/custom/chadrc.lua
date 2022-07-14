@@ -46,6 +46,10 @@ M.plugins = {
                 enable = true,
                 ignore = false
             },
+            view = {
+                adaptive_size = false,
+                hide_root_folder = false,
+            },
             actions = {
                 open_file = {
                     resize_window = false,
