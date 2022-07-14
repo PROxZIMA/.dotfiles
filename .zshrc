@@ -164,6 +164,85 @@ lnvm () {
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 }
 
+
+copydots() {
+    _USER=/home/proxzima;
+    _DOTS=$_USER/.dotfiles;
+    _USERCONFIG=$_USER/.config;
+    _USERLOCALS=$_USER/.local/share;
+    _USERAPPS=$_USERLOCALS/applications;
+    _DOTSCONFIG=$_DOTS/.config;
+    _DOTSLOCALS=$_DOTS/.local/share;
+    _DOTSAPPS=$_DOTSLOCALS/applications;
+    cp () { rsync -a --mkpath "$@" };
+    cpin () { rsync -rvqO --inplace --exclude '.git*' "$@" };
+
+    cp $_USER/Downloads/ArcMenu $_DOTSCONFIG/ArcMenu/;
+    cp $_USER/Downloads/ArcTheme $_DOTSCONFIG/ArcMenu/;
+    cp $_USER/Downloads/dash-to-panel $_DOTSCONFIG/Dash-to-Panel/;
+    cp $_USERCONFIG/alacritty $_DOTSCONFIG/;
+    cp $_USERCONFIG/autostart $_DOTSCONFIG/;
+    cp $_USERCONFIG/btop $_DOTSCONFIG/;
+    cp $_USERCONFIG/kitty $_DOTSCONFIG/;
+    cp $_USERCONFIG/Code/User/snippets $_DOTSCONFIG/Code/User/;
+    cp $_USERCONFIG/Code/User/keybindings.json $_DOTSCONFIG/Code/User/;
+    cp $_USERCONFIG/Code/User/settings.json $_DOTSCONFIG/Code/User/;
+    cp $_USERCONFIG/Code/User/vsc.css $_DOTSCONFIG/Code/User/;
+    cp $_USERCONFIG/fish $_DOTSCONFIG/;
+    cpin $_USERCONFIG/lite-xl $_DOTSCONFIG/;
+    rm -r $_DOTSCONFIG/lite-xl/colors;
+    cp $_USERCONFIG/lite-xl/colors/dracula.lua $_DOTSCONFIG/lite-xl/colors/;
+    cp $_USERCONFIG/mpv $_DOTSCONFIG/;
+    cp $_USERCONFIG/neofetch $_DOTSCONFIG/;
+    cpin $_USERCONFIG/nvim $_DOTSCONFIG/;
+    cp $_USERCONFIG/starship.toml $_DOTSCONFIG/;
+    cp $_USERCONFIG/ascii.txt $_DOTSCONFIG/;
+    cp $_USERLOCALS/arcmenu $_DOTSLOCALS/;
+    cp $_USERLOCALS/fonts $_DOTSLOCALS/;
+    rm $_DOTSLOCALS/fonts/.uuid;
+    cp $_USER/.icons $_DOTS/;
+    cp $_USER/.ipython/profile_default/ipython_config.py $_DOTS/.ipython/profile_default/;
+    cp $_USER/.python_startup.py $_DOTS/;
+    cp $_USER/.mongodb $_DOTS/;
+    cp $_USER/.zshrc $_DOTS/;
+    cp $_USER/.aliases $_DOTS/;
+    cp $_USER/.tmux.conf $_DOTS/;
+    cp $_USER/.p10k.zsh $_DOTS/;
+    cp /usr/share/gtksourceview-4/styles/dracula.xml $_DOTS/usr/share/gtksourceview-4/styles/;
+    cp /usr/share/sushi/gtksourceview-4/styles/builder-dark.style-scheme.xml $_DOTS/usr/share/sushi/gtksourceview-4/styles/;
+
+    cp $_USERCONFIG/KADOKAWA/RPGMV/*.rpgsave $_DOTSCONFIG/KADOKAWA/RPGMV/;
+    cp $_USERCONFIG/obs-studio/basic/profiles/proxima $_DOTSCONFIG/obs-studio/basic/profiles/;
+    cp $_USERCONFIG/lsd $_DOTSCONFIG/;
+    cp $_USERCONFIG/mimeapps.list $_DOTSCONFIG/;
+    cp $_USERAPPS/ToN.desktop $_DOTSAPPS/;
+    cp $_USERAPPS/gmail.desktop $_DOTSAPPS/;
+    cp $_USERAPPS/office.desktop $_DOTSAPPS/;
+    cp $_USERAPPS/androidstudio.desktop $_DOTSAPPS/;
+    cp $_USERAPPS/kitty.desktop $_DOTSAPPS/;
+    cp $_USERAPPS/lite_xl.desktop $_DOTSAPPS/;
+    cp $_USERLOCALS/fish/fish_history $_DOTSLOCALS/fish/;
+    cpin $_USERLOCALS/lite-xl $_DOTSLOCALS/;
+    cp $_USER/.gnupg $_DOTS/;
+    cp $_USER/.mycli-history $_DOTS/;
+    cp $_USER/.myclirc $_DOTS/;
+    cp $_USER/.ovsx_vsce $_DOTS/;
+    cp $_USER/.gitconfig $_DOTS/;
+    cp $_USER/.git-credentials $_DOTS/;
+    cp $_USER/.ipython/profile_default/history.sqlite $_DOTS/.ipython/profile_default/;
+    cpin --stderr=c $_USER/.oh-my-zsh $_DOTS/ 2>/dev/null;
+    cp $_USER/.nvidia-settings-rc $_DOTS/;
+    cp $_USER/.psql_history $_DOTS/;
+    cp $_USER/.python_history $_DOTS/;
+    cp $_USER/.ssh $_DOTS/;
+    cp $_USER/.vsce $_DOTS/;
+    cp $_USER/.xsessionrc $_DOTS/;
+    cp $_USER/.zsh_history $_DOTS/;
+    cp $_USER/Templates $_DOTS/;
+
+    unset -f cp;
+}
+
 cht() {curl cht.sh/$1}
 
 syu() {sudo sh -c 'SKIP_AUTOSNAP= pacman -Syu; pamac upgrade --aur; pamac clean -b'}
