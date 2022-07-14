@@ -1,7 +1,7 @@
 math.randomseed(os.time()) -- For random header.
 
 vim.cmd("cd " .. vim.fn.expand("%:p:h"))
-vim.o.guifont = "Operator Mono SSm Lig Book,FiraCode Nerd Font,Hack Nerd Font Mono,JetBrainsMono Nerd Font,codicon:h11"
+vim.o.guifont = "FiraCode Nerd Font,Operator Mono SSm Lig Book,FiraCode Nerd Font,Hack Nerd Font Mono,JetBrainsMono Nerd Font,codicon:h11"
 
 vim.api.nvim_create_user_command("Config", [[edit $MYVIMRC]], {})
 vim.api.nvim_create_user_command("ConfigReload", require "custom.plugins.reload", {})
@@ -44,10 +44,21 @@ M.plugins = {
             ignore_buffer_on_setup = true,
             git = {
                 enable = true,
+                ignore = false
+            },
+            actions = {
+                open_file = {
+                    resize_window = false,
+                },
             },
             renderer = {
-                highlight_opened_files = "all"
-            }
+                highlight_git = true,
+                icons = {
+                    show = {
+                        folder_arrow = false
+                    }
+                },
+            },
         },
         ["hrsh7th/nvim-cmp"] = {
             formatting = {
