@@ -60,11 +60,6 @@ M.statusline_separators = {
       left = "",
       right = "",
    },
-
-   fire = {
-      left = " ",
-      right = "  ",
-   },
 }
 
 M.devicons = {

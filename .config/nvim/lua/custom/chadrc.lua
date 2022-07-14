@@ -18,8 +18,8 @@ local M = {}
 M.ui = {
     theme = "onedark",
     statusline = {
-        separator_style = "fire"
-    }
+        override = require "custom.plugins.statusline"
+    },
 }
 
 M.lspkind = {
@@ -63,7 +63,7 @@ M.plugins = {
                 val = Headers[math.random(#Headers)],
                 opts = {
                     hl = pick_color(),
-                 },
+                },
             }
         }
     }
