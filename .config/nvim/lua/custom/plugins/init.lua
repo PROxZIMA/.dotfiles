@@ -5,6 +5,7 @@ return {
             require "plugins.configs.nvimtree"
         end
     },
+
     ["goolord/alpha-nvim"] = {
         after = "base46",
         disable = false,
@@ -12,13 +13,36 @@ return {
            require "plugins.configs.alpha"
         end
     },
-    ["neovim/nvim-lspconfig"] = {
-        after = "nvim-lsp-installer",
-        module = "lspconfig",
+
+    -- autoclose tags in html, jsx etc
+    ["windwp/nvim-ts-autotag"] = {
+        ft = { "html", "javascriptreact" },
+        after = "nvim-treesitter",
         config = function()
-            require "plugins.configs.lsp_installer"
-            require "plugins.configs.lspconfig"
-            require "custom.plugins.lspconfig"
-        end
-    }
+            require("custom.plugins.smolconfigs").autotag()
+        end,
+    },
+
+    -- format & linting
+    ["jose-elias-alvarez/null-ls.nvim"] = {
+        after = "nvim-lspconfig",
+        config = function()
+            require "custom.plugins.null-ls"
+        end,
+    },
+
+    -- dim inactive windows
+    ["andreadev-it/shade.nvim"] = {
+        module = "shade",
+        config = function()
+            require("custom.plugins.smolconfigs").shade()
+        end,
+    },
+
+    ["Pocco81/AutoSave.nvim"] = {
+        module = "autosave",
+        config = function()
+            require("custom.plugins.smolconfigs").autosave()
+        end,
+    },
 }

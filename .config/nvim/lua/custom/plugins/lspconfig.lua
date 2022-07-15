@@ -1,56 +1,31 @@
-local present, lspconfig = pcall(require, "lspconfig")
+local M = {}
 
-if not present then
-   return
+M.setup_lsp = function(attach, capabilities)
+    local lspconfig = require "lspconfig"
+
+    local servers = { "html", "cssls", "bashls", "emmet_ls", "clangd", "pyright" }
+
+    for _, lsp in ipairs(servers) do
+        lspconfig[lsp].setup {
+            on_attach = attach,
+            capabilities = capabilities,
+            root_dir = vim.loop.cwd,
+        }
+    end
+
+    -- temporarily disable tsserver suggestions
+    require("lspconfig").tsserver.setup {
+        init_options = {
+            preferences = {
+                disableSuggestions = true,
+            },
+        },
+
+        on_attach = function(client, bufnr)
+            client.resolved_capabilities.document_formatting = false
+            vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>fm", "<cmd>lua vim.lsp.buf.formatting()<CR>", {})
+        end,
+    }
 end
 
-require("base46").load_highlight "lsp"
-
-require "ui.lsp"
-
-lspconfig.jedi_language_server.setup({
-	init_options = {
-		codeAction = {
-			nameExtractVariable = 'jls_extract_var',
-			nameExtractFunction = 'jls_extract_def',
-		},
-		completion = {
-			disableSnippets = false,
-			resolveEagerly = false,
-			ignorePatterns = {},
-		},
-		diagnostics = {
-			enable = true,
-			didOpen = true,
-			didChange = true,
-			didSave = true,
-		},
-		hover = {
-			enable = true,
-			disable = {
-				class = { all = false, names = {}, fullNames = {} },
-				["function"] = { all = false, names = {}, fullNames = {} },
-				instance = { all = false, names = {}, fullNames = {} },
-				keyword = { all = false, names = {}, fullNames = {} },
-				module = { all = false, names = {}, fullNames = {} },
-				param = { all = false, names = {}, fullNames = {} },
-				path = { all = false, names = {}, fullNames = {} },
-				property = { all = false, names = {}, fullNames = {} },
-				statement = { all = false, names = {}, fullNames = {} },
-			},
-		},
-		jediSettings = {
-			autoImportModules = {},
-			caseInsensitiveCompletion = true,
-			debug = false,
-		},
-		markupKindPreferred = "markdown",
-		workspace = {
-			extraPaths = {},
-			symbols = {
-				ignoreFolders = { ".nox", ".tox", ".venv", "__pycache__", "venv" },
-				maxSymbols = 20,
-			},
-		},
-	},
-})
+return M
