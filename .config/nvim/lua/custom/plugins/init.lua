@@ -7,11 +7,7 @@ return {
     },
 
     ["goolord/alpha-nvim"] = {
-        after = "base46",
-        disable = false,
-        config = function()
-           require "plugins.configs.alpha"
-        end
+        disable = false
     },
 
     -- autoclose tags in html, jsx etc
@@ -36,6 +32,14 @@ return {
         module = "shade",
         config = function()
             require("custom.plugins.smolconfigs").shade()
+        end,
+    },
+
+    -- tabbar
+    ["akinsho/bufferline.nvim"] = {
+        after = "base46",
+        config = function()
+            require("custom.plugins.smolconfigs").bufferline()
         end,
     },
 

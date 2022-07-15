@@ -30,4 +30,29 @@ M.autosave = function()
     end
 end
 
+M.bufferline = function()
+    local present, bufferline = pcall(require, "bufferline")
+
+    if not present then
+        return
+    end
+
+    bufferline.setup {
+        options = {
+            right_mouse_command = "vertical sbuffer %d",
+            middle_mouse_command = "",
+            diagnostics = "nvim_lsp",
+            offsets = {
+                {
+                    filetype = "NvimTree",
+                    text = "",
+                    highlight = "Directory",
+                    text_align = "center"
+                }
+            },
+            separator_style = "thin",
+        }
+    }
+end
+
 return M

@@ -50,7 +50,6 @@ M.treesitter = {
         "c",
         "bash",
         "lua",
-        "norg",
     },
 }
 
@@ -108,7 +107,8 @@ M.chadui =  {
         end,
     },
     tabufline = {
-        lazyload = false
+        enabled = false,
+        lazyload = false,
     },
 }
 
