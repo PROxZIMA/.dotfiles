@@ -1,10 +1,12 @@
 local M = {}
 
 local override = require "custom.override"
+local highlights = require "custom.highlights"
 
 M.ui = {
-    theme = "onedark",
-    -- hl_add = require "custom.highlights",
+    theme = "sweetdracula",
+    theme_toggle = { "sweetdracula", "one_light" },
+    hl_override = highlights,
 }
 
 M.plugins = {

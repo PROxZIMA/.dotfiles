@@ -39,7 +39,7 @@ return {
     ["akinsho/bufferline.nvim"] = {
         after = "base46",
         config = function()
-            require("custom.plugins.smolconfigs").bufferline()
+            require "custom.plugins.bufferline"
         end,
     },
 

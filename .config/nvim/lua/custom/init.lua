@@ -1,5 +1,6 @@
 vim.cmd("cd " .. vim.fn.expand("%:p:h"))
-vim.o.guifont = "FiraCode Nerd Font,Operator Mono SSm Lig Book,FiraCode Nerd Font,Hack Nerd Font Mono,JetBrainsMono Nerd Font,codicon:h11"
+vim.cmd("function! TbToggle_theme(a,b,c,d) \n lua require('base46').toggle_theme() \n endfunction")
+vim.o.guifont = "FiraCode Nerd Font,Operator Mono SSm Lig Book Italic,Hack Nerd Font Mono,JetBrainsMono Nerd Font,codicon:h11"
 
 vim.api.nvim_create_user_command("Config", [[edit $MYVIMRC]], {})
 vim.api.nvim_create_user_command("ConfigReload", require "custom.reload", {})
