@@ -173,12 +173,12 @@ Configs should be placed in `~/.config/[code|vscodium]/User`. Theme used in scre
 - `.dotfiles/.config/Code/User/vsc.css` is a special CSS file which I use to modify vscode's UI (Vscode core file is edited so follow steps with care).
     ```sh
     $ # Replace [code|codium|vscodium-bin] with appropriate folder name.
-    $ resPrefix=/usr/share/[code|codium|vscodium-bin]/resources/app/out/vs/code/electron-browser/workbench
+    $ resPrefix=/usr/share/[code|codium|vscodium-bin]/resources/app/out/vs/code/electron-[browser|sandbox]/workbench
     $ # Symlink required files in the above folder.
-    $ ln -s '/full/path/to/.dotfiles/.config/Code/User/vsc.css' $prefix
-    $ ln -s '/full/path/to/.dotfiles/.icons/default/vsc/' $prefix
+    $ ln -s '/full/path/to/.dotfiles/.config/Code/User/vsc.css' $resPrefix
+    $ ln -s '/full/path/to/.dotfiles/.icons/default/vsc/' $resPrefix
     ```
-- Open `$prefix/workbench.html` and add `<link rel="stylesheet" href='vsc.css'>` inside the `<head>` tag.
+- Open `$resPrefix/workbench.html` and add `<link rel="stylesheet" href='vsc.css'>` inside the `<head>` tag.
 - Restart Vscode. Now Vscode will show a popup `Your code installation appears to be corrupt` because a core file is modified. To fix this open command palette and execute `Fix Checksums: Apply`. Restart again.
   - Perform above 2 steps every time vscode is updated.
 - ***Boom!!!***
