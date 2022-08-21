@@ -179,7 +179,10 @@ Configs should be placed in `~/.config/[code|vscodium]/User`. Theme used in scre
     $ ln -s '/full/path/to/.dotfiles/.icons/default/vsc/' $resPrefix
     ```
 - Open `$resPrefix/workbench.html` and add `<link rel="stylesheet" href='vsc.css'>` inside the `<head>` tag.
-- Restart Vscode. Now Vscode will show a popup `Your code installation appears to be corrupt` because a core file is modified. To fix this open command palette and execute `Fix Checksums: Apply`. Restart again.
+    ```sh
+    $ sed -i 's;</head>;<link rel="stylesheet" href="vsc.css"></head>;g' $resPrefix/workbench.html
+    ```
+- Restart Vscode. Open command palette and execute `Fix Checksums: Apply`. Restart again.
   - Perform above 2 steps every time vscode is updated.
 - ***Boom!!!***
 - If you don't want to touch the core file (which is not a big deal) you can use [`Customize UI`](https://marketplace.visualstudio.com/items?itemName=iocave.customize-ui).
