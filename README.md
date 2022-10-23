@@ -146,6 +146,7 @@ Firefox theme is mine too. Installation can be found at [`PROxZIMA/Firefox-Theme
 - [Net speed Simplified](https://extensions.gnome.org/extension/3724/net-speed-simplified/)
 - [Tiling Assistant](https://extensions.gnome.org/extension/3733/tiling-assistant/)
 - [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
+- [Refresh Wifi Connections](https://extensions.gnome.org/extension/905/refresh-wifi-connections/)
 ---
 > *Note*
 > - I switched to [`btop`](https://github.com/aristocratos/btop). It's much better than other tops :)
