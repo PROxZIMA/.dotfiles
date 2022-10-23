@@ -17,35 +17,53 @@
 <h3 align="center">Resource Monitor</h3>
 <p align="center"><img src="./assets/btop.png"></p> -->
 
-<img alt="Rice Preview" align="right" width="400px" src="assets/rice.jpg"/>
+
+<table>
+<tr>
+<td>
 
 ```
-⠀⠀⠀:snowflake: -> Setup
------------------------------------------
+⠀⠀ ❄️ -> Setup
+ -----------------------------------
 
- ╭─ Distro -> Pop!_OS 22.04 LTS x86_64
- ├─ Editor -> VSCode / NeoVim
+ ╭─ Distro  -> Pop!_OS 22.04 x86_64
+ ├─ Editor  -> VSCode / NeoVim
  ├─ Browser -> Firefox
- ├─ Shell -> ZSH
+ ├─ Shell   -> ZSH
  ╰─ Resource Monitor -> Btop
 
  ╭─ Model -> ASUS TUF Gaming A15
- ├─ CPU -> Ryzen 7 4800H (16) @ 4.3GHz
- ├─ GPU -> NVIDIA GeForce RTX 3050 Mobile
+ ├─ CPU   -> Ryzen 7 4800H @ 4.3GHz
+ ├─ GPU   -> NVIDIA GeForce RTX 3050
  ╰─ Resolution -> 1920x1080
 
- ╭─ DE -> GNOME 42.3.1
- ├─ WM -> Mutter
+ ╭─ DE       -> GNOME 42.3.1
+ ├─ WM       -> Mutter
  ├─ Terminal -> Kitty
- ├─ Theme -> Sweet-Dark
- ├─ Icons -> Sweet-Rainbow
- ╰─ Font -> Fira Sans Semi-Light 10
+ ├─ Theme    -> Sweet-Dark
+ ├─ Icons    -> Sweet-Rainbow
+ ╰─ Font     -> Fira Sans Semi-Light
 
-                       
+                        
 ```
 
-## Wallpapers
-[<img src="./assets/photos.png" width="500" title="Wallpapers">](https://photos.app.goo.gl/h7EE46K7qDgLpQUv9)
+</td>
+<td rowspan='3'>
+
+<img alt="Rice Preview" width="600px" src="assets/rice.jpg"/>
+
+</td>
+</tr>
+<tr></tr>
+<tr>
+<td>
+
+### Wallpapers
+[<img src="./assets/photos.png" width="300px" title="Wallpapers">](https://photos.app.goo.gl/h7EE46K7qDgLpQUv9)
+
+</td>
+</tr>
+</table>
 
 ### Vscode
 Configs should be placed in `~/.config/[code|vscodium]/User`. Theme used in screenshot is [`Sweet Dracula`](https://marketplace.visualstudio.com/items?itemName=PROxZIMA.sweetdracula) (Made by me 😁)
@@ -118,6 +136,16 @@ Firefox theme is mine too. Installation can be found at [`PROxZIMA/Firefox-Theme
 - I don't use `fish` as my default shell but yeah, I used to.
 - Configs :: [`.dotfiles/.config/fish`](.config/fish) and [`.dotfiles/.local/share/fish`](.local/share/fish/).
 
+### Gnome Shell Extensions
+- [Alt+Tab Scroll Workaround](https://extensions.gnome.org/extension/5282/alttab-scroll-workaround/)
+- [ArcMenu](https://extensions.gnome.org/extension/3628/arcmenu/)
+- [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
+- [Customize IBus](https://extensions.gnome.org/extension/4112/customize-ibus/)
+- [Dash to Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/)
+- [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/)
+- [Net speed Simplified](https://extensions.gnome.org/extension/3724/net-speed-simplified/)
+- [Tiling Assistant](https://extensions.gnome.org/extension/3733/tiling-assistant/)
+- [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
 ---
 > *Note*
 > - I switched to [`btop`](https://github.com/aristocratos/btop). It's much better than other tops :)
