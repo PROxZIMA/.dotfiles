@@ -1,4 +1,4 @@
-neofetch --source ~/Pictures/fubuki.jpg --size 420
+neofetch --source ~/.config/ascii.txt --backend ascii
 
 # Different terminal theme for VSCode and rest
 if [ "$TERM_PROGRAM" = "vscode" ]; then
@@ -62,6 +62,8 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt pushdminus
 setopt inc_append_history
+setopt complete_in_word
+setopt always_to_end
 
 unsetopt extended_history
 unsetopt EXTENDED_HISTORY
@@ -77,7 +79,7 @@ setopt HIST_BEEP
 setopt incappendhistorytime
 
 # Completion
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'      # Case insensitive tab completion
 zstyle ':completion:*' rehash true                              # automatically find new executables in path
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
 zstyle ':completion:*' completer _expand _complete _ignored _approximate
@@ -115,7 +117,8 @@ export PROMPT_EOL_MARK=""
 export GPG_TTY='tty'
 export SUBDOMAIN=ftw
 export API_SUBDOMAIN=127.0.0.1
-export WINEARCH=win64
+export WINEARCH=win32
+export WINEPREFIX="$HOME/.wine"
 export JDK_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 export CHROME_EXECUTABLE="/usr/lib/chromium-browser/chromium-browser"
 
@@ -183,12 +186,18 @@ copydots() {
     cp $_USERCONFIG/alacritty $_DOTSCONFIG/;
     cp $_USERCONFIG/autostart $_DOTSCONFIG/;
     cp $_USERCONFIG/btop $_DOTSCONFIG/;
+    cp $_USERCONFIG/Kid3 $_DOTSCONFIG/;
     cp $_USERCONFIG/kitty $_DOTSCONFIG/;
+    cp $_USERCONFIG/lapce-stable $_DOTSCONFIG/;
     cp $_USERCONFIG/Code/User/snippets $_DOTSCONFIG/Code/User/;
     cp $_USERCONFIG/Code/User/keybindings.json $_DOTSCONFIG/Code/User/;
     cp $_USERCONFIG/Code/User/settings.json $_DOTSCONFIG/Code/User/;
+    cp $_USERCONFIG/Code/User/spellright.dict $_DOTSCONFIG/Code/User/;
     cp $_USERCONFIG/Code/User/vsc.css $_DOTSCONFIG/Code/User/;
+    cp $_USERCONFIG/Code/User/vsc.js $_DOTSCONFIG/Code/User/;
+    cp $_USERCONFIG/uGet/Setting.json $_DOTSCONFIG/uGet/;
     cp $_USERCONFIG/fish $_DOTSCONFIG/;
+    cp $_USERCONFIG/qimgv $_DOTSCONFIG/;
     cpin $_USERCONFIG/lite-xl $_DOTSCONFIG/;
     rm -r $_DOTSCONFIG/lite-xl/colors;
     cp $_USERCONFIG/lite-xl/colors/dracula.lua $_DOTSCONFIG/lite-xl/colors/;
@@ -215,12 +224,13 @@ copydots() {
     cp $_USERCONFIG/obs-studio/basic/profiles/proxima $_DOTSCONFIG/obs-studio/basic/profiles/;
     cp $_USERCONFIG/lsd $_DOTSCONFIG/;
     cp $_USERCONFIG/mimeapps.list $_DOTSCONFIG/;
-    cp $_USERAPPS/ToN.desktop $_DOTSAPPS/;
-    cp $_USERAPPS/gmail.desktop $_DOTSAPPS/;
-    cp $_USERAPPS/office.desktop $_DOTSAPPS/;
-    cp $_USERAPPS/androidstudio.desktop $_DOTSAPPS/;
-    cp $_USERAPPS/kitty.desktop $_DOTSAPPS/;
-    cp $_USERAPPS/lite_xl.desktop $_DOTSAPPS/;
+    cp $_USERAPPS/ $_DOTSAPPS/;
+    # cp $_USERAPPS/ToN.desktop $_DOTSAPPS/;
+    # cp $_USERAPPS/gmail.desktop $_DOTSAPPS/;
+    # cp $_USERAPPS/office.desktop $_DOTSAPPS/;
+    # cp $_USERAPPS/androidstudio.desktop $_DOTSAPPS/;
+    # cp $_USERAPPS/kitty.desktop $_DOTSAPPS/;
+    # cp $_USERAPPS/lite_xl.desktop $_DOTSAPPS/;
     cp $_USERLOCALS/fish/fish_history $_DOTSLOCALS/fish/;
     cpin $_USERLOCALS/lite-xl $_DOTSLOCALS/;
     cp $_USER/.gnupg $_DOTS/;
@@ -260,6 +270,8 @@ ff() {firefox -width 900 -height 600 -P app "$1" 2>/dev/null & disown}
 ydl() {yt-dlp -ix --audio-format mp3 --audio-quality 0 -o '~/Downloads/songs/%(title)s.%(ext)s' "$1"}
 
 ydlp() {yt-dlp -icx --yes-playlist --audio-format mp3 --audio-quality 0 -o '~/Downloads/songs/%(playlist)s/%(title)s.%(ext)s' "$1"}
+
+ytdlv() {yt-dlp --format mp4 --audio-quality 0 -o '~/Download/videos/%(title)s.%(ext)s' "$1"}
 
 mkfile() {mkdir -p "$(dirname "$1")" && touch "$1";}
 

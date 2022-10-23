@@ -86,14 +86,12 @@
     },
     // Window Settings
     "window.commandCenter": false,
-    "window.confirmBeforeClose": "keyboardOnly",
     "window.menuBarVisibility": "toggle",
     "window.newWindowDimensions": "maximized",
     "window.restoreWindows": "all",
     "window.title": "${activeEditorShort}${separator}${rootName}",
     "window.titleBarStyle": "native",
-    "window.titleSeparator": " ・ ・ ",
-    "window.zoomLevel": 0.4,
+    "window.titleSeparator": " ・ ・",
     "workbench.colorTheme": "Sweet Dracula",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.highlightModifiedTabs": true,
@@ -111,12 +109,13 @@
         "*.ipynb": "jupyter-notebook"
     },
     // Editor Settings
-    "editor.acceptSuggestionOnEnter": "on",
+    "editor.acceptSuggestionOnEnter": "smart",
     "editor.autoClosingBrackets": "always",
     "editor.bracketPairColorization.enabled": true,
     "editor.codeActionsOnSave": {
         "source.organizeImports": true
     },
+    "editor.colorDecorators": false,
     "editor.cursorBlinking": "phase",
     "editor.cursorSmoothCaretAnimation": true,
     "editor.cursorStyle": "line-thin",
@@ -132,7 +131,7 @@
     "editor.guides.bracketPairsHorizontal": "active",
     "editor.guides.highlightActiveBracketPair": true,
     "editor.hover.above": false,
-    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.inlayHints.enabled": "on",
     "editor.inlineSuggest.enabled": true,
     "editor.insertSpaces": true,
     "editor.linkedEditing": true,
@@ -148,13 +147,23 @@
     "editor.scrollbar.vertical": "auto",
     "editor.selectionHighlight": true,
     "editor.smoothScrolling": true,
+    "editor.stickyScroll.enabled": true,
+    "editor.stickyScroll.maxLineCount": 5,
+    "editor.stickyTabStops": false,
     "editor.suggestSelection": "first",
+    "editor.suggest.insertMode": "replace",
     "editor.suggest.preview": true,
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.tabCompletion": "on",
     "editor.tabSize": 4,
     "editor.wordBasedSuggestions": true,
+    "editor.wordBasedSuggestionsMode": "matchingDocuments",
     "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+        "other": "on",
+        "comments": "on",
+        "strings": "on",
+    },
     // Emmet Settings
     "emmet.excludeLanguages": [],
     "emmet.includeLanguages": {
@@ -167,63 +176,83 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     // Customize UI
+    "customizeUI.activityBar": "bottom",
+    "customizeUI.activityBarHideSettings": true,
     "customizeUI.listRowHeight": 20,
     "customizeUI.font.monospace": "FantasqueSansMono Nerd Font Mono",
     "customizeUI.font.regular": "FantasqueSansMono Nerd Font",
     "customizeUI.fontSizeMap": {
         "13px": "12px",
-        "monospace": "12px"
+        "monospace": "12px",
+        "tab-title": "12px",
+        "window-title": "12.5px"
     },
+    "customizeUI.titleBar": "inline",
     "customizeUI.stylesheet": {
-        ":root": "--tab-height: 25px;--tab-radius: 8px;--ui-radius: 6px;--base-color: #bd93f9;--gradient-one: #c50ed2;--gradient-two: #8500f7;--side-pane-color: #232634;--focus-border: #3f4f81;--sash-size: 2px !important;--sash-hover-size: 2px !important; ",
-        ".editor-container": "-webkit-font-smoothing: antialiased; ",
-        ".monaco-workbench .part.titlebar .window-controls-container .window-icon, .monaco-workbench .part.editor > .content > .watermark": "display: none !important; ",
-        ".monaco-workbench .part.titlebar .window-controls-container .layout-dropdown-container": "margin-left: auto !important; ",
-        ".monaco-workbench .part.titlebar > .window-controls-container": "width: unset !important; ",
-        ".monaco-workbench .part.titlebar > .window-controls-container > .window-icon": "width: 30px !important; ",
-        ".monaco-workbench.linux .part.titlebar > .window-title": "font-size: 12.5px !important; ",
-        ".monaco-workbench .part.titlebar > .titlebar-container .window-appicon > .home-bar-icon-badge, .monaco-workbench .part.titlebar > .titlebar-container > .window-appicon:not(.codicon)": "background-image: url(./vsc/vsc.svg) !important; ",
-        ".monaco-workbench .part.editor > .content .editor-group-container.empty .editor-group-letterpress": "background-image: url(./vsc/vsc-back.svg) !important; ",
-        ".monaco-workbench .part.editor.has-watermark > .content.empty .editor-group-container > .editor-group-letterpress": "background-position-y: 50% !important; ",
-        ".mac, .windows, .linux": "font-family: 'FantasqueSansMono Nerd Font' !important;--monaco-monospace-font: 'FantasqueSansMono Nerd Font Mono' !important; ",
-        ".monaco-sash.hover:before, .monaco-sash.active:before": "background: linear-gradient(to bottom, var(--gradient-one), var(--gradient-two)) !important; ",
-        ".monaco-workbench .activitybar > .content :not(.monaco-menu) > .monaco-action-bar .action-item.checked .active-item-indicator:before": "border: 0 !important;width: 3px !important;height: 100% !important;position: absolute !important;top: 0 !important;left: 0 !important;background-image: linear-gradient(to top, var(--gradient-one), var(--gradient-two)) !important; ",
-        ".monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab > .tab-border-bottom-container, .monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab > .tab-border-top-container": "background-image: linear-gradient(to left, var(--gradient-one), var(--gradient-two)) !important;height: 3px !important; ",
-        ".monaco-workbench .activitybar > .content :not(.monaco-menu) > .monaco-action-bar .badge .badge-content": "background-image: linear-gradient(90deg, var(--gradient-one), var(--gradient-two)) !important; ",
-        ".monaco-workbench .part.editor > .content .editor-group-container.active > .title .tabs-container > .tab.dirty > .tab-actions .action-label:not(:hover):before, .monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.dirty > .tab-actions .action-label:not(:hover):before": "content: '' !important; ",
-        ".codicon-git-branch:before": "background: linear-gradient(to bottom, var(--gradient-one), var(--gradient-two)) !important;-webkit-background-clip: text !important;background-clip: text !important;color: rgba(255, 255, 255, 0.4) !important; ",
+        ":root": "--tab-height: 25px;--tab-radius: 8px;--ui-radius: 6px;--main-bg-color: #161925;--base-color: #bd93f9;--gradient-one: #c50ed2;--gradient-two: #8500f7;--side-pane-color: #232634;--focus-border: #3f4f81;--sash-size: 2px !important;--sash-hover-size: 2px !important;",
+        ".editor-container": "-webkit-font-smoothing: antialiased;",
+        ".monaco-workbench .part.editor > .content > .watermark": "display: none !important;",
+        ".monaco-workbench .part.titlebar .window-controls-container .layout-dropdown-container": "margin-left: auto !important;",
+        ".monaco-workbench .part.titlebar > .window-controls-container": "width: unset !important;",
+        ".monaco-workbench .part.titlebar > .window-controls-container > .window-icon": "width: 30px !important;",
+        ".monaco-workbench .part.titlebar > .titlebar-container .window-appicon > .home-bar-icon-badge, .monaco-workbench .part.titlebar > .titlebar-container > .window-appicon:not(.codicon)": "background-image: url(./vsc/vsc.svg) !important;",
+        ".monaco-workbench .part.editor > .content .editor-group-container.empty .editor-group-letterpress": "background-image: url(./vsc/vsc-back.svg) !important;",
+        ".monaco-workbench .part.editor.has-watermark > .content.empty .editor-group-container > .editor-group-letterpress": "background-position-y: 50% !important;",
+        ".monaco-sash.hover:before, .monaco-sash.active:before": "background: linear-gradient(to bottom, var(--gradient-one), var(--gradient-two)) !important;",
+        ".monaco-editor .squiggly-error": "background: none !important;border-bottom: 0.5px solid var(--vscode-editorError-foreground) !important;",
+        ".monaco-editor .squiggly-warning": "background: none !important;border-bottom: 0.5px solid var(--vscode-editorWarning-foreground) !important;",
+        ".monaco-editor .squiggly-info": "background: none !important;border-bottom: 0.5px solid var(--vscode-editorInfo-foreground) !important;",
+        ".monaco-editor .squiggly-hint": "background: none !important;border-bottom: 0.5px solid var(--vscode-editorHint-foreground) !important;",
+        "body.activity-bar-at-bottom .monaco-workbench .activitybar .active-item-indicator": "display: block !important;",
+        ".monaco-workbench .activitybar > .content :not(.monaco-menu) > .monaco-action-bar .action-item.checked .active-item-indicator:before": "border: 0 !important;width: 100% !important;height: 3px !important;position: absolute !important;bottom: 0 !important;left: 0 !important;top: unset !important;background-image: linear-gradient(to top, var(--gradient-one), var(--gradient-two)) !important;border-radius: 100vmax !important;",
+        ".monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab > .tab-border-bottom-container, .monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab > .tab-border-top-container": "background-image: linear-gradient(to left, var(--gradient-one), var(--gradient-two)) !important;height: 3px !important;",
+        ".monaco-workbench .activitybar > .content :not(.monaco-menu) > .monaco-action-bar .badge .badge-content": "background-image: linear-gradient(90deg, var(--gradient-one), var(--gradient-two)) !important;",
+        ".monaco-workbench .part.editor > .content .editor-group-container.active > .title .tabs-container > .tab.dirty > .tab-actions .action-label:not(:hover):before, .monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.dirty > .tab-actions .action-label:not(:hover):before": "content: '' !important;",
+        ".codicon-git-branch:before": "background: linear-gradient(to bottom, var(--gradient-one), var(--gradient-two)) !important;-webkit-background-clip: text !important;background-clip: text !important;color: rgba(255, 255, 255, 0.4) !important;",
         ".monaco-editor, .split-view-view .monaco-editor-background": "background: url(./vsc/pek.png) bottom right / 10% auto no-repeat scroll;",
-        ".monaco-scrollable-element > .scrollbar > .slider": "border-radius: 7px !important; ",
-        ".monaco-scrollable-element > .scrollbar > .slider.active": "background: linear-gradient(to top, var(--gradient-one), var(--gradient-two)) !important; ",
-        "canvas.decorationsOverviewRuler, .monaco-scrollable-element > .scrollbar.vertical, .monaco-scrollable-element > .scrollbar.vertical > .slider": "width: 7px !important; ",
-        ".monaco-scrollable-element > .scrollbar.horizontal, .monaco-scrollable-element > .scrollbar.horizontal > .slider": "height: 7px !important; ",
-        ".monaco-scrollable-element > .scrollbar.horizontal > .slider": "width: 135px !important; ",
-        ".monaco-editor .monaco-hover, .monaco-editor .suggest-widget, .monaco-editor .suggest-details": "border-radius: var(--ui-radius) !important;overflow: hidden !important;box-shadow: rgb(0 0 0 / 36%) 0px 2px calc(var(--ui-radius) + 2px) !important; ",
-        ".pane .pane-body, .pane .pane-body .monaco-list, .pane .pane-body .monaco-list .monaco-scrollable-element, .pane .pane-body .monaco-list .monaco-scrollable-element .monaco-list-rows, .pane .pane-body .monaco-list .monaco-scrollable-element .monaco-list-rows .monaco-list-row": "overflow: visible !important; ",
-        ".open-editors .monaco-list .monaco-list-row": "padding-left: 0px !important; ",
-        ".monaco-list-row:hover, .monaco-list-row.selected, .monaco-list-row.focused": "border-radius: 0 var(--ui-radius) var(--ui-radius) 0 !important; ",
-        ".monaco-workbench .monaco-list:not(.element-focused):focus:before, .monaco-select-box, .monaco-select-box-dropdown-container, .monaco-select-box-dropdown-container .monaco-list-row:hover, .monaco-select-box-dropdown-container .monaco-list-row.selected, .monaco-select-box-dropdown-container .monaco-list-row.focused": "border-radius: var(--ui-radius) !important; ",
-        ".monaco-list-row.selected::before, .monaco-list-row.selected::after": "--ui-radius: 6px;content: '' !important;display: block !important;position: absolute !important;width: var(--ui-radius) !important;height: var(--ui-radius) !important;left: 0 !important;pointer-events: none !important; ",
-        ".monaco-list-row.selected::before": "top: calc(0px - var(--ui-radius)) !important;background: radial-gradient(circle at 100% 0%, transparent 70.71%, var(--side-pane-color) 29.289%) no-repeat;background-position: 100% 0%; ",
-        ".monaco-list-row.selected::after": "bottom: calc(0px - var(--ui-radius)) !important;background: radial-gradient(circle at 100% 100%, transparent 70.71%, var(--side-pane-color) 29.289%) no-repeat;background-position: 100% 100%; ",
-        ".monaco-button.monaco-text-button": "border-radius: var(--ui-radius) !important; ",
+        ".monaco-scrollable-element > .scrollbar > .slider": "border-radius: 7px !important;",
+        ".monaco-scrollable-element > .scrollbar > .slider.active": "background: linear-gradient(to top, var(--gradient-one), var(--gradient-two)) !important;",
+        "canvas.decorationsOverviewRuler, .monaco-scrollable-element > .scrollbar.vertical, .monaco-scrollable-element > .scrollbar.vertical > .slider": "width: 7px !important;",
+        ".monaco-scrollable-element > .scrollbar.horizontal, .monaco-scrollable-element > .scrollbar.horizontal > .slider": "height: 7px !important;",
+        ".monaco-scrollable-element > .scrollbar.horizontal > .slider": "width: 135px !important;",
+        ".monaco-editor .monaco-hover, .monaco-editor .suggest-widget, .monaco-editor .suggest-details": "border-radius: var(--ui-radius) !important;overflow: hidden !important;box-shadow: rgb(0 0 0 / 36%) 0px 2px calc(var(--ui-radius) + 2px) !important;",
+        ".pane .pane-body, .pane .pane-body .monaco-list, .pane .pane-body .monaco-list .monaco-scrollable-element, .pane .pane-body .monaco-list .monaco-scrollable-element .monaco-list-rows, .pane .pane-body .monaco-list .monaco-scrollable-element .monaco-list-rows .monaco-list-row": "overflow: visible !important;",
+        ".open-editors .monaco-list .monaco-list-row": "padding-left: 0px !important;",
+        ".monaco-list-row:hover, .monaco-list-row.selected, .monaco-list-row.focused": "border-radius: 0 var(--ui-radius) var(--ui-radius) 0 !important;",
+        ".monaco-workbench .monaco-list:not(.element-focused):focus:before, .monaco-select-box, .monaco-select-box-dropdown-container, .monaco-select-box-dropdown-container .monaco-list-row:hover, .monaco-select-box-dropdown-container .monaco-list-row.selected, .monaco-select-box-dropdown-container .monaco-list-row.focused": "border-radius: var(--ui-radius) !important;",
+        ".monaco-list-row.selected::before, .monaco-list-row.selected::after": "--ui-radius: 6px;content: '' !important;display: block !important;position: absolute !important;width: var(--ui-radius) !important;height: var(--ui-radius) !important;left: 0 !important;pointer-events: none !important;",
+        ".monaco-list-row.selected::before": "top: calc(0px - var(--ui-radius)) !important;background: radial-gradient(circle at 100% 0%, transparent 70.71%, var(--side-pane-color) 29.289%) no-repeat;background-position: 100% 0%;",
+        ".monaco-list-row.selected::after": "bottom: calc(0px - var(--ui-radius)) !important;background: radial-gradient(circle at 100% 100%, transparent 70.71%, var(--side-pane-color) 29.289%) no-repeat;background-position: 100% 100%;",
+        ".monaco-button.monaco-text-button": "border-radius: var(--ui-radius) !important;",
+        ".monaco-editor .cursors-layer.cursor-smooth-caret-animation > .cursor": "transition: all 100ms ease-out;",
         ".tab:first-child": "margin-left: var(--tab-radius) !important;",
         ".tab:last-child": "margin-right: var(--tab-radius) !important;",
         ".tab.active": "border-radius: var(--tab-radius) var(--tab-radius) 0 0 !important;",
-        ".tab.dirty-border-top > .tab-border-top-container": "border-radius: var(--tab-radius) var(--tab-radius) 0 0 !important; ",
+        ".tab.dirty-border-top > .tab-border-top-container": "border-radius: var(--tab-radius) var(--tab-radius) 0 0 !important;",
         ".tab.active::before, .tab.active::after": "--tab-radius: 8px;--tab-color: #161925;content: '' !important;display: block !important;box-sizing: border-box !important;position: absolute !important;z-index: 1;width: var(--tab-radius) !important;height: var(--tab-radius) !important;bottom: 0px !important;pointer-events: none !important;",
         ".tab.active::before": "left: calc(0px - var(--tab-radius)) !important;border-bottom-right-radius: var(--tab-radius) !important;box-shadow: 3px 3px 0 3px var(--tab-color) !important;",
-        ".tab.active::after": "right: 0 !important;transform: translateX(var(--tab-radius)) !important;border-bottom-left-radius: var(--tab-radius) !important;box-shadow: -3px 3px 0 3px var(--tab-color) !important;"
+        ".tab.active::after": "right: 0 !important;transform: translateX(var(--tab-radius)) !important;border-bottom-left-radius: var(--tab-radius) !important;box-shadow: -3px 3px 0 3px var(--tab-color) !important;",
+        ".monaco-workbench .part.sidebar>.title>.title-label h2": "font-weight: bold !important;",
+        "body.activity-bar-at-bottom div.monaco-grid-view > div > div > div.monaco-scrollable-element > div.split-view-container > div.split-view-view.visible > div > div > div.monaco-scrollable-element > div.split-view-container > div:nth-child(1) > div > div > div.monaco-scrollable-element > div.split-view-container > div:nth-child(2)": "height: auto !important;",
+        "body.activity-bar-at-bottom .monaco-workbench .part.activitybar": "border: none !important; padding: 6px !important;margin-top: -24px !important; background-color: var(--vscode-editor-background) !important; position: relative !important; z-index: 10 !important;",
+        "body.activity-bar-at-bottom .monaco-workbench .activitybar.bordered:before": "display: none !important;",
+        "body.activity-bar-at-bottom .monaco-workbench .activitybar > .content": "height: 48px !important;justify-content: center !important; border-radius: 6px; width: unset !important; border: 1px solid #3f4f818c !important;",
+        "body.activity-bar-at-bottom .monaco-workbench .activitybar>.content>.composite-bar": "margin-bottom: unset !important;",
+        //
+        ".monaco-workbench .part.editor .tabs-and-actions-container .window-controls-container": "display: flex;flex-grow: 0;flex-shrink: 0;text-align: center; -webkit-app-region: no-drag; height: 100%;",
+        ".monaco-workbench .part.editor .tabs-and-actions-container .window-controls-container .window-icon": "width: 30px !important;height: 30px !important; display: flex; align-items: center; justify-content: center;",
+        ".monaco-workbench .part.editor .tabs-and-actions-container .window-controls-container .window-icon.window-close:hover": "background-color: #FF5555",
     },
     // Terminal Settings
     "terminal.integrated.altClickMovesCursor": true,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.customGlyphs": false,
     "terminal.integrated.cursorStyle": "line",
-    "terminal.integrated.scrollback": 200000,
     "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Hack Nerd Font Mono', 'JetBrainsMono Nerd Font', 'Operator Mono SSm Lig Book'",
     "terminal.integrated.fontSize": 12,
     "terminal.integrated.gpuAcceleration": "canvas",
+    "terminal.integrated.scrollback": 200000,
+    "terminal.integrated.smoothScrolling": true,
     "terminal.integrated.tabs.enabled": false,
     "terminal.integrated.profiles.linux": {
         "zsh": {
@@ -232,12 +261,14 @@
     },
     // Language Settings
     "[python]": {
-        "editor.semanticHighlighting.enabled": false,
-        "editor.suggest.insertMode": "replace",
-        "editor.wordBasedSuggestions": true
+        "editor.semanticHighlighting.enabled": false
     },
     "python.analysis.completeFunctionParens": true,
     "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "120"
+    ],
     "python.languageServer": "Pylance",
     "python.linting.ignorePatterns": [
         ".vscode/*.py",
@@ -247,18 +278,16 @@
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
     "python.linting.pylintArgs": [
+        "--rcfile",
+        "${env:HOME}/.pylintrc"
         // "--load-plugins=pylint_django"
     ],
-    "python.pythonPath": "/bin/python3",
-    "vsintellicode.features.python.deepLearning": "enabled",
-    "vsintellicode.python.completionsEnabled": true,
     "[cpp]": {
         "editor.semanticHighlighting.enabled": false,
-        "editor.suggest.insertMode": "replace",
-        "editor.wordBasedSuggestions": true
     },
     "C_Cpp.autocompleteAddParentheses": true,
     "C_Cpp.codeFolding": "Enabled",
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 2, ColumnLimit: 0}",
     "css.format.enable": true,
     "css.format.newlineBetweenRules": true,
     "css.format.newlineBetweenSelectors": true,
@@ -280,7 +309,6 @@
     "html.autoClosingTags": true,
     "html.completion.attributeDefaultValue": "singlequotes",
     "[dart]": {
-        "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.suggestSelection": "first",
         "editor.tabCompletion": "onlySnippets",
         "editor.wordBasedSuggestions": false
@@ -298,6 +326,13 @@
         "editor.tabSize": 2
     },
     "json.maxItemsComputed": 100000,
+    "[markdown]": {
+        "editor.quickSuggestions": {
+            "other": "on",
+            "comments": "on",
+            "strings": "on",
+        }
+    },
     "[scss]": {
         "editor.tabSize": 2
     },
@@ -313,6 +348,12 @@
         "editor.formatOnSave": false,
     },
     "js/ts.implicitProjectConfig.checkJs": true,
+    //Latex
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
+    "latex-workshop.latex.autoBuild.run": "never",
+    "[latex]": {
+        "editor.formatOnSave": false
+    },
     // Empty-Indent Extension
     "emptyIndent.highlightColor": "rgba(246,36,89,0.6)",
     "emptyIndent.highlightIndent": false,
@@ -330,6 +371,8 @@
     "gitlens.codeLens.enabled": false,
     "gitlens.statusBar.enabled": true,
     // General Setting\
+    "color-highlight.markRuler": false,
+    "color-highlight.markerType": "background",
     "debug.onTaskErrors": "showErrors",
     "debug.openDebug": "openOnDebugBreak",
     "eslint.enable": true,
@@ -341,18 +384,41 @@
     "git.autofetch": true,
     "liveServer.settings.donotShowInfoMsg": true,
     "liveServer.settings.donotVerifyTags": true,
-    "liveServer.settings.https": {
-        "enable": true,
-        "cert": "/home/proxzima/.ssh/cert/cert.pem",
-        "key": "/home/proxzima/.ssh/cert/key.pem",
-        "passphrase": "1234"
-    },
+    // "liveServer.settings.https": {
+    //     "enable": true,
+    //     "cert": "/home/proxzima/.ssh/cert/cert.pem",
+    //     "key": "/home/proxzima/.ssh/cert/key.pem",
+    //     "passphrase": "1234"
+    // },
+    "liveServer.settings.useLocalIp": true,
     "markdown.preview.markEditorSelection": true,
     "markdown.preview.scrollEditorWithPreview": false,
     "markdown.preview.scrollPreviewWithEditor": false,
     "svg.preview.autoOpen": true,
     "svg.preview.transparencyGrid": true,
-    "svg.preview.boundingBox": true,
+    "svg.preview.boundingBox": false,
+    "print.folder.exclude": [
+        "{bin,obj,out}",
+        "node_module",
+        "**/*.{bin,exe,dll,hex,pdb,pdf,pfx,png,jpg,gif,bmp,suo,pptx,ppt,jar,woff2,woff,ttf,eot,odt,otf,class}"
+    ],
+    "print.lineNumbers": "on",
+    "print.printAndClose": false,
+    "print.colourScheme": "Atom One",
+    "print.alternateBrowser": true,
+    "print.browserPath": "/usr/bin/google-chrome",
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "spellright.language": [
+        "en_GB"
+    ],
+    "spellright.notificationClass": "information",
+    "spellright.suggestionsInHints": false,
+    "spellright.useDocumentSymbolsInCode": true,
+    "telemetry.telemetryLevel": "off",
     "search.exclude": {
         "**/bower_components": true,
         "**/*.code-search": true,
@@ -386,5 +452,6 @@
         "**/env/**": true,
         "**/venv/**": true,
         "env-*": true
-    }
+    },
+    "window.zoomLevel": 0.5
 }

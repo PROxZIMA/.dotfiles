@@ -1,0 +1,16 @@
+Error: .../.mount_lite-xKnwcSn/usr/share/lite-xl/core/doc/init.lua:62: behavior.xml: Permission denied
+stack traceback:
+	[C]: in function 'assert'
+	.../.mount_lite-xKnwcSn/usr/share/lite-xl/core/doc/init.lua:62: in function 'old_doc_load'
+	...xzima/.config/lite-xl/plugins/gitdiff_highlight/init.lua:157: in function 'Doc_load'
+	/home/proxzima/.config/lite-xl/plugins/lintplus/init.lua:294: in function 'doc_load'
+	/home/proxzima/.config/lite-xl/plugins/lsp/init.lua:1811: in function 'load'
+	/home/proxzima/.config/lite-xl/plugins/autoreload.lua:47: in function 'load'
+	.../.mount_lite-xKnwcSn/usr/share/lite-xl/core/doc/init.lua:27: in function 'new'
+	/home/proxzima/.config/lite-xl/plugins/detectindent.lua:117: in function 'new'
+	/tmp/.mount_lite-xKnwcSn/usr/share/lite-xl/core/object.lua:42: in function 'Doc'
+	/tmp/.mount_lite-xKnwcSn/usr/share/lite-xl/core/init.lua:1295: in function 'open_doc'
+	/tmp/.mount_lite-xKnwcSn/usr/share/lite-xl/core/init.lua:989: in function 'init'
+	[string "local core..."]:8: in function <[string "local core..."]:2>
+	[C]: in function 'xpcall'
+	[string "local core..."]:2: in main chunk

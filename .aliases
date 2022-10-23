@@ -1,13 +1,16 @@
 
 alias sudo='sudo '
 alias python='python3'
-alias snaut='sudo gtk-launch org.gnome.Nautilus.desktop'
 alias naut='gtk-launch org.gnome.Nautilus.desktop'
-alias sedit='sudo gtk-launch org.gnome.gedit.desktop'
+alias snaut='sudo naut'
 alias edit='gtk-launch org.gnome.gedit.desktop'
+alias sedit='sudo edit'
+alias note='code --extensions-dir ~/.config/Code/User/notepad/exts --user-data-dir ~/.config/Code/User/notepad/data'
 alias nvide='nvide --multigrid'
 alias cls="clear && printf '\e[3J'"
 alias cat='bat -p'
+alias copy='xclip -selection clipboard'
+alias play='mpv $(xclip -o)'
 alias gitd='~/Documents/Scripts/gitDownload.sh'
 alias wttr='curl "wttr.in/Pune?0qM"'
 alias usage='du -ah -d1 | sort -rn 2>/dev/null'
@@ -193,4 +196,3 @@ alias gignore='git update-index --assume-unchanged'
 alias gignored='git ls-files -v | grep "^[[:lower:]]"'
 alias gunignore='git update-index --no-assume-unchanged'
 alias grev='git revert'
-

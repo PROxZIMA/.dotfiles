@@ -1,0 +1,65 @@
+
+[lapce]
+custom-titlebar = true
+color-theme = "Lapce Dark"
+
+[ui]
+font-family = "FantasqueSansMono Nerd Font"
+drop-shadow-width = 2
+font-size = 13
+header-height = 30
+scroll-width = 7
+
+[editor]
+font-family = "Operator Mono SSm Lig Book"
+scroll-beyond-last-line = true
+hover-delay = 275
+format-on-save = false
+line-height = 18
+font-size = 12
+
+[terminal]
+font-family = "Delugia"
+line-height = 17
+
+[theme]
+
+[theme.base]
+black = "#161925"
+cyan = "#8BE9FD"
+green = "#50FA7B"
+magenta = "#DE559C"
+orange = "#FFB86C"
+purple = "#BD93F9"
+red = "#FF5555"
+yellow = "#F1FA8C"
+
+[theme.ui]
+"activity.background" = "$black"
+"status.background" = "$black"
+"palette.background" = "$black"
+"panel.current" = "#232634"
+"lapce.dropdown_shadow" = "#00000092"
+"lapce.scroll_bar" = "#DE559C"
+"hover.background" = "$black"
+"lapce.border" = "#6272a432"
+"panel.hovered" = "#232634"
+"panel.background" = "$black"
+"completion.background" = "$black"
+
+[theme.syntax]
+comment = "#6272A4"
+constant = "#BD93F9"
+constructor = "$green"
+function = "$cyan"
+keyword = "#FF79C6"
+variable = "#F2F2F2"
+enum-member = "$cyan"
+enumMember = "$cyan"
+"function.method" = "$red"
+number = "$purple"
+selfKeyword = "$red"
+"variable.other.member" = "#F2F2F2"
+
+[core]
+color-theme = "Lapce Dark"

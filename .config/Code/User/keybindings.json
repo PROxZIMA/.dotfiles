@@ -9,7 +9,7 @@
         "command": "workbench.action.terminal.sendSequence",
         "when": "resourceExtname == .py",
         "args": {
-            "text": "/usr/bin/python \"${file}\" < ./i\n"
+            "text": "python \"${file}\" < ./i\n"
         }
     },
     {
