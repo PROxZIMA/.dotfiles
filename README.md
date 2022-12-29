@@ -95,14 +95,14 @@ Use the following command to convert your `CSS` file to `Customize UI`'s json ob
 The Firefox theme is mine too. Installation can be found at [`PROxZIMA/Firefox-Theme`](https://github.com/PROxZIMA/Firefox-Theme/).
 
 ### Terminal
-- After hopping over a number of terminals I finally settled with [`Kitty 😻`](https://github.com/kovidgoyal/kitty).
+- The fast & slick terminal - [`Kitty 😻`](https://github.com/kovidgoyal/kitty).
 - Configs :: [`.dotfiles/.config/kitty`](.config/kitty/).
 
 ### ZSH
 [`zsh`](https://www.zsh.org/) is an awesome shell with tons of customizations when used with [`ohmyzsh`](https://github.com/ohmyzsh/ohmyzsh). Following are the two themes I use:
 - [`.dotfiles/.p10k.zsh`](.p10k.zsh) which I made using [`Powerlevel10k`](https://github.com/romkatv/powerlevel10k) :) I use it in [vscode](./assets/vscode.png). Installation can be found at P10K docs but placing it in `~/` will do it.
 - Other is my default terminal prompt :: [`Spaceship`](https://github.com/spaceship-prompt/spaceship-prompt). Configs :: [`.dotfiles/.config/starship.toml`](.config/starship.toml).
-- [`.dotfiles/.zshrc`](.zshrc) should be placed in `~/`. Some aliases in there `(.dotfiles/.aliases)`](.aliases) are linked to the scripts I use which can be found [`here`](https://github.com/PROxZIMA/My-Scripts).
+- [`.dotfiles/.zshrc`](.zshrc) should be placed in `~/`. Some aliases in there [`(.dotfiles/.aliases)`](.aliases) are linked to the scripts I use which can be found [`here`](https://github.com/PROxZIMA/My-Scripts).
 
 ### Neofetch
 - System info in the terminal is displayed using `neofetch`. I've added some glyphs before each info line in the config. Small change but looks good :p
@@ -111,9 +111,13 @@ The Firefox theme is mine too. Installation can be found at [`PROxZIMA/Firefox-T
 
 ### Neovim
 - `Neovim` is ❤️.
-- All credits go to `NvChad``](https://github.com/NvChad/NvChad).
+- All credits go to [`NvChad`](https://github.com/NvChad/NvChad).
 - GUI : [`Neovide`](https://github.com/neovide/neovide).
 - Configs :: [`.dotfiles/.config/nvim`](.config/nvim/).
+
+### Geany
+- Probably the best lightweight GUI text editor... no, [a literal IDE](./assets/geany.png)
+- Configs :: [`.dotfiles/.config/geany/colorschemes/Sweet-Dracula.conf`](.config/geany/colorschemes/Sweet-Dracula.conf).
 
 ### Gedit
 [`.dotfiles/usr/share/gtksourceview-4/styles/dracula.xml`](usr/share/gtksourceview-4/styles/dracula.xml) is a Dracula based theme I made for [Gedit](./assets/gedit.png).
@@ -123,7 +127,7 @@ The Firefox theme is mine too. Installation can be found at [`PROxZIMA/Firefox-T
 - Configs :: [`.dotfiles/.local/share/arcmenu/stylesheet.css`](.local/share/arcmenu/stylesheet.css) is the layout CSS.
 
 ### Dash to Panel
-- Gnome shell extension `Dash to `Panel` turns the default shell panel into a highly customizable dock. Import its config from the extension settings.
+- Gnome shell extension `Dash to Panel` turns the default shell panel into a highly customizable dock. Import its config from the extension settings.
 - Configs :: [`./dotfiles/.config/Dash-to-Panel/dash-to-panel`](.config/Dash-to-Panel/dash-to-panel)
 
 ### Sushi
@@ -148,6 +152,11 @@ The Firefox theme is mine too. Installation can be found at [`PROxZIMA/Firefox-T
 - [Rounded Window Corners](https://extensions.gnome.org/extension/5237/rounded-window-corners/)
 - [Tiling Assistant](https://extensions.gnome.org/extension/3733/tiling-assistant/)
 - [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
+
+### GTK3.20+ Theme
+- [Theme](https://www.gnome-look.org/p/1253385/) - [Sweet-Dark](https://github.com/EliverLara/Sweet)
+- [Icons](https://www.opendesktop.org/p/1284047) - [Sweet-Rainbow](https://github.com/EliverLara/Sweet-folders)
+- [Cursors](https://www.gnome-look.org/p/1393084) - [Sweet-Cursors](https://github.com/EliverLara/Sweet/tree/nova/kde/cursors)
 <!--
 {
   let local_extensions = [...document.getElementById('local_extensions').children].filter(x => !x.classList.contains('system'));
