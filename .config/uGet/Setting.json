@@ -60,7 +60,7 @@
 		"completed": true
 	},
 	"UserInterface": {
-		"ExitConfirmation": true,
+		"ExitConfirmation": false,
 		"DeleteConfirmation": false,
 		"ShowTrayIcon": false,
 		"StartInTray": false,
@@ -115,6 +115,8 @@
 	},
 	"FolderHistory": [
 		"\/home\/proxzima\/Downloads",
+		"\/home\/proxzima\/Downloads\/Apps",
+		"\/home\/proxzima\/Downloads\/temp",
 		"\/home\/proxzima"
 	],
 	"AutoSave": 1,

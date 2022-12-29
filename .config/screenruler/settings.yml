@@ -1,0 +1,14 @@
+---
+ruler_x: 942
+ruler_y: 417
+ruler_length: 246
+track_mouse: true
+metric: 0
+keep_above: true
+foreground_color: "#202020202020"
+background_color: "#e6e6e3e36b6b"
+font: Sans 12
+opacity: 0.85
+use_custom_pixels_per_inch: false
+horizontal_pixels_per_inch: 96.0
+vertical_pixels_per_inch: 96.0

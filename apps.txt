@@ -1,41 +1,40 @@
-Android Studio
 Audacity
+Amberol
+CPU-X
 Dconf
 Firefox
+Geany
 Gimp
 Gnome Tweaks
 Gparted
 Gpick
 LibreOffice
-Lite-XL
 Meld
-Microsoft Teams
 MPV Media Player
-Museeks
 Neovim
 OBS
 ProtonVPN
 PulseAudio
 Qalculate
 Qbittorrent
-Slack
+qimgv
+Screen ruler
 Syncthing
 Timeshift
 TLP, TLPUI
-VLC
+uget
+ventoy
 VSCodium
 
 Gnome Extensions:
+Alt+Tab Scroll Workaround
 ArcMenu
 Clipboard Indicator
+Customize IBus
 Dash to Panel
-Emoji Selector
 GSConnect
 Net speed Simplified
+Refresh Wifi Connections
+Rounded Window Corners
 Tiling Assistant
-Unite
 User Themes
-
-Cosmic Workspace
-Pop Cosmic
-Cosmic Shell

@@ -2,6 +2,8 @@ from rich.console import Console
 from rich.theme import Theme
 from rich.traceback import install
 
+from icecream import ic
+
 console = Console(
     theme=Theme({"traceback.border": "#161925", "traceback.border.syntax_error": "#161925"}),
 )

@@ -34,6 +34,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias boot-options='pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY HOME=$HOME garuda-boot-options -style kvantum 2>/dev/null & disown'
+alias clrbuff='free -h && sudo sysctl -w vm.drop_caches=3 && sudo sync && echo 3 | sudo tee /proc/sys/vm/drop_caches && free -h'
 
 # Common use
 alias update="sudo sh -c 'apt update && apt full-upgrade && apt autoremove && apt clean'"

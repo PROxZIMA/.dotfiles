@@ -92,9 +92,10 @@
     "window.title": "${activeEditorShort}${separator}${rootName}",
     "window.titleBarStyle": "native",
     "window.titleSeparator": " ・ ・",
-    "workbench.colorTheme": "Sweet Dracula",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.restoreViewState": false,
+    "workbench.editor.sharedViewState": false,
     "workbench.editor.showTabs": true,
     "workbench.editor.tabCloseButton": "right",
     "workbench.editor.tabSizing": "shrink",
@@ -108,6 +109,7 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
+    "workbench.reduceMotion": "off",
     // Editor Settings
     "editor.acceptSuggestionOnEnter": "smart",
     "editor.autoClosingBrackets": "always",
@@ -189,7 +191,7 @@
     },
     "customizeUI.titleBar": "inline",
     "customizeUI.stylesheet": {
-        ":root": "--tab-height: 25px;--tab-radius: 8px;--ui-radius: 6px;--main-bg-color: #161925;--base-color: #bd93f9;--gradient-one: #c50ed2;--gradient-two: #8500f7;--side-pane-color: #232634;--focus-border: #3f4f81;--sash-size: 2px !important;--sash-hover-size: 2px !important;",
+        ":root,::after,::before": "--tab-height: 25px;--tab-radius: 8px;--ui-radius: 6px;--base-color: #bd93f9;--gradient-one: #c50ed2;--gradient-two: #8500f7;--side-pane-color: var(--vscode-editor-background);--focus-border: #3f4f81;--sash-size: 2px !important;--sash-hover-size: 2px !important;",
         ".editor-container": "-webkit-font-smoothing: antialiased;",
         ".monaco-workbench .part.editor > .content > .watermark": "display: none !important;",
         ".monaco-workbench .part.titlebar .window-controls-container .layout-dropdown-container": "margin-left: auto !important;",
@@ -229,16 +231,17 @@
         ".tab:last-child": "margin-right: var(--tab-radius) !important;",
         ".tab.active": "border-radius: var(--tab-radius) var(--tab-radius) 0 0 !important;",
         ".tab.dirty-border-top > .tab-border-top-container": "border-radius: var(--tab-radius) var(--tab-radius) 0 0 !important;",
-        ".tab.active::before, .tab.active::after": "--tab-radius: 8px;--tab-color: #161925;content: '' !important;display: block !important;box-sizing: border-box !important;position: absolute !important;z-index: 1;width: var(--tab-radius) !important;height: var(--tab-radius) !important;bottom: 0px !important;pointer-events: none !important;",
-        ".tab.active::before": "left: calc(0px - var(--tab-radius)) !important;border-bottom-right-radius: var(--tab-radius) !important;box-shadow: 3px 3px 0 3px var(--tab-color) !important;",
-        ".tab.active::after": "right: 0 !important;transform: translateX(var(--tab-radius)) !important;border-bottom-left-radius: var(--tab-radius) !important;box-shadow: -3px 3px 0 3px var(--tab-color) !important;",
+        ".tab.active::before, .tab.active::after": "content: '' !important;display: block !important;box-sizing: border-box !important;position: absolute !important;z-index: 1;width: var(--tab-radius) !important;height: var(--tab-radius) !important;bottom: 0px !important;pointer-events: none !important;",
+        ".tab.active::before": "left: calc(0px - var(--tab-radius)) !important;border-bottom-right-radius: var(--tab-radius) !important;box-shadow: 3px 3px 0 3px var(--vscode-editor-background) !important;",
+        ".tab.active::after": "right: 0 !important;transform: translateX(var(--tab-radius)) !important;border-bottom-left-radius: var(--tab-radius) !important;box-shadow: -3px 3px 0 3px var(--vscode-editor-background) !important;",
         ".monaco-workbench .part.sidebar>.title>.title-label h2": "font-weight: bold !important;",
         "body.activity-bar-at-bottom div.monaco-grid-view > div > div > div.monaco-scrollable-element > div.split-view-container > div.split-view-view.visible > div > div > div.monaco-scrollable-element > div.split-view-container > div:nth-child(1) > div > div > div.monaco-scrollable-element > div.split-view-container > div:nth-child(2)": "height: auto !important;",
-        "body.activity-bar-at-bottom .monaco-workbench .part.activitybar": "border: none !important; padding: 6px !important;margin-top: -24px !important; background-color: var(--vscode-editor-background) !important; position: relative !important; z-index: 10 !important;",
+        "body.activity-bar-at-bottom .monaco-workbench .part.activitybar": "border: none !important; padding: 0px 6px 6px 6px !important;margin-top: -8px !important; background-color: var(--vscode-editor-background) !important; position: relative !important; z-index: 10 !important;",
         "body.activity-bar-at-bottom .monaco-workbench .activitybar.bordered:before": "display: none !important;",
-        "body.activity-bar-at-bottom .monaco-workbench .activitybar > .content": "height: 48px !important;justify-content: center !important; border-radius: 6px; width: unset !important; border: 1px solid #3f4f818c !important;",
+        "body.activity-bar-at-bottom .monaco-workbench .activitybar > .content": "justify-content: center !important; border-radius: 6px; width: unset !important; border: 1px solid #3f4f818c !important;",
         "body.activity-bar-at-bottom .monaco-workbench .activitybar>.content>.composite-bar": "margin-bottom: unset !important;",
-        //
+        "body.activity-bar-at-bottom .monaco-action-bar .action-item.icon > .action-label": "color: var(--vscode-editor-foreground) !important;opacity: 0.4;",
+        "body.activity-bar-at-bottom .monaco-action-bar .action-item.icon.checked > .action-label": "opacity: 1 !important;",
         ".monaco-workbench .part.editor .tabs-and-actions-container .window-controls-container": "display: flex;flex-grow: 0;flex-shrink: 0;text-align: center; -webkit-app-region: no-drag; height: 100%;",
         ".monaco-workbench .part.editor .tabs-and-actions-container .window-controls-container .window-icon": "width: 30px !important;height: 30px !important; display: flex; align-items: center; justify-content: center;",
         ".monaco-workbench .part.editor .tabs-and-actions-container .window-controls-container .window-icon.window-close:hover": "background-color: #FF5555",
@@ -254,6 +257,7 @@
     "terminal.integrated.scrollback": 200000,
     "terminal.integrated.smoothScrolling": true,
     "terminal.integrated.tabs.enabled": false,
+    "terminal.integrated.tabs.enableAnimation": true,
     "terminal.integrated.profiles.linux": {
         "zsh": {
             "path": "/usr/bin/zsh"
@@ -285,9 +289,87 @@
     "[cpp]": {
         "editor.semanticHighlighting.enabled": false,
     },
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/**",
+        "/usr/include",
+        "/usr/local/include",
+        "/usr/include/c++/11.1.0"
+    ],
+    "C_Cpp.default.defines": [
+        "${default}"
+    ],
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
+    "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
+    "C_Cpp.default.compilerArgs": [
+        "-g"
+    ],
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "(gdb) Launch",
+                "type": "cppdbg",
+                "request": "launch",
+                "program": "${fileDirname}/${fileBasenameNoExtension}",
+                "args": [],
+                "stopAtEntry": false,
+                "cwd": "${workspaceFolder}",
+                "environment": [],
+                "externalConsole": false,
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb",
+                "preLaunchTask": "Build",
+                "setupCommands": [
+                    {
+                        "description": "Enable pretty-printing for gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ]
+            }
+        ]
+    },
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "Build",
+                "type": "shell",
+                "command": "g++ -g \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}\"",
+                "problemMatcher": [
+                    "$gcc"
+                ],
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                }
+            },
+            {
+                "label": "Build (Multiple cpp files)",
+                "type": "shell",
+                "command": "g++ -g \"${fileDirname}/*.cpp\" -o \"${fileDirname}/${fileBasenameNoExtension}\"",
+                "problemMatcher": [
+                    "$gcc"
+                ],
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                }
+            }
+        ]
+    },
     "C_Cpp.autocompleteAddParentheses": true,
-    "C_Cpp.codeFolding": "Enabled",
+    "C_Cpp.codeFolding": "enabled",
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 2, ColumnLimit: 0}",
+    "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
+    "C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
+    "C_Cpp.inlayHints.parameterNames.enabled": true,
+    "C_Cpp.inlayHints.parameterNames.hideLeadingUnderscores": true,
+    "C_Cpp.inlayHints.parameterNames.suppressWhenArgumentContainsName": true,
+    "C_Cpp.inlayHints.referenceOperator.enabled": true,
+    "C_Cpp.inlayHints.referenceOperator.showSpace": false,
     "css.format.enable": true,
     "css.format.newlineBetweenRules": true,
     "css.format.newlineBetweenSelectors": true,
@@ -349,8 +431,6 @@
     },
     "js/ts.implicitProjectConfig.checkJs": true,
     //Latex
-    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
-    "latex-workshop.latex.autoBuild.run": "never",
     "[latex]": {
         "editor.formatOnSave": false
     },
@@ -362,7 +442,8 @@
     "github.copilot.inlineSuggest.enable": true,
     "github.copilot.enable": {
         "*": true,
-        "plaintext": false,
+        "yaml": false,
+        "plaintext": true,
         "markdown": false
     },
     // Gitlens
@@ -382,8 +463,183 @@
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "git.autofetch": true,
+    "grammarly.files.include": [
+        "**/*.md",
+        "**/*.txt",
+        "**/*.tex",
+    ],
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*/*.aux",
+        "*/*.synctex.gz"
+    ],
+    "latex-workshop.latex.outDir": "/tmp/Review-Paper/",
+    "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk 🔃",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "latexmk (latexmkrc)",
+            "tools": [
+                "latexmk_rconly"
+            ]
+        },
+        {
+            "name": "latexmk (lualatex)",
+            "tools": [
+                "lualatexmk"
+            ]
+        },
+        {
+            "name": "latexmk (xelatex)",
+            "tools": [
+                "xelatexmk"
+            ]
+        },
+        {
+            "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "Compile Rnw files",
+            "tools": [
+                "rnw2tex",
+                "latexmk"
+            ]
+        },
+        {
+            "name": "Compile Jnw files",
+            "tools": [
+                "jnw2tex",
+                "latexmk"
+            ]
+        },
+        {
+            "name": "tectonic",
+            "tools": [
+                "tectonic"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "lualatexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-lualatex",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "xelatexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-xelatex",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "latexmk_rconly",
+            "command": "latexmk",
+            "args": [
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "rnw2tex",
+            "command": "Rscript",
+            "args": [
+                "-e",
+                "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+            ],
+            "env": {}
+        },
+        {
+            "name": "jnw2tex",
+            "command": "julia",
+            "args": [
+                "-e",
+                "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
+            ],
+            "env": {}
+        },
+        {
+            "name": "jnw2texmintex",
+            "command": "julia",
+            "args": [
+                "-e",
+                "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+            ],
+            "env": {}
+        },
+        {
+            "name": "tectonic",
+            "command": "tectonic",
+            "args": [
+                "--synctex",
+                "--keep-logs",
+                "%DOC%.tex"
+            ],
+            "env": {}
+        }
+    ],
     "liveServer.settings.donotShowInfoMsg": true,
     "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.file": "404.html",
     // "liveServer.settings.https": {
     //     "enable": true,
     //     "cert": "/home/proxzima/.ssh/cert/cert.pem",
@@ -396,7 +652,7 @@
     "markdown.preview.scrollPreviewWithEditor": false,
     "svg.preview.autoOpen": true,
     "svg.preview.transparencyGrid": true,
-    "svg.preview.boundingBox": false,
+    "svg.preview.boundingBox": true,
     "print.folder.exclude": [
         "{bin,obj,out}",
         "node_module",
@@ -404,7 +660,7 @@
     ],
     "print.lineNumbers": "on",
     "print.printAndClose": false,
-    "print.colourScheme": "Atom One",
+    "print.colourScheme": "XCode",
     "print.alternateBrowser": true,
     "print.browserPath": "/usr/bin/google-chrome",
     "spellright.documentTypes": [
@@ -428,7 +684,8 @@
     },
     "files.associations": {
         "*.xml": "html",
-        "*.svg": "html"
+        "*.svg": "html",
+        "*.json": "jsonc"
     },
     "files.exclude": {
         "**/.DS_Store": true,
@@ -453,5 +710,6 @@
         "**/venv/**": true,
         "env-*": true
     },
-    "window.zoomLevel": 0.5
+    "window.zoomLevel": 0.5,
+    "workbench.colorTheme": "Sweet Dracula"
 }

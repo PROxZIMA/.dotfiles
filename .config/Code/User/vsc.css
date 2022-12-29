@@ -1,15 +1,24 @@
-:root {
+/* *:not(.monaco-editor .margin):not(.monaco-editor .lines-content.monaco-editor-background):not(.monaco-editor .cursors-layer.cursor-smooth-caret-animation > .cursor):not(.monaco-scrollable-element > .scrollbar.vertical > .slider):not(.monaco-scrollable-element > .scrollbar.horizontal > .slider):not(.pane .pane-body .monaco-list .monaco-scrollable-element .monaco-list-rows) {
+  transition-duration: 100ms !important;
+} */
+
+:root,
+::after,
+::before {
   --tab-height: 25px;
   --tab-radius: 8px;
   --ui-radius: 6px;
-  --main-bg-color: #161925;
   --base-color: #bd93f9;
   --gradient-one: #c50ed2;
   --gradient-two: #8500f7;
-  --side-pane-color: #232634;
+  --side-pane-color: var(--vscode-editor-background);
   --focus-border: #3f4f81;
   --sash-size: 2px !important;
   --sash-hover-size: 2px !important;
+}
+
+body > .monaco-workbench > .monaco-grid-view > .monaco-grid-branch-node > .monaco-split-view2 > .monaco-scrollable-element > .split-view-container {
+  background: var(--vscode-editor-background) !important;
 }
 
 .editor-container {
@@ -19,6 +28,27 @@
 .monaco-workbench .part.titlebar .window-controls-container .window-icon,
 .monaco-workbench .part.editor > .content > .watermark {
   display: none !important;
+}
+
+.monaco-workbench .part.editor .tabs-and-actions-container .window-controls-container {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: center;
+  -webkit-app-region: no-drag;
+  height: 100%;
+}
+
+.monaco-workbench .part.editor .tabs-and-actions-container .window-controls-container .window-icon {
+  width: 30px !important;
+  height: 30px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.monaco-workbench .part.editor .tabs-and-actions-container .window-controls-container .window-icon.window-close:hover {
+  background: #FF5555 !important;
 }
 
 .monaco-workbench .part.titlebar .window-controls-container .layout-dropdown-container {
@@ -33,9 +63,9 @@
   width: 30px !important;
 }
 
-/* .monaco-workbench.linux .part.titlebar > .window-title {
+.monaco-workbench.linux .part.titlebar > .window-title {
   font-size: 12.5px !important;
-} */
+}
 
 .monaco-workbench .part.titlebar > .titlebar-container .window-appicon > .home-bar-icon-badge,
 .monaco-workbench .part.titlebar > .titlebar-container > .window-appicon:not(.codicon) {
@@ -50,12 +80,17 @@
   background-position-y: 50% !important;
 }
 
-/* .mac,
+.mac,
 .windows,
 .linux {
   font-family: 'FantasqueSansMono Nerd Font' !important;
   --monaco-monospace-font: 'FantasqueSansMono Nerd Font Mono' !important;
-} */
+}
+
+
+.monaco-workbench .part.sidebar > .title > .title-label h2 {
+  font-weight: bold !important;
+}
 
 .monaco-sash.hover:before,
 .monaco-sash.active:before {
@@ -137,7 +172,7 @@ body.activity-bar-at-bottom .monaco-workbench .activitybar .active-item-indicato
 /* Editor Background */
 
 .monaco-editor,
-.split-view-view .monaco-editor-background {
+.split-view-view .lines-content.monaco-editor-background {
   background: url(./vsc/pek.png) bottom right / 10% auto no-repeat scroll;
   /*background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url(./vsc/bg.jpg) center center / auto 100vh no-repeat scroll;*/
 }
@@ -159,9 +194,17 @@ canvas.decorationsOverviewRuler,
   width: 7px !important;
 }
 
+.monaco-scrollable-element > .scrollbar.vertical > .slider {
+  transition: all 100ms ease-out;
+}
+
 .monaco-scrollable-element > .scrollbar.horizontal,
 .monaco-scrollable-element > .scrollbar.horizontal > .slider {
   height: 7px !important;
+}
+
+.monaco-scrollable-element > .scrollbar.horizontal > .slider {
+  transition: all 100ms ease-out;
 }
 
 .monaco-scrollable-element > .scrollbar.horizontal > .slider {
@@ -211,7 +254,6 @@ canvas.decorationsOverviewRuler,
 
 .monaco-list-row.selected::before,
 .monaco-list-row.selected::after {
-  --ui-radius: 6px;
   content: '' !important;
   display: block !important;
   position: absolute !important;
@@ -275,8 +317,6 @@ canvas.decorationsOverviewRuler,
 /* Border bottom radius*/
 .tab.active::before,
 .tab.active::after {
-  --tab-radius: 8px;
-  --tab-color: #161925;
   content: '' !important;
   display: block !important;
   box-sizing: border-box !important;
@@ -295,7 +335,8 @@ canvas.decorationsOverviewRuler,
   /* transform: translateX(calc(0px - var(--tab-radius))) !important; */
   /* border-right: 2px solid var(--base-color) !important; */
   border-bottom-right-radius: var(--tab-radius) !important;
-  box-shadow: 3px 3px 0 3px var(--tab-color) !important;
+  /* box-shadow: 3px 3px 0 3px var(--tab-color) !important; */
+  box-shadow: 3px 3px 0 3px var(--vscode-editor-background) !important;
   /* background: radial-gradient(circle at 0% 0%, transparent 70.71%, var(--tab-color) 29.289%) no-repeat;
   background-position: 0% 0%; */
 }
@@ -305,7 +346,8 @@ canvas.decorationsOverviewRuler,
   transform: translateX(var(--tab-radius)) !important;
   /* border-left: 2px solid var(--base-color) !important; */
   border-bottom-left-radius: var(--tab-radius) !important;
-  box-shadow: -3px 3px 0 3px var(--tab-color) !important;
+  /* box-shadow: -3px 3px 0 3px var(--tab-color) !important; */
+  box-shadow: -3px 3px 0 3px var(--vscode-editor-background) !important;
   /* background: radial-gradient(circle at 100% 0%, transparent 70.71%, var(--tab-color) 29.289%) no-repeat;
   background-position: 100% 0%; */
 }

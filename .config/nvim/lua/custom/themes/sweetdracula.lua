@@ -54,6 +54,11 @@ M.base_16 = {
    base0F = "#F8F8F2",
 }
 
+M.polish_hl = {
+  ["@function.builtin"] = { fg = M.base_30.cyan },
+  ["@number"] = { fg = M.base_30.purple },
+}
+
 vim.opt.bg = "dark"
 
 return M
