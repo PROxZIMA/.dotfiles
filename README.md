@@ -66,7 +66,7 @@
 </table>
 
 ### Vscode
-Configs should be placed in `~/.config/[code|vscodium]/User`. The theme used in the screenshot is `Sweet Dracula`](https://marketplace.visualstudio.com/items?itemName=PROxZIMA.sweetdracula) (Made by me 😁)
+Configs should be placed in `~/.config/[code|vscodium]/User`. The theme used in the screenshot is [`Sweet Dracula`](https://marketplace.visualstudio.com/items?itemName=PROxZIMA.sweetdracula) (Made by me 😁)
 - Install [`Fix VSCode Checksums`](https://marketplace.visualstudio.com/items?itemName=lehni.vscode-fix-checksums) extension.
 - [`.dotfiles/.config/Code/User/vsc.css`](.config/Code/User/vsc.css) is a special CSS file that I use to modify vscode's UI (Vscode's core file is edited so follow the steps with care).
     ```sh
