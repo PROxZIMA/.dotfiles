@@ -1,12 +1,9 @@
 # neofetch --source ~/.config/ascii.txt --backend ascii
+# pokemon-colorscripts -r -s --no-title
 
 # Different terminal theme for VSCode and rest
 if [ "$TERM_PROGRAM" = "vscode" ]; then
-  if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-  fi
-  ZSH_THEME="powerlevel10k/powerlevel10k"
-  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+  eval "$(starship init zsh --print-full-init)"
 elif [[ -x "$(command -v starship)" ]]; then
   # Starship prompt
   eval "$(starship init zsh --print-full-init)"
@@ -20,7 +17,7 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/.local/bin:$HOME/.local/bin/flutter/bin:$HOME/.local/dex:/usr/local/texlive/2022/bin/x86_64-linux
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/.local/bin:$HOME/.local/bin/flutter/bin:$HOME/.local/dex:/usr/local/texlive/2022/bin/x86_64-linux:/usr/share/archcraft/scripts
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -44,9 +41,9 @@ fi
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(zsh-autosuggestions zsh-syntax-highlighting)
-
+# zsh-autocomplete
+# alias-tips
 source $ZSH/oh-my-zsh.sh
-
 
 # Options section
 setopt extendedglob             # Extended globbing. Allows using regular expressions with *
@@ -54,7 +51,7 @@ setopt nocaseglob               # Case insensitive globbing
 setopt rcexpandparam            # Array expension with parameters
 setopt nocheckjobs              # Don't warn about running processes when exiting
 setopt numericglobsort          # Sort filenames numerically when it makes sense
-setopt nobeep                   # No beep
+# setopt nobeep                   # No beep
 setopt appendhistory            # Immediately append history instead of overwriting
 setopt histignorealldups        # If a new command is a duplicate, remove the older one
 setopt autocd                   # if only directory path is entered, cd there.
@@ -79,14 +76,17 @@ setopt HIST_BEEP
 setopt incappendhistorytime
 
 # Completion
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'      # Case insensitive tab completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'      # Case insensitive tab completion
 zstyle ':completion:*' rehash true                              # automatically find new executables in path
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
 zstyle ':completion:*' completer _expand _complete _ignored _approximate
-zstyle ':completion:*' menu select=2
+#zstyle ':completion:*' menu select=2
 zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
-zstyle ':completion:*:descriptions' format '%U%F{cyan}%d%f%u'
 zstyle ':completion:*' regular true
+zstyle ':completion:*' group-name ''
+#zstyle ':completion:*' group-order alias builtins functions commands
+zstyle ':completion:*' complete-options true
+#zstyle ':completion:*:descriptions' format '%U%F{cyan}%d%f%u'
 
 # Speed up completions
 zstyle ':completion:*' accept-exact '*(N)'
@@ -122,6 +122,7 @@ export WINEARCH=win32
 export WINEPREFIX="$HOME/.wine"
 export JDK_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 export CHROME_EXECUTABLE="/usr/lib/chromium-browser/chromium-browser"
+export MOZ_ENABLE_WAYLAND=1
 
 export HADOOP_HOME=/home/proxzima/.local/bin/hadoop
 export HADOOP_INSTALL=$HADOOP_HOME
@@ -166,6 +167,13 @@ fi
 lnvm () {
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+}
+
+
+copydots() {
+    _USER=/home/proxzima;
+    rsync -rvqO --inplace --exclude '.git/' --files-from ~/.dotfiles/.dotpaths $_USER $_USER/.dotfiles;
+    rm $_USER/.dotfiles/.local/share/fonts/.uuid;
 }
 
 cht() {curl cht.sh/$1}

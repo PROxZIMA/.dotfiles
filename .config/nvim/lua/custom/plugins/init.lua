@@ -37,7 +37,7 @@ return {
 
     -- tabbar
     ["akinsho/bufferline.nvim"] = {
-        after = "base46",
+        after = "alpha-nvim",
         config = function()
             require "custom.plugins.bufferline"
         end,

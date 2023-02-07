@@ -1,0 +1,7 @@
+[Nemo Action]
+Name=Media properties
+Comment=Media properties
+Exec=mediainfo-gui %F
+Icon-Name=mediainfo
+Selection=S
+Extensions=mp3;avi;flv;mp4;mkv;gif;

@@ -21,7 +21,7 @@ lspkind = {
 
 M.alphanvim = {
     header = {
-        val = Headers[math.random(#Headers)],
+        val = Headers[15],
         opts = {
             hl = pick_color(),
         },
@@ -96,11 +96,11 @@ M.blankline = {
     },
 }
 
-M.chadui =  {
+M.chad_ui =  {
     statusline = {
         separator_style = {
             left = " ",
-            right = "  ",
+            right = " ",
         },
         overriden_modules = function()
             return require "custom.plugins.statusline"
@@ -109,7 +109,7 @@ M.chadui =  {
     tabufline = {
         enabled = false,
         lazyload = false,
-    },
+    }
 }
 
 return M

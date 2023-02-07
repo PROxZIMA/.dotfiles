@@ -1,0 +1,54 @@
+#!/usr/bin/bash
+
+# Policy Authentication Agent
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
+export $(gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
+
+# https://wiki.hyprland.org/FAQ/#some-of-my-apps-take-a-really-long-time-to-open
+# https://gist.github.com/PowerBall253/2dea6ddf6974ba4e5d26c3139ffb7580
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
+dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP --all &
+
+export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
+
+# variables
+scripts=~/.scripts
+
+# gsettings
+gsettings set org.gnome.desktop.interface gtk-theme 'Tokyonight-Dark-BL-LB'
+gsettings set org.gnome.desktop.interface font-name 'CaskaydiaCove Nerd Font 9'
+gsettings set org.gnome.desktop.interface icon-theme 'Tokyonight-Moon'
+gsettings set org.gnome.desktop.interface cursor-theme 'Sweet-cursors'
+
+# For nemo
+gsettings set org.cinnamon.desktop.default-applications.terminal exec kitty
+
+# notification daemon
+swaync &
+
+# waybar
+$scripts/launch_waybar &
+# $scripts/dynamic &
+
+# wallpaper
+$scripts/wall ~/.config/hypr/wallpapers/1.jpg &
+
+# effects
+# $scripts/tools/rgb &
+
+# Applets
+blueman-applet &
+nm-applet --indicator &
+
+# music daemon
+mpd &
+
+# other
+hyprctl setcursor Sweet-cursors 24
+wl-paste --watch cliphist store &
+notify-send -a aurora "hello $(whoami)" &
+
+sleep 2
+mpd-mpris &

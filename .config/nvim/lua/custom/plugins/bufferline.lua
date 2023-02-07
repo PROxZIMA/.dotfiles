@@ -8,9 +8,9 @@ end
 bufferline.setup {
     options = {
         themable = true,
-        close_command = "bp|sp|bn|bd%d",
+        -- close_command = "bp|sp|bn|bd%d",
         right_mouse_command = "vertical sbuffer %d",
-        middle_mouse_command = "bp|sp|bn|bd%d",
+        -- middle_mouse_command = "bp|sp|bn|bd%d",
         diagnostics = "nvim_lsp",
         offsets = {
             {
@@ -31,10 +31,11 @@ bufferline.setup {
     },
     highlights = {
         fill = {
-            guibg = colors.black,
+            bg = colors.black2,
         },
         buffer_selected = {
-            gui = "bold,italic"
+            bold = true,
+            italic = true
         },
     },
 }

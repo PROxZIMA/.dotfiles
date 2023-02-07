@@ -9,8 +9,8 @@
   --tab-radius: 8px;
   --ui-radius: 6px;
   --base-color: #bd93f9;
-  --gradient-one: #c50ed2;
-  --gradient-two: #8500f7;
+  --gradient-one: #cba6f7;
+  --gradient-two: #89b4fa;
   --side-pane-color: var(--vscode-editor-background);
   --focus-border: #3f4f81;
   --sash-size: 2px !important;
@@ -83,8 +83,10 @@ body > .monaco-workbench > .monaco-grid-view > .monaco-grid-branch-node > .monac
 .mac,
 .windows,
 .linux {
-  font-family: 'FantasqueSansMono Nerd Font' !important;
-  --monaco-monospace-font: 'FantasqueSansMono Nerd Font Mono' !important;
+  /* font-family: 'CaskaydiaCove Nerd Font' !important;
+  --monaco-monospace-font: 'CaskaydiaCove Nerd Font' !important; */
+  /* font-family: 'Delugia' !important;
+  --monaco-monospace-font: 'Delugia Mono' !important; */
 }
 
 
@@ -141,6 +143,7 @@ body.activity-bar-at-bottom .monaco-workbench .activitybar .active-item-indicato
 .monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab > .tab-border-top-container {
   background-image: linear-gradient(to left, var(--gradient-one), var(--gradient-two)) !important;
   height: 3px !important;
+  display: none !important;
 }
 
 .monaco-workbench .activitybar > .content :not(.monaco-menu) > .monaco-action-bar .badge .badge-content {
@@ -291,17 +294,17 @@ canvas.decorationsOverviewRuler,
 
 /* Active tab (Without border) */
 
-.tab:first-child {
+..tab:first-child {
   margin-left: var(--tab-radius) !important;
   /* margin-left: calc(var(--tab-radius) - 2px) !important; */
 }
 
-.tab:last-child {
+..tab:last-child {
   margin-right: var(--tab-radius) !important;
   /* margin-right: calc(var(--tab-radius) - 2px) !important; */
 }
 
-.tab.active {
+..tab.active {
   /* border: 2px solid var(--base-color) !important; */
   /* background-color: transparent !important; */
   /* rgb(20, 24, 34) */
@@ -315,8 +318,8 @@ canvas.decorationsOverviewRuler,
 }
 
 /* Border bottom radius*/
-.tab.active::before,
-.tab.active::after {
+..tab.active::before,
+..tab.active::after {
   content: '' !important;
   display: block !important;
   box-sizing: border-box !important;
@@ -330,7 +333,7 @@ canvas.decorationsOverviewRuler,
   /* border-bottom: 2px solid var(--base-color) !important; */
 }
 
-.tab.active::before {
+...tab.active::before {
   left: calc(0px - var(--tab-radius)) !important;
   /* transform: translateX(calc(0px - var(--tab-radius))) !important; */
   /* border-right: 2px solid var(--base-color) !important; */
@@ -341,7 +344,7 @@ canvas.decorationsOverviewRuler,
   background-position: 0% 0%; */
 }
 
-.tab.active::after {
+..tab.active::after {
   right: 0 !important;
   transform: translateX(var(--tab-radius)) !important;
   /* border-left: 2px solid var(--base-color) !important; */
@@ -379,3 +382,27 @@ canvas.decorationsOverviewRuler,
 } */
 
 /*  */
+
+.tab{
+    border-radius: 12px !important;
+    margin: 5px !important;
+    height: 40px !important;
+    border:2px solid #313244 !important;
+    background-color: #161925 !important;
+}
+.tab.active {
+    border: 2px solid var(--gradient-one) !important;
+    color: var(--gradient-one) !important;
+    font-weight: bold !important;
+}
+.tab.dirty {
+    border: 2px solid var(--gradient-two) !important;
+
+}
+.tabs-container{
+    height: auto !important;
+    padding: 5px !important;
+}
+.editor-actions {
+    height: inherit !important;
+}

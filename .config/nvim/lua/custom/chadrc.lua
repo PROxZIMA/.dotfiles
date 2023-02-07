@@ -1,3 +1,12 @@
+-- First read our docs (completely) then check the example_config repo
+
+-- local M = {}
+--
+-- M.ui = {
+--   theme = "onedark",
+-- }
+--
+-- return M
 local M = {}
 
 local override = require "custom.override"
@@ -7,6 +16,7 @@ M.ui = {
     theme = "sweetdracula",
     theme_toggle = { "sweetdracula", "one_light" },
     hl_override = highlights,
+    transparency = true
 }
 
 M.plugins = {
@@ -20,7 +30,7 @@ M.plugins = {
         ["goolord/alpha-nvim"] = override.alphanvim,
         ["nvim-treesitter/nvim-treesitter"] = override.treesitter,
         ["lukas-reineke/indent-blankline.nvim"] = override.blankline,
-        ["NvChad/ui"] = override.chadui,
+        ["NvChad/ui"] = override.chad_ui,
     },
 
     options = {

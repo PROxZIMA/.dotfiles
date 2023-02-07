@@ -1,32 +1,12 @@
-<div align="center">
-  <a href='#'><img align="center" src="./assets/dots.png" alt="PROXY'S DOTS"></a>
-</div>
+<a href='#'><img align="center" src="./assets/dots.png" alt="PROXY'S DOTS"></a>
 
-<!-- <h3 align="center">Terminal</h3>
-<p align="center"><img src="./assets/terminal.png"></p>
+<a href='#'><img align="right" src="assets/rice.jpg" alt="Rice Preview" width="400px"/></a>
 
-<h3 align="center">VS Codium</h3>
-<p align="center"><img src="./assets/vscode.png"></p>
-
-<h3 align="center">Firefox</h3>
-<p align="center"><img src="./assets/firefox.png"></p>
-
-<h3 align="center">Neovim</h3>
-<p align="center"><img src="./assets/neovim.png"></p>
-
-<h3 align="center">Resource Monitor</h3>
-<p align="center"><img src="./assets/btop.png"></p> -->
-
-
-<table>
-<tr>
-<td>
-
-```
-⠀⠀ ❄️ -> Setup
+```mint
+⠀⠀   🌸 Setup / Hyprland 🌸
  -----------------------------------
 
- ╭─ Distro  -> Pop!_OS 22.04 x86_64
+ ╭─ Distro  -> Archcraft x86_64
  ├─ Editor  -> VSCode / NeoVim
  ├─ Browser -> Firefox
  ├─ Shell   -> ZSH
@@ -37,38 +17,111 @@
  ├─ GPU   -> NVIDIA GeForce RTX 3050
  ╰─ Resolution -> 1920x1080
 
- ╭─ DE       -> GNOME 42.3.1
- ├─ WM       -> Mutter
+ ╭─ WM       -> Hyprland
  ├─ Terminal -> Kitty
- ├─ Theme    -> Sweet-Dark
- ├─ Icons    -> Sweet-Rainbow
- ╰─ Font     -> Fira Sans Semi-Light
+ ├─ Theme    -> Tokyonight-Dark-BL-LB
+ ├─ Icons    -> Tokyonight-Moon
+ ╰─ Font     -> CaskaydiaCove Nerd Font
 
                         
 ```
 
-</td>
-<td rowspan='3'>
-
-<img alt="Rice Preview" width="600px" src="assets/rice.jpg"/>
-
-</td>
-</tr>
-<tr></tr>
-<tr>
-<td>
+---
 
 ### Wallpapers
-[<img src="./assets/photos.png" width="300px" title="Wallpapers">](https://photos.app.goo.gl/h7EE46K7qDgLpQUv9)
+[<img src="./assets/photos.png" width="400px" title="Wallpapers">](https://photos.app.goo.gl/h7EE46K7qDgLpQUv9)
 
-</td>
-</tr>
-</table>
+<img src="./assets/line_break.svg" width="100%" title="Line break">
 
-### Vscode
-Configs should be placed in `~/.config/[code|vscodium]/User`. The theme used in the screenshot is `Sweet Dracula`](https://marketplace.visualstudio.com/items?itemName=PROxZIMA.sweetdracula) (Made by me 😁)
-- Install [`Fix VSCode Checksums`](https://marketplace.visualstudio.com/items?itemName=lehni.vscode-fix-checksums) extension.
-- [`.dotfiles/.config/Code/User/vsc.css`](.config/Code/User/vsc.css) is a special CSS file that I use to modify vscode's UI (Vscode's core file is edited so follow the steps with care).
+---
+
+<div align="center">
+
+## Installation
+</div>
+
+<details>
+<summary><h3>Dependencies</h3></summary>
+
+- Using <kbd>paru</kbd>
+    ```sh
+    paru -S base-devel pokemon-colorscripts-git hyprland-git hyprpicker-git xdg-desktop-portal-hyprland-git waybar-hyprland cava kitty wofi starship wl-clipboard swaync swaylock-effects swaylockd tty-clock-git playerctl pavucontrol btop mpd mpd-mpris mpv mpv-mpris qt5-base qt5-wayland qt6-base qt6-wayland lsd geany bat cliphist-bin polkit-gnome g4music wlogout visual-studio-code-bin boo-grub-git boo-sddm-git proxzima-plymouth-git --needed
+    ```
+
+- See https://wiki.hyprland.org/Useful-Utilities/Hyprland-desktop-portal/#installing
+    ```sh
+    paru -R xdg-desktop-portal-wlr
+    ```
+
+- Extra dependencies (not necessary)
+    ```sh
+    paru -S system76-power obs-studio wlrobs-hg v4l2loopback-dkms v4l2loopback-utils v4l-utils waydroid binder_linux-dkms chromium-wayland-vaapi qalculate-gtk qimgv-light rlr-git uget onlyoffice --needed
+    ```
+
+- [<kbd>Chaotic-AUR</kbd>](https://aur.chaotic.cx/) :: Automated building repo for AUR packages 👨🏻‍💻
+
+> **Note**
+>
+> Go through the packages once, before blindly installing them.
+
+</details>
+
+<details>
+<summary><h3>GTK Theme, Icons, Cursors</h3></summary>
+
+- <kbd>GTK Theme</kbd> :: [<kbd>Tokyonight-Dark-BL-LB</kbd>](https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme)
+    ```sh
+    cd ~/Downloads
+    git clone https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme.git
+    cd Tokyo-Night-GTK-Theme/
+    sudo cp -r themes/Tokyonight-Dark-BL-LB /usr/share/themes/
+    ```
+
+- <kbd>Icons</kbd>:: [<kbd>Tokyonight-Moon</kbd>](https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme)
+    ```sh
+    cd ~/Downloads
+    git clone https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme.git
+    cd Tokyo-Night-GTK-Theme/
+    sudo cp -r icons/Tokyonight-Moon /usr/share/icons/
+    ```
+
+- <kbd>Cursors</kbd> :: [<kbd>Sweet-cursors</kbd>](https://github.com/EliverLara/Sweet/tree/nova/kde/cursors)
+    ```sh
+    cd ~/Downloads
+    git clone https://github.com/EliverLara/Sweet.git -b nova
+    cd Sweet/
+    sudo cp -r kde/cursors/Sweet-cursors /usr/share/icons/
+    ```
+
+- <kbd>GRUB</kbd> :: [<kbd>PROxZIMA/boo-grub</kbd>](https://github.com/PROxZIMA/boo-grub)
+- <kbd>Plymouth</kbd> :: [<kbd>PROxZIMA/proxzima-plymouth</kbd>](https://github.com/PROxZIMA/proxzima-plymouth)
+- <kbd>SDDM</kbd> :: [<kbd>PROxZIMA/boo-sddm</kbd>](https://github.com/PROxZIMA/boo-sddm)
+</details>
+
+<details>
+<summary><h3>Dotfiles</h3></summary>
+
+```sh
+cd ~/Downloads
+git clone https://github.com/PROxZIMA/.dotfiles.git
+cd .dotfiles
+cp -r .config .icons .local .mpd .ncmpcpp .scripts .wallpapers ~/
+cp .face .fonts.conf .dmrc .gtkrc-2.0 ~/
+```
+
+> **Warning**
+>
+> Again, do not, I said DO NOT blindly run this. Backup your dots beforehand.<br>These commands are well suited for freshly installed systems.
+
+</details>
+
+<details>
+<summary><h3>Extras</h3></summary>
+
+#### Vscode
+- Theme :: [<kbd>Sweet Dracula</kbd>](https://marketplace.visualstudio.com/items?itemName=PROxZIMA.sweetdracula)
+- Extension :: [<kbd>Fix VSCode Checksums</kbd>](https://marketplace.visualstudio.com/items?itemName=lehni.vscode-fix-checksums)
+- [<kbd>.dotfiles/.config/Code/User/vsc.css</kbd>](.config/Code/User/vsc.css) is a special CSS file that I use to modify vscode's UI (Vscode's core file is edited so follow the steps with care).
     ```sh
     $ # Replace [code|codium|vscodium-bin] with appropriate folder name.
     $ resPrefix=/usr/share/[code|codium|vscodium-bin]/resources/app/out/vs/code/electron-[browser|sandbox]/workbench
@@ -76,100 +129,49 @@ Configs should be placed in `~/.config/[code|vscodium]/User`. The theme used in 
     $ ln -s '/full/path/to/.dotfiles/.config/Code/User/vsc.css' $resPrefix
     $ ln -s '/full/path/to/.dotfiles/.icons/default/vsc/' $resPrefix
     ```
-- Open `$resPrefix/workbench.html` and add `<link rel="stylesheet" href='vsc.css'>` inside the `<head>` tag.
+  - Open <kbd>$resPrefix/workbench.html</kbd> and add `<link rel="stylesheet" href='vsc.css'>` inside the `<head>` tag.
     ```sh
     $ sed -i 's;</head>;<link rel="stylesheet" href="vsc.css"></head>;g' $resPrefix/workbench.html
     ```
-- Restart Vscode. Open the command palette and execute `Fix Checksums: Apply`. Restart again.
-  - Perform the above 2 steps every time Vscode is updated.
-- ***Boom!!!***
-- If you don't want to touch the core file (which is not a big deal) you can use [`Customize UI`](https://marketplace.visualstudio.com/items?itemName=iocave.customize-ui).
+  - Restart Vscode. Open the command palette and execute <kbd>Fix Checksums: Apply</kbd>. Restart again.
+    - Perform the above 2 steps every time Vscode is updated.
+- ***Voilà !!!***
+- If you don't want to touch the core file (which is not a big deal) you can use [<kbd>Customize UI</kbd>](https://marketplace.visualstudio.com/items?itemName=iocave.customize-ui).
   - This method may/may not work as extensions can't be guaranteed to always work.
-  - All required settings are present in `settings.json`.
-Use the following command to convert your `CSS` file to `Customize UI`'s json object.
+  - All required settings are present in <kbd>settings.json</kbd>.
+Use the following command to convert your <kbd>CSS</kbd> file to <kbd>Customize UI</kbd>'s json object.
     ```sh
     $ sed -ze 's/\n/ /g' -Ee 's,/\*[^*]*\*+([^/*][^*]*\*+)*/,,g' -Ee 's/ {2,}//g' -Ee 's/\}([^\{]*) \{/", "\1": "/g' -e 's/:root \{/{":root": "/g' vsc.css
-    ```
+    <kbd></kbd>`
 
-### Firefox
-The Firefox theme is mine too. Installation can be found at [`PROxZIMA/Firefox-Theme`](https://github.com/PROxZIMA/Firefox-Theme/).
+#### Firefox
+- Theme :: [<kbd>PROxZIMA/Sweet-Pop</kbd>](https://github.com/PROxZIMA/Sweet-Pop/)
 
-### Terminal
-- The fast & slick terminal - [`Kitty 😻`](https://github.com/kovidgoyal/kitty).
-- Configs :: [`.dotfiles/.config/kitty`](.config/kitty/).
+#### Neovim ❤️
+- Setup :: [<kbd>NvChad</kbd>](https://github.com/NvChad/NvChad)
+- GUI :: [<kbd>Neovide</kbd>](https://github.com/neovide/neovide)
+- Configs :: [<kbd>.dotfiles/.config/nvim</kbd>](.config/nvim/)
 
-### ZSH
-[`zsh`](https://www.zsh.org/) is an awesome shell with tons of customizations when used with [`ohmyzsh`](https://github.com/ohmyzsh/ohmyzsh). Following are the two themes I use:
-- [`.dotfiles/.p10k.zsh`](.p10k.zsh) which I made using [`Powerlevel10k`](https://github.com/romkatv/powerlevel10k) :) I use it in [vscode](./assets/vscode.png). Installation can be found at P10K docs but placing it in `~/` will do it.
-- Other is my default terminal prompt :: [`Spaceship`](https://github.com/spaceship-prompt/spaceship-prompt). Configs :: [`.dotfiles/.config/starship.toml`](.config/starship.toml).
-- [`.dotfiles/.zshrc`](.zshrc) should be placed in `~/`. Some aliases in there [`(.dotfiles/.aliases)`](.aliases) are linked to the scripts I use which can be found [`here`](https://github.com/PROxZIMA/My-Scripts).
+</details>
 
-### Neofetch
-- System info in the terminal is displayed using `neofetch`. I've added some glyphs before each info line in the config. Small change but looks good :p
-- Nerd fonts are highly recommended.
-- Configs :: [`.dotfiles/.config/neofetch/config.conf`](.config/neofetch/config.conf).
-
-### Neovim
-- `Neovim` is ❤️.
-- All credits go to [`NvChad`](https://github.com/NvChad/NvChad).
-- GUI : [`Neovide`](https://github.com/neovide/neovide).
-- Configs :: [`.dotfiles/.config/nvim`](.config/nvim/).
-
-### Geany
-- Probably the best lightweight GUI text editor... no, [a literal IDE](./assets/geany.png)
-- Configs :: [`.dotfiles/.config/geany/colorschemes/Sweet-Dracula.conf`](.config/geany/colorschemes/Sweet-Dracula.conf).
-
-### Gedit
-[`.dotfiles/usr/share/gtksourceview-4/styles/dracula.xml`](usr/share/gtksourceview-4/styles/dracula.xml) is a Dracula based theme I made for [Gedit](./assets/gedit.png).
-
-### ArcMenu
-- Configs can be imported from its settings. Menu Layout is `Modern Menu Layout > Unity`.
-- Configs :: [`.dotfiles/.local/share/arcmenu/stylesheet.css`](.local/share/arcmenu/stylesheet.css) is the layout CSS.
-
-### Dash to Panel
-- Gnome shell extension `Dash to Panel` turns the default shell panel into a highly customizable dock. Import its config from the extension settings.
-- Configs :: [`./dotfiles/.config/Dash-to-Panel/dash-to-panel`](.config/Dash-to-Panel/dash-to-panel)
-
-### Sushi
-[`.dotfiles/usr/share/sushi/gtksourceview-4/styles/builder-dark.style-scheme.xml`](usr/share/sushi/gtksourceview-4/styles/builder-dark.style-scheme.xml) is [`sushi`](https://gitlab.gnome.org/GNOME/sushi) (A GNOME file previewer) style scheme derived from `dracula.xml`.
-
-### Fonts
-[`.dotfiles/.local/share/fonts`](.local/share/fonts/) include some nerd ttf/otf fonts.
-
-### Fish
-- I don't use `fish` as my default shell but yeah, I used to.
-- Configs :: [`.dotfiles/.config/fish`](.config/fish) and [`.dotfiles/.local/share/fish`](.local/share/fish/).
-
-### Gnome Shell Extensions
-- [Alt+Tab Scroll Workaround](https://extensions.gnome.org/extension/5282/alttab-scroll-workaround/)
-- [ArcMenu](https://extensions.gnome.org/extension/3628/arcmenu/)
-- [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
-- [Customize IBus](https://extensions.gnome.org/extension/4112/customize-ibus/)
-- [Dash to Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/)
-- [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/)
-- [Net speed Simplified](https://extensions.gnome.org/extension/3724/net-speed-simplified/)
-- [Refresh Wifi Connections](https://extensions.gnome.org/extension/905/refresh-wifi-connections/)
-- [Rounded Window Corners](https://extensions.gnome.org/extension/5237/rounded-window-corners/)
-- [Tiling Assistant](https://extensions.gnome.org/extension/3733/tiling-assistant/)
-- [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
-
-### GTK3.20+ Theme
-- [Theme](https://www.gnome-look.org/p/1253385/) - [Sweet-Dark](https://github.com/EliverLara/Sweet)
-- [Icons](https://www.opendesktop.org/p/1284047) - [Sweet-Rainbow](https://github.com/EliverLara/Sweet-folders)
-- [Cursors](https://www.gnome-look.org/p/1393084) - [Sweet-Cursors](https://github.com/EliverLara/Sweet/tree/nova/kde/cursors)
-<!--
-{
-  let local_extensions = [...document.getElementById('local_extensions').children].filter(x => !x.classList.contains('system'));
-  let s = '';
-  local_extensions.forEach(x => {
-    s += '- [' + x.querySelector('.title-link').innerText + '](' + x.querySelector('.title-link').href + ')\n';
-  });
-  console.log(s);
-}
--->
 ---
 
-Sooo that's it for now. I'll update this repo from time to time. Feel free to raise an issue if something is wrong. See ya!!!
+<details>
+<summary><h2>Credits</h2></summary>
 
-___
-<h2 align="center">ARIGATOU ❤️</h2>
+_© [r/unixporn](https://www.reddit.com/r/unixporn)_
+
+_© All the maintainers and the artists <3_
+
+_© [flick0](https://github.com/flick0/dotfiles/tree/aurora) © [Syndrizzle](https://github.com/syndrizzle/hotfiles/tree/bspwm) © [NvChad](https://github.com/NvChad)_
+
+</details>
+
+<img src="./assets/catppuccin_cat_on_line.svg" width="100%" title="Footer">
+
+<div align="center">
+
+*Sooo that's it for now. See ya!!!*
+
+***ARIGATOU ❤️***
+</div>

@@ -1,0 +1,223 @@
+/*
+ * vim: ft=less
+ */
+
+@define-color noti-bg rgb(22, 25, 37);
+@define-color cc-bg alpha(@noti-bg, 0.9);
+
+@define-color noti-border-color @noti-bg;
+@define-color noti-bg-hover rgb(39,44,66);
+@define-color noti-close-bg rgba(255, 255, 255, 0.1);
+@define-color noti-close-bg-hover rgba(255, 255, 255, 0.15);
+
+@define-color bg-selected rgb(137,180,250);
+
+
+/* Window behind control center and on all other monitors */
+.blank-window {
+  background: alpha(black, 0);
+
+}
+
+/* Main panel */
+.control-center {
+  background: @cc-bg;
+  border-radius: 16px;
+  border: 2px solid #cba6f7;
+}
+
+.control-center-list {
+  background: transparent;
+}
+
+.floating-notifications {
+  background: transparent;
+}
+
+
+/* Single row in panel */
+.notification-row {
+  outline: none;
+  background: transparent;
+  border-radius: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.notification-row:focus,
+.notification-row:hover {
+  outline: none;
+  background: transparent;
+}
+
+.notification {
+  box-shadow: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* specific urgency colors */
+.critical .summary {
+  color: #f38ba8;
+}
+
+.notification-content {
+  outline: none;
+  margin: 10px;
+  padding:8px;
+  border-radius: 16px;
+  border: 2px solid #cba6f7;
+  background: @cc-bg;
+}
+
+.control-center .notification-content {
+  border: none;
+  background: transparent;
+}
+
+.close-button {
+  background: @noti-close-bg;
+  color: white;
+  text-shadow: none;
+  padding: 0;
+  margin-top: 15px;
+  margin-right: 15px;
+  box-shadow: none;
+  border: none;
+  border-radius: 100%;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.close-button:hover {
+  box-shadow: none;
+  background: @noti-close-bg-hover;
+  transition: all 0.15s ease-in-out;
+  border: none;
+}
+
+.control-center .close-button {
+  margin-top: 4px;
+  margin-right: 4px;
+}
+
+.notification-default-action,
+.notification-action {
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  color: white;
+  outline: none;
+  background: transparent;
+  border: none;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+  -gtk-icon-effect: none;
+}
+
+.image {
+  border-radius: 100%;
+}
+
+.body-image {
+  background-color: white;
+  border-radius: 100%;
+}
+
+.summary {
+  font-size: 16px;
+  font-weight: bold;
+  background: transparent;
+  color: white;
+  text-shadow: none;
+}
+
+.time {
+  font-size: 13px;
+  background: transparent;
+  color: white;
+  text-shadow: none;
+  margin-right: 5px;
+
+}
+
+.body {
+  font-size: 13px;
+  font-weight: normal;
+  background: transparent;
+  color: white;
+  text-shadow: none;
+}
+
+/* The "Notifications" and "Do Not Disturb" text widget */
+.top-action-title {
+  color: white;
+  text-shadow: none;
+}
+
+
+/*** Widgets ***/
+
+/* Title widget */
+.widget-title {
+  margin: 8px;
+  font-size: 1.5rem;
+}
+.widget-title > button {
+  font-size: initial;
+  color: white;
+  text-shadow: none;
+  background: @noti-bg;
+  border: 1px solid @noti-border-color;
+  box-shadow: none;
+  border-radius: 12px;
+}
+.widget-title > button:hover {
+  background: @noti-bg-hover;
+}
+
+/* DND widget */
+.widget-dnd {
+  margin: 8px;
+  font-size: 1rem;
+}
+.widget-dnd > switch {
+  font-size: initial;
+  border-radius: 12px;
+  background: @noti-bg;
+  border: 1px solid @noti-border-color;
+  box-shadow: none;
+}
+.widget-dnd > switch:checked {
+  background: @bg-selected;
+}
+.widget-dnd > switch slider {
+  background: @noti-bg-hover;
+  border-radius: 12px;
+}
+
+/* Label widget */
+.widget-label {
+  margin: 8px;
+}
+.widget-label > label {
+  font-size: 1.1rem;
+}
+
+/* Mpris widget */
+.widget-mpris {
+  /* The parent to all players */
+}
+.widget-mpris-player {
+  padding: 8px;
+  margin: 8px;
+}
+.widget-mpris-title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.widget-mpris-subtitle {
+ font-size: 0.85rem;
+}

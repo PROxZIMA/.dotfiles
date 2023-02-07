@@ -7,13 +7,13 @@
 		"Banner": false,
 		"x": 0,
 		"y": 0,
-		"width": 1632,
-		"height": 1014,
+		"width": 0,
+		"height": 0,
 		"maximized": true,
 		"NthCategory": 0,
 		"NthStatus": 0,
-		"PanedPositionH": 359,
-		"PanedPositionV": 983
+		"PanedPositionH": 186,
+		"PanedPositionV": 598
 	},
 	"Summary": {
 		"name": true,
@@ -41,7 +41,7 @@
 		"SortNth": 0,
 		"Width": {
 			"state": 18,
-			"name": 820,
+			"name": 965,
 			"complete": 70,
 			"total": 70,
 			"percent": 60,
@@ -50,8 +50,8 @@
 			"speed": 80,
 			"UploadSpeed": 80,
 			"uploaded": 0,
-			"ratio": 45,
-			"retry": 45,
+			"ratio": 47,
+			"retry": 47,
 			"category": 0,
 			"uri": 0,
 			"AddedOn": 140,
@@ -60,16 +60,16 @@
 		"completed": true
 	},
 	"UserInterface": {
-		"ExitConfirmation": false,
+		"ExitConfirmation": true,
 		"DeleteConfirmation": false,
-		"ShowTrayIcon": false,
+		"ShowTrayIcon": true,
 		"StartInTray": false,
-		"CloseToTray": false,
+		"CloseToTray": true,
 		"StartInOfflineMode": false,
-		"StartNotification": false,
-		"SoundNotification": false,
-		"ApplyRecently": false,
-		"ApplyRecent": false,
+		"StartNotification": true,
+		"SoundNotification": true,
+		"ApplyRecently": true,
+		"ApplyRecent": true,
 		"SkipExisting": false,
 		"LargeIcon": false
 	},
@@ -115,9 +115,7 @@
 	},
 	"FolderHistory": [
 		"\/home\/proxzima\/Downloads",
-		"\/home\/proxzima\/Downloads\/Apps",
-		"\/home\/proxzima\/Downloads\/temp",
-		"\/home\/proxzima"
+		"\/home\/proxzima\/Downloads\/waydroid"
 	],
 	"AutoSave": 1,
 	"AutoSaveInterval": 3,
