@@ -1,6 +1,6 @@
 <a href='#'><img align="center" src="./assets/dots.png" alt="PROXY'S DOTS"></a>
 
-<a href='#'><img align="right" src="assets/rice.jpg" alt="Rice Preview" width="400px"/></a>
+[<img align="right" src="assets/rice.jpg" alt="Rice Preview" width="400px"/>](./assets/rice.mp4)
 
 ```mint
 ⠀⠀   🌸 Setup / Hyprland 🌸
@@ -33,7 +33,7 @@
 
 <img src="./assets/line_break.svg" width="100%" title="Line break">
 
----
+https://user-images.githubusercontent.com/43103163/217900808-384586b7-37e4-4d64-a306-0402763f6d8c.mp4
 
 <div align="center">
 
