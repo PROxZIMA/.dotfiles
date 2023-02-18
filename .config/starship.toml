@@ -212,7 +212,7 @@ style = "bold #a6e3a1"
 disabled = true
 time_format = "%R"
 style = "bg:#3b4363"
-format = '[](fg:#333a56 $style)[  $time ](fg:#94e2d5 $style)'
+format = '[](fg:#2c324a $style)[  $time ](fg:#94e2d5 $style)'
 
 # Last param in the first line/row
 # fg:#3b4363 if time enabled
