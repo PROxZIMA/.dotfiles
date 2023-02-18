@@ -165,7 +165,7 @@ _© [r/unixporn](https://www.reddit.com/r/unixporn)_
 
 _© All the maintainers and the artists <3_
 
-_© [flick0](https://github.com/flick0/dotfiles/tree/aurora) © [Syndrizzle](https://github.com/syndrizzle/hotfiles/tree/bspwm) © [NvChad](https://github.com/NvChad)_
+_© [flick0](https://github.com/flick0/dotfiles/tree/aurora) © [Syndrizzle](https://github.com/syndrizzle/hotfiles/tree/bspwm) © [NvChad](https://github.com/NvChad) © [adi1090x](https://github.com/adi1090x)_
 
 </details>
 
