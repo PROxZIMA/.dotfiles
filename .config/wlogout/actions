@@ -8,7 +8,7 @@ cdialog () {
 cdialog "$1"
 
 if [[ "$?" == 0 ]]; then
-    sleep 0.5s
+    sleep 0.25s
     if [[ "$1" == 'shutdown' ]]; then
         systemctl poweroff
     elif [[ "$1" == 'reboot' ]]; then
@@ -16,12 +16,14 @@ if [[ "$?" == 0 ]]; then
     elif [[ "$1" == 'hibernate' ]]; then
         playerctl --all-players stop
         ~/.scripts/lock
-        systemctl hibernate
+        sleep 0.5s
+        systemctl suspend-then-hibernate
     elif [[ "$1" == 'lock' ]]; then
         ~/.scripts/lock
     elif [[ "$1" == 'suspend' ]]; then
         playerctl --all-players stop
         ~/.scripts/lock
+        sleep 0.5s
         systemctl suspend
     elif [[ "$1" == 'logout' ]]; then
         hyprctl dispatch exit none
