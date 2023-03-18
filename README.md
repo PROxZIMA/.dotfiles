@@ -21,7 +21,8 @@
  ├─ Terminal -> Kitty
  ├─ Theme    -> Tokyonight-Dark-BL-LB
  ├─ Icons    -> Tokyonight-Moon
- ╰─ Font     -> CaskaydiaCove Nerd Font
+ ├─ Font     -> CaskaydiaCove Nerd Font
+ ╰─ Hotel    -> Trivago
 
                         
 ```
