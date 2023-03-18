@@ -41,8 +41,10 @@
         "tooltip": true,
         "exec": "echo '{\"text\":\"💧\",\"tooltip\":\"Drun | Run\"}'",
         "return-type": "json",
-        "on-click": "pkill wofi || wofi --show drun -n",
-        "on-click-right": "pkill wofi || wofi --show run -n",
+        "on-click": "pkill tofi || gamemoderun tofi-drun -c ~/.config/tofi/tofi.launcher.conf",
+        "on-click-right": "pkill tofi || gamemoderun tofi-run -c ~/.config/tofi/tofi.launcher.conf",
+        // "on-click": "pkill wofi || wofi --show drun -n",
+        // "on-click-right": "pkill wofi || wofi --show run -n",
     },
     "wlr/workspaces": {
         // "format": "{icon} {name}",
@@ -106,7 +108,7 @@
         },
         "escape": true,
         "tooltip": true,
-        "exec": "~/.scripts/caway -b 10",
+        "exec": "~/.scripts/caway -b 10 -e",
         "return-type": "json",
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl previous",
@@ -272,9 +274,12 @@
         "return-type": "json",
         // Here "-l top_right -x -15 -y 10" doesn't matter as '-n' mode is used
         // Window position is managed in Hyperland config's windowrulev2
-        "on-click": "pkill wofi || cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist decode | wl-copy",
+        "on-click": "pkill tofi || cliphist list | gamemoderun tofi -c ~/.config/tofi/tofi.clip.conf | cliphist decode | wl-copy",
         "on-click-middle": "rm -f ~/.cache/cliphist/db",
-        "on-click-right": "pkill wofi || cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist delete",
+        "on-click-right": "pkill tofi || cliphist list | gamemoderun tofi -c ~/.config/tofi/tofi.clip.conf | cliphist delete",
+        // "on-click": "pkill wofi || cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist decode | wl-copy",
+        // "on-click-middle": "rm -f ~/.cache/cliphist/db",
+        // "on-click-right": "pkill wofi || cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist delete",
         "escape": true
     },
     "custom/power": {
