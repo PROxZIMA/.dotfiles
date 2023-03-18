@@ -17,7 +17,7 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/.local/bin:$HOME/.local/bin/flutter/bin:$HOME/.local/dex:/usr/local/texlive/2022/bin/x86_64-linux:/usr/share/archcraft/scripts
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/.local/bin:$HOME/.local/bin/flutter/bin:$HOME/.local/dex:/usr/local/texlive/2022/bin/x86_64-linux:/usr/share/archcraft/scripts:$HOME/.local/share/gem/ruby/3.0.0/bin:/opt/cuda/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -173,7 +173,9 @@ lnvm () {
 copydots() {
     _USER=/home/proxzima;
     rsync -rvqO --inplace --exclude '.git/' --files-from ~/.dotfiles/.dotpaths $_USER $_USER/.dotfiles;
-    rm $_USER/.dotfiles/.local/share/fonts/.uuid;
+    find $_USER/.dotfiles/.local/share/fonts/ -name '*.uuid' -type f -delete;
+    rm -rf $_USER/.dotfiles/.mpd/mpd{.log,.pid,state};
+
 }
 
 cht() {curl cht.sh/$1}
@@ -194,7 +196,7 @@ ydl() {yt-dlp -ix --audio-format mp3 --audio-quality 0 -o '~/Downloads/songs/%(t
 
 ydlp() {yt-dlp -icx --yes-playlist --audio-format mp3 --audio-quality 0 -o '~/Downloads/songs/%(playlist)s/%(title)s.%(ext)s' "$1"}
 
-ytdlv() {yt-dlp --format mp4 --audio-quality 0 -o '~/Download/videos/%(title)s.%(ext)s' "$1"}
+ydlv() {yt-dlp --format mp4 --audio-quality 0 -o '~/Downloads/videos/%(title)s.%(ext)s' "$1"}
 
 mkfile() {mkdir -p "$(dirname "$1")" && touch "$1";}
 

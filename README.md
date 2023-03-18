@@ -45,7 +45,7 @@ https://user-images.githubusercontent.com/43103163/217900808-384586b7-37e4-4d64-
 
 - Using <kbd>paru</kbd>
     ```sh
-    paru -S base-devel pokemon-colorscripts-git hyprland-git hyprpicker-git xdg-desktop-portal-hyprland-git waybar-hyprland cava kitty wofi starship wl-clipboard swaync swaylock-effects swaylockd tty-clock-git playerctl pavucontrol btop mpd mpd-mpris mpv mpv-mpris qt5-base qt5-wayland qt6-base qt6-wayland lsd geany bat cliphist-bin polkit-gnome g4music wlogout visual-studio-code-bin boo-grub-git boo-sddm-git proxzima-plymouth-git --needed
+    paru -S base-devel pokemon-colorscripts-git hyprland-git hyprpicker-git xdg-desktop-portal-hyprland-git waybar-hyprland cava kitty wofi starship wl-clipboard swaync swaylock-effects swaylockd tty-clock-git playerctl pavucontrol btop mpd mpd-mpris mpv mpv-mpris qt5-base qt5-wayland qt6-base qt6-wayland lsd geany bat cliphist-bin gamemode polkit-gnome g4music wlogout visual-studio-code-bin boo-grub-git boo-sddm-git proxzima-plymouth-git --needed
     ```
 
 - See https://wiki.hyprland.org/Useful-Utilities/Hyprland-desktop-portal/#installing
@@ -55,7 +55,7 @@ https://user-images.githubusercontent.com/43103163/217900808-384586b7-37e4-4d64-
 
 - Extra dependencies (not necessary)
     ```sh
-    paru -S system76-power obs-studio wlrobs-hg v4l2loopback-dkms v4l2loopback-utils v4l-utils waydroid binder_linux-dkms chromium-wayland-vaapi qalculate-gtk qimgv-light rlr-git uget onlyoffice --needed
+    paru -S system76-power obs-studio wlrobs-hg v4l2loopback-dkms v4l2loopback-utils v4l-utils waydroid binder_linux-dkms chromium-wayland-vaapi qalculate-gtk qimgv-light rlr-git uget libreoffice-fresh nemo bulky --needed
     ```
 
 - [<kbd>Chaotic-AUR</kbd>](https://aur.chaotic.cx/) :: Automated building repo for AUR packages 👨🏻‍💻

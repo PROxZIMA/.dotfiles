@@ -91,13 +91,13 @@
     "window.commandCenter": false,
     "window.menuBarVisibility": "toggle",
     "window.newWindowDimensions": "maximized",
-    "window.restoreWindows": "all",
+    "window.restoreWindows": "preserve",
     "window.title": "${activeEditorShort}${separator}${rootName}",
     "window.titleBarStyle": "native",
     "window.titleSeparator": " ・ ・",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.highlightModifiedTabs": true,
-    "workbench.editor.restoreViewState": false,
+    "workbench.editor.restoreViewState": true,
     "workbench.editor.sharedViewState": false,
     "workbench.editor.showTabs": true,
     "workbench.editor.tabCloseButton": "right",
@@ -183,6 +183,8 @@
     "explorer.compactFolders": false,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
+    // Files Explorer
+    "problems.decorations.enabled": false,
     // Customize UI
     // "customizeUI.activityBar": "bottom",
     // "customizeUI.activityBarHideSettings": true,
@@ -277,6 +279,7 @@
         "editor.semanticHighlighting.enabled": false
     },
     "python.analysis.completeFunctionParens": true,
+    "python.analysis.typeCheckingMode": "off",
     "python.formatting.provider": "black",
     "python.formatting.blackArgs": [
         "--line-length",
@@ -302,7 +305,8 @@
         "${workspaceFolder}/**",
         "/usr/include",
         "/usr/local/include",
-        "/usr/include/c++/11.1.0"
+        "/usr/include/c++/11.1.0",
+        "/opt/cuda/include/"
     ],
     "C_Cpp.default.defines": [
         "${default}"
@@ -371,7 +375,7 @@
     },
     "C_Cpp.autocompleteAddParentheses": true,
     "C_Cpp.codeFolding": "enabled",
-    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 2, ColumnLimit: 0}",
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 100}",
     "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
     "C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
     "C_Cpp.inlayHints.parameterNames.enabled": true,
@@ -728,6 +732,5 @@
         "env-*": true
     },
     "workbench.colorTheme": "Sweet Dracula",
-    "security.workspace.trust.untrustedFiles": "open",
-    "workbench.activityBar.visible": false
+    "security.workspace.trust.untrustedFiles": "open"
 }
