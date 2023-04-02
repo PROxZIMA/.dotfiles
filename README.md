@@ -1,4 +1,25 @@
-<a href='#'><img align="center" src="./assets/dots.png" alt="PROXY'S DOTS"></a>
+<h1 align="center">
+  <a href='#'><img src="./assets/dots.png" alt="PROXY'S DOTS" width="90%"></a>
+  <a href='#'><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="600px"/></a>
+  <br>
+  <br>
+  <div>
+    <a href="https://github.com/PROxZIMA/.dotfiles/issues">
+        <img src="https://img.shields.io/github/issues/PROxZIMA/.dotfiles?color=fab387&labelColor=303446&style=for-the-badge">
+    </a>
+    <a href="https://github.com/PROxZIMA/.dotfiles/stargazers">
+        <img src="https://img.shields.io/github/stars/PROxZIMA/.dotfiles?color=ca9ee6&labelColor=303446&style=for-the-badge">
+    </a>
+    <a href="https://github.com/PROxZIMA/.dotfiles/">
+        <img src="https://img.shields.io/github/repo-size/PROxZIMA/.dotfiles?color=ea999c&labelColor=303446&style=for-the-badge">
+    </a>
+    <a href="https://github.com/PROxZIMA/.dotfiles/blob/master/LICENSE">
+        <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=ca9ee6&colorA=313244&colorB=cba6f7"/>
+    </a>
+    <br>
+  </div>
+</h1>
+<br>
 
 [<img align="right" src="assets/rice.jpg" alt="Rice Preview" width="400px"/>](./assets/rice.mp4)
 
@@ -27,7 +48,7 @@
                         
 ```
 
----
+<h1></h1>
 
 ### Wallpapers
 [<img src="./assets/photos.png" width="400px" title="Wallpapers">](https://photos.app.goo.gl/h7EE46K7qDgLpQUv9)
@@ -157,10 +178,11 @@ Use the following command to convert your <kbd>CSS</kbd> file to <kbd>Customize 
 
 </details>
 
----
+
+<h1></h1>
 
 <details>
-<summary><h2>Credits</h2></summary>
+<summary><h3>Credits</h3></summary>
 
 _© [r/unixporn](https://www.reddit.com/r/unixporn)_
 
