@@ -32,6 +32,10 @@ swaync &
 $scripts/launch_waybar &
 # $scripts/dynamic &
 
+# music daemon
+# mpd &
+g4music &
+
 # wallpaper
 $scripts/wall ~/.config/hypr/wallpapers/1.jpg &
 
@@ -39,16 +43,24 @@ $scripts/wall ~/.config/hypr/wallpapers/1.jpg &
 # $scripts/tools/rgb &
 
 # Applets
+$scripts/appindicator.py &
 blueman-applet &
-nm-applet --indicator &
-
-# music daemon
-mpd &
+nm-applet --indicator &\
 
 # other
 hyprctl setcursor Sweet-cursors 24
 wl-paste --watch cliphist store &
 notify-send -a aurora "hello $(whoami)" &
+libinput-gestures-setup start &
 
+# sleep 1
+# mpd-mpris &
+# hyprctl dispatch movetoworkspacesilent 2,com.github.neithern.g4music
+
+
+sleep 1
+killall xdg-desktop-portal-hyprland
+killall xdg-desktop-portal
+/usr/lib/xdg-desktop-portal-hyprland &
 sleep 2
-mpd-mpris &
+/usr/lib/xdg-desktop-portal &
