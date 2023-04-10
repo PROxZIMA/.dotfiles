@@ -13,10 +13,10 @@
     "modules-left": [
         "custom/launcher",
         "wlr/workspaces",
-        "cpu",
-        "memory",
-        "temperature",
-        "disk",
+        // "cpu",
+        // "memory",
+        // "temperature",
+        // "disk",
         "custom/updates"
     ],
     "modules-center": [
@@ -30,11 +30,11 @@
         "custom/notifications",
         "tray",
         "clock",
-        "custom/weather",
-        "custom/cycle_wall",
-        "custom/clipboard",
-        "custom/power",
-        "custom/custom"
+        // "custom/weather",
+        // "custom/cycle_wall",
+        // "custom/clipboard",
+        "custom/power"
+        // "custom/custom"
     ],
     "custom/launcher": {
         "format": "{}",
@@ -94,7 +94,7 @@
         "format": "{}",
         "exec": "~/.scripts/updates",
         "on-click": "~/.scripts/updates update",
-        "interval": 300,
+        "interval": 600,
         "tooltip": true,
         // "tooltip-format": "{}",
         // "exec-tooltip": "~/.scripts/updates tooltip"
@@ -272,11 +272,11 @@
         "format": "{}",
         "exec": "~/.scripts/tools/expand clipboard",
         "return-type": "json",
-        // Here "-l top_right -x -15 -y 10" doesn't matter as '-n' mode is used
         // Window position is managed in Hyperland config's windowrulev2
         "on-click": "pkill tofi || cliphist list | gamemoderun tofi -c ~/.config/tofi/tofi.clip.conf | cliphist decode | wl-copy",
         "on-click-middle": "rm -f ~/.cache/cliphist/db",
         "on-click-right": "pkill tofi || cliphist list | gamemoderun tofi -c ~/.config/tofi/tofi.clip.conf | cliphist delete",
+        // Here "-l top_right -x -15 -y 10" doesn't matter as '-n' mode is used
         // "on-click": "pkill wofi || cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist decode | wl-copy",
         // "on-click-middle": "rm -f ~/.cache/cliphist/db",
         // "on-click-right": "pkill wofi || cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist delete",
@@ -284,7 +284,8 @@
     },
     "custom/power": {
         "format": "{}",
-        "exec": "~/.scripts/tools/expand power",
+        // "exec": "~/.scripts/tools/expand power",
+        "exec": "echo '{\"text\":\"⏻\",\"tooltip\":\"Power\"}'",
         "return-type": "json",
         "on-click": "~/.config/wlogout/launch.sh"
     },
