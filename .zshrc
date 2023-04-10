@@ -17,7 +17,7 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/.local/bin:$HOME/.local/bin/flutter/bin:$HOME/.local/dex:/usr/local/texlive/2022/bin/x86_64-linux:/usr/share/archcraft/scripts:$HOME/.local/share/gem/ruby/3.0.0/bin:/opt/cuda/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/.local/bin:$HOME/.local/bin/flutter/bin:$HOME/.local/dex:/usr/local/texlive/2022/bin/x86_64-linux:/usr/share/archcraft/scripts:$HOME/.local/share/gem/ruby/3.0.0/bin:/opt/cuda/bin:/opt/flutter/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh

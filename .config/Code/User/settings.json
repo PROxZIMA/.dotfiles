@@ -23,7 +23,7 @@
             "statusBar.background": "#060606"
         },
         "[Sweet Dracula]": {
-            "editorGroupHeader.tabsBackground": "#161925",
+            "editorGroupHeader.tabsBackground": "#161925"
         }
     },
     "editor.tokenColorCustomizations": {
@@ -158,6 +158,7 @@
     "editor.stickyScroll.enabled": true,
     "editor.stickyScroll.maxLineCount": 5,
     "editor.stickyTabStops": false,
+    "editor.suggestLineHeight": 28,
     "editor.suggestSelection": "first",
     "editor.suggest.insertMode": "replace",
     "editor.suggest.preview": true,
@@ -170,7 +171,7 @@
     "editor.quickSuggestions": {
         "other": "on",
         "comments": "on",
-        "strings": "on",
+        "strings": "on"
     },
     // Emmet Settings
     "emmet.excludeLanguages": [],
@@ -292,14 +293,17 @@
         ".git"
     ],
     "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
+    "python.linting.pylintEnabled": false,
     "python.linting.pylintArgs": [
         "--rcfile",
         "${env:HOME}/.pylintrc"
         // "--load-plugins=pylint_django"
     ],
+    "ruff.args": [
+        "--config=~/pyproject.toml"
+    ],
     "[cpp]": {
-        "editor.semanticHighlighting.enabled": false,
+        "editor.semanticHighlighting.enabled": false
     },
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/**",
@@ -425,7 +429,7 @@
         "editor.quickSuggestions": {
             "other": "on",
             "comments": "on",
-            "strings": "on",
+            "strings": "on"
         }
     },
     "[scss]": {
@@ -440,7 +444,7 @@
     "typescript.validate.enable": false,
     "[typescriptreact]": {
         "editor.tabSize": 2,
-        "editor.formatOnSave": false,
+        "editor.formatOnSave": false
     },
     "js/ts.implicitProjectConfig.checkJs": true,
     //Latex
@@ -480,7 +484,7 @@
     "grammarly.files.include": [
         "**/*.md",
         "**/*.txt",
-        "**/*.tex",
+        "**/*.tex"
     ],
     "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
     "latex-workshop.latex.autoBuild.run": "never",
@@ -670,7 +674,7 @@
         "html": {
             "background-position": "0 0, 13px 13px",
             "background-size": "26px 26px",
-            "background": "rgba(255, 255, 255, 1)",
+            "background": "rgba(255, 255, 255, 1)"
             // "background-image": "linear-gradient(45deg, #141414 25%, transparent 25%, transparent 75%, #141414 75%, #141414), linear-gradient(45deg, #141414 25%, transparent 25%, transparent 75%, #141414 75%, #141414)"
         }
     },

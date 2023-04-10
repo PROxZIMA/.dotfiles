@@ -20,7 +20,7 @@ esac
 
 # If the parameter is "update", update all services
 if [ "$1" = "update" ]; then
-    kitty --start-as=fullscreen --title all_is_kitty sh -c 'paru -Syu'
+    kitty --start-as=fullscreen --title all_is_kitty --hold --detach sh -c 'paru -Syu'
 fi
 
 # If there aren't any parameters, return the total number of updates

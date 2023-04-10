@@ -135,7 +135,7 @@ format = '[ $symbol ($version )]($style)'
 
 [nodejs]
 symbol = ""
-style = "fg:#cba6f7 bg:#2c324a"
+style = "fg:#cba6f7 bg:#f00"
 format = '[ $symbol ($version )]($style)'
 
 [perl]
