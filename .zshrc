@@ -172,7 +172,7 @@ lnvm () {
 
 copydots() {
     _USER=/home/proxzima;
-    rsync -rvqO --inplace --exclude '.git/' --files-from ~/.dotfiles/.dotpaths $_USER $_USER/.dotfiles;
+    rsync -rvqO --inplace --exclude '.git/' --exclude '__pycache__' --files-from ~/.dotfiles/.dotpaths $_USER $_USER/.dotfiles;
     find $_USER/.dotfiles/.local/share/fonts/ -name '*.uuid' -type f -delete;
     rm -rf $_USER/.dotfiles/.mpd/mpd{.log,.pid,state};
 

@@ -291,33 +291,33 @@ canvas.decorationsOverviewRuler,
 }
 
 /*  */
-
-/* Active tab (Without border) */
-
-..tab:first-child {
-  margin-left: var(--tab-radius) !important;
-  /* margin-left: calc(var(--tab-radius) - 2px) !important; */
-}
-
-..tab:last-child {
-  margin-right: var(--tab-radius) !important;
-  /* margin-right: calc(var(--tab-radius) - 2px) !important; */
-}
-
-..tab.active {
-  /* border: 2px solid var(--base-color) !important; */
-  /* background-color: transparent !important; */
-  /* rgb(20, 24, 34) */
-  border-radius: var(--tab-radius) var(--tab-radius) 0 0 !important;
-  /* border-bottom: 2px solid #0c0e14 !important; */
-  /* z-index: 1 !important; */
-}
-
-.tab.dirty-border-top > .tab-border-top-container {
-  border-radius: var(--tab-radius) var(--tab-radius) 0 0 !important;
-}
-
 ignorethispart {
+
+  /* Active tab (Without border) */
+
+  .tab:first-child {
+    margin-left: var(--tab-radius) !important;
+    /* margin-left: calc(var(--tab-radius) - 2px) !important; */
+  }
+
+  .tab:last-child {
+    margin-right: var(--tab-radius) !important;
+    /* margin-right: calc(var(--tab-radius) - 2px) !important; */
+  }
+
+  .tab.active {
+    /* border: 2px solid var(--base-color) !important; */
+    /* background-color: transparent !important; */
+    /* rgb(20, 24, 34) */
+    border-radius: var(--tab-radius) var(--tab-radius) 0 0 !important;
+    /* border-bottom: 2px solid #0c0e14 !important; */
+    /* z-index: 1 !important; */
+  }
+
+  .tab.dirty-border-top > .tab-border-top-container {
+    border-radius: var(--tab-radius) var(--tab-radius) 0 0 !important;
+  }
+
 
   /* Border bottom radius */
   .tab.active::before,
@@ -358,30 +358,30 @@ ignorethispart {
   }
 
   /* .tabs-container:before {
-  content: '' !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  background: linear-gradient(90deg, rgb(12, 14, 20), rgb(189, 172, 255), rgb(189, 147, 249), rgb(189, 147, 249), rgb(189, 147, 249), rgb(189, 172, 249), rgb(12, 14, 20)) !important;
-  clip: rect(33px, 2600px, 33px, 0px) !important;
-  position: absolute !important;
-}
+    content: '' !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: linear-gradient(90deg, rgb(12, 14, 20), rgb(189, 172, 255), rgb(189, 147, 249), rgb(189, 147, 249), rgb(189, 147, 249), rgb(189, 172, 249), rgb(12, 14, 20)) !important;
+    clip: rect(33px, 2600px, 33px, 0px) !important;
+    position: absolute !important;
+  }
 
-.tabs-container:after {
-  content: '' !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  background: linear-gradient(90deg, rgb(12, 14, 20), rgb(189, 172, 255), rgb(189, 147, 249), rgb(189, 147, 249), rgb(189, 147, 249), rgb(189, 172, 249), rgb(12, 14, 20)) !important;
-  clip: rect(33px, 2600px, 35px, 0px) !important;
-  position: absolute !important;
-}
+  .tabs-container:after {
+    content: '' !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: linear-gradient(90deg, rgb(12, 14, 20), rgb(189, 172, 255), rgb(189, 147, 249), rgb(189, 147, 249), rgb(189, 147, 249), rgb(189, 172, 249), rgb(12, 14, 20)) !important;
+    clip: rect(33px, 2600px, 35px, 0px) !important;
+    position: absolute !important;
+  }
 
-.tab-label > .monaco-icon-label-container::after {
-  background: transparent !important;
-} */
+  .tab-label > .monaco-icon-label-container::after {
+    background: transparent !important;
+  } */
 }
 
 .tab {
@@ -389,7 +389,7 @@ ignorethispart {
   margin: 5px !important;
   height: 40px !important;
   border: 2px solid #313244 !important;
-  background-color: #161925 !important;
+  background-color: var(--vscode-editor-background) !important;
 }
 
 .tab.active {
@@ -419,8 +419,8 @@ ignorethispart {
 
 
 
+/* ATOM */
 ignorethispart {
-  /* ATOM */
 
   .part.editor > .content .editor-group-container > .title:not(.tabs).dirty .codicon-close-dirty {
     color: #568af2 !important;

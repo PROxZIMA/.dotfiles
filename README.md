@@ -67,7 +67,7 @@ https://user-images.githubusercontent.com/43103163/217900808-384586b7-37e4-4d64-
 
 - Using <kbd>paru</kbd>
     ```sh
-    paru -S base-devel pokemon-colorscripts-git hyprland-git hyprpicker-git xdg-desktop-portal-hyprland-git waybar-hyprland cava kitty wofi starship wl-clipboard swaync swaylock-effects-git swaylockd tty-clock-git playerctl pavucontrol btop mpd mpd-mpris mpv mpv-mpris qt5-base qt5-wayland qt6-base qt6-wayland lsd geany bat cliphist-bin gamemode polkit-gnome g4music wlogout visual-studio-code-bin boo-grub-git sddm-git boo-sddm-git proxzima-plymouth-git yad blueman network-manager-applet libinput-gestures light --needed
+    paru -S base-devel pokemon-colorscripts-git hyprland-git hyprpicker-git xdg-desktop-portal-hyprland-git waybar-hyprland cava kitty wofi starship wl-clipboard swww swaync swaylock-effects-git tty-clock-git playerctl pavucontrol btop mpd mpd-mpris mpv mpv-mpris qt5-base qt5-wayland qt6-base qt6-wayland lsd geany bat cliphist gamemode polkit-gnome g4music wlogout visual-studio-code-bin boo-grub-git sddm-git boo-sddm-git proxzima-plymouth-git yad blueman network-manager-applet libinput-gestures light --needed
     ```
 
 - See https://wiki.hyprland.org/Useful-Utilities/Hyprland-desktop-portal/#installing
@@ -81,6 +81,8 @@ https://user-images.githubusercontent.com/43103163/217900808-384586b7-37e4-4d64-
     ```
 
 - [<kbd>Chaotic-AUR</kbd>](https://aur.chaotic.cx/) :: Automated building repo for AUR packages 👨🏻‍💻
+
+- [<kbd>Nvidia | Hyprland</kbd>](https://wiki.hyprland.org/Nvidia/) :: Personally did not face any issues with nvidia
 
 > **Note**
 >
@@ -148,8 +150,9 @@ chmod -R +x ~/.config/wlogout/
 - Extension :: [<kbd>Fix VSCode Checksums</kbd>](https://marketplace.visualstudio.com/items?itemName=lehni.vscode-fix-checksums)
 - [<kbd>.dotfiles/.config/Code/User/vsc.css</kbd>](.config/Code/User/vsc.css) is a special CSS file that I use to modify vscode's UI (Vscode's core file is edited so follow the steps with care).
     ```sh
-    $ # Replace [code|codium|vscodium-bin] with appropriate folder name.
-    $ resPrefix=/usr/share/[code|codium|vscodium-bin]/resources/app/out/vs/code/electron-[browser|sandbox]/workbench
+    $ # In VSCode: Help > Toggle Developer Tools
+    $ # Copy window.location.pathname.replace(/\/[^\/]+$/, '')
+    $ resPrefix=/above/copied/path
     $ # Symlink required files in the above folder.
     $ ln -s '/full/path/to/.dotfiles/.config/Code/User/vsc.css' $resPrefix
     $ ln -s '/full/path/to/.dotfiles/.icons/default/vsc/' $resPrefix

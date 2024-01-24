@@ -12,7 +12,7 @@
     // Choose the order of the modules
     "modules-left": [
         "custom/launcher",
-        "wlr/workspaces",
+        "hyprland/workspaces",
         // "cpu",
         // "memory",
         // "temperature",
@@ -41,12 +41,12 @@
         "tooltip": true,
         "exec": "echo '{\"text\":\"💧\",\"tooltip\":\"Drun | Run\"}'",
         "return-type": "json",
-        "on-click": "pkill tofi || gamemoderun tofi-drun -c ~/.config/tofi/tofi.launcher.conf",
-        "on-click-right": "pkill tofi || gamemoderun tofi-run -c ~/.config/tofi/tofi.launcher.conf",
+        "on-click": "pkill tofi || sleep 0.15 && tofi-drun -c ~/.config/tofi/tofi.launcher.conf",
+        "on-click-right": "pkill tofi || sleep 0.15 && tofi-run -c ~/.config/tofi/tofi.launcher.conf",
         // "on-click": "pkill wofi || wofi --show drun -n",
         // "on-click-right": "pkill wofi || wofi --show run -n",
     },
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
         // "format": "{icon} {name}",
         "format": "",
         "format-icons": {
@@ -113,7 +113,7 @@
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl previous",
         "on-scroll-down": "playerctl next",
-        "on-click-right": "g4music",
+        "on-click-right": "amberol",
         "max-length": 35
     },
     "hyprland/window": {
@@ -220,8 +220,8 @@
         "return-type": "json",
         "exec-if": "which swaync-client",
         "exec": "swaync-client -swb",
-        "on-click": "swaync-client -t -sw",
-        "on-click-right": "swaync-client -d -sw",
+        "on-click": "sleep 0.15 && swaync-client -t -sw",
+        "on-click-right": "sleep 0.15 && swaync-client -d -sw",
         "escape": true
     },
     "tray": {
@@ -273,9 +273,9 @@
         "exec": "~/.scripts/tools/expand clipboard",
         "return-type": "json",
         // Window position is managed in Hyperland config's windowrulev2
-        "on-click": "pkill tofi || cliphist list | gamemoderun tofi -c ~/.config/tofi/tofi.clip.conf | cliphist decode | wl-copy",
+        "on-click": "pkill tofi || sleep 0.15 && cliphist list | tofi -c ~/.config/tofi/tofi.clip.conf | cliphist decode | wl-copy",
         "on-click-middle": "rm -f ~/.cache/cliphist/db",
-        "on-click-right": "pkill tofi || cliphist list | gamemoderun tofi -c ~/.config/tofi/tofi.clip.conf | cliphist delete",
+        "on-click-right": "pkill tofi || sleep 0.15 && cliphist list | tofi -c ~/.config/tofi/tofi.clip.conf | cliphist delete",
         // Here "-l top_right -x -15 -y 10" doesn't matter as '-n' mode is used
         // "on-click": "pkill wofi || cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist decode | wl-copy",
         // "on-click-middle": "rm -f ~/.cache/cliphist/db",

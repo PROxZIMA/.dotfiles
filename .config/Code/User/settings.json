@@ -87,6 +87,15 @@
             }
         ]
     },
+    // Animations
+    "animations.Smooth-Mode": true,
+    "animations.Durations": {
+        "Active": 100,
+        "Command-Palette": 100,
+        "Scrolling": 150,
+        "Smooth-Mode": 100,
+        "Tabs": 100
+    },
     // Window Settings
     "window.commandCenter": false,
     "window.menuBarVisibility": "toggle",
@@ -99,10 +108,9 @@
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.restoreViewState": true,
     "workbench.editor.sharedViewState": false,
-    "workbench.editor.showTabs": true,
+    "workbench.editor.showTabs": "multiple",
     "workbench.editor.tabCloseButton": "right",
     "workbench.editor.tabSizing": "shrink",
-    "workbench.editor.untitled.hint": "hidden",
     "workbench.iconTheme": "sweet-vscode-icons",
     "workbench.layoutControl.type": "menu",
     "workbench.list.smoothScrolling": true,
@@ -118,7 +126,7 @@
     "editor.autoClosingBrackets": "always",
     "editor.bracketPairColorization.enabled": true,
     "editor.codeActionsOnSave": {
-        "source.organizeImports": true
+        "source.organizeImports": "explicit"
     },
     "editor.colorDecorators": false,
     "editor.cursorBlinking": "phase",
@@ -146,7 +154,7 @@
     "editor.maxTokenizationLineLength": 99999999,
     "editor.minimap.enabled": false,
     "editor.mouseWheelScrollSensitivity": 1.5,
-    "editor.occurrencesHighlight": false,
+    "editor.occurrencesHighlight": "off",
     "editor.renderControlCharacters": true,
     "editor.renderFinalNewline": "on",
     "editor.renderLineHighlight": "gutter",
@@ -655,6 +663,20 @@
             "env": {}
         }
     ],
+    "leetcode.colorizeProblems": true,
+    "leetcode.defaultLanguage": "python3",
+    "leetcode.showDescription": "In Webview",
+    "leetcode.workspaceFolder": "/home/proxzima/Documents/PROxZIMA/Competitive-Coding/LeetCode",
+    "leetcode.hint.configWebviewMarkdown": false,
+    "leetcode.hint.commandShortcut": false,
+    "leetcode.hint.commentDescription": false,
+    "leetcode.editor.shortcuts": [
+        "submit",
+        "test",
+        "solution",
+        "description",
+        "star"
+    ],
     "liveServer.settings.donotShowInfoMsg": true,
     "liveServer.settings.donotVerifyTags": true,
     "liveServer.settings.file": "404.html",
@@ -687,7 +709,7 @@
     "print.printAndClose": false,
     "print.colourScheme": "XCode",
     "print.alternateBrowser": true,
-    "print.browserPath": "/usr/bin/google-chrome",
+    "print.browserPath": "/usr/bin/chromium",
     "spellright.documentTypes": [
         "markdown",
         "latex",
@@ -736,5 +758,10 @@
         "env-*": true
     },
     "workbench.colorTheme": "Sweet Dracula",
-    "security.workspace.trust.untrustedFiles": "open"
+    "security.workspace.trust.untrustedFiles": "open",
+    "vscode_custom_css.imports": [
+        "file:///home/proxzima/.vscode/extensions/brandonkirbyson.vscode-animations-1.0.9/dist/updateHandler.js"
+    ],
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.editor.tabActionLocation": "right"
 }

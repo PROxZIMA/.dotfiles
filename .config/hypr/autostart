@@ -34,7 +34,7 @@ $scripts/launch_waybar &
 
 # music daemon
 # mpd &
-g4music &
+# g4music &
 
 # wallpaper
 $scripts/wall ~/.config/hypr/wallpapers/1.jpg &
