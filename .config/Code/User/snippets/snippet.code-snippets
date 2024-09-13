@@ -111,16 +111,58 @@
             ""
         ]
     },
-    "consoleLog": {
+    "consoleLogJs": {
         "scope": "javascript",
         "prefix": "clg",
-        "body": "console.log(${1:object});",
+        "body": [
+            "console.log(${1:Text});",
+			"$0"
+        ],
         "description": "Displays a message in the console"
     },
-    "consoleLogObject": {
+    "consoleLogObjecJs": {
         "scope": "javascript",
         "prefix": "clo",
-        "body": "console.log('${1:object} :>> ', ${1:object});",
+        "body": [
+            "console.log('${1:Text} :>> ', ${1:object});",
+			"$0"
+        ],
         "description": "Displays an object in the console with its name"
-    }
+    },
+    "consoleLogTs": {
+        "scope": "typescript",
+        "prefix": "clg",
+        "body": [
+            "console.log(${1:Text});",
+			"$0"
+        ],
+        "description": "Displays a message in the console"
+    },
+    "consoleLogObjectTs": {
+        "scope": "typescript",
+        "prefix": "clo",
+        "body": [
+            "console.log('${1:Text} :>> ', ${1:object});",
+			"$0"
+        ],
+        "description": "Displays an object in the console with its name"
+    },
+	"consoleLogCs": {
+        "scope": "csharp",
+		"prefix": "clg",
+		"body": [
+			"Console.WriteLine($\"${1:Text}\");",
+			"$0"
+        ],
+		"description": "Creates a call to WriteLine"
+	},
+	"consoleLogObjectCs": {
+        "scope": "csharp",
+		"prefix": "clo",
+		"body": [
+			"Console.WriteLine($\"${1:Text} :>> {${1:object}}\");",
+			"$0"
+        ],
+		"description": "Creates a call to WriteLine"
+	},
 }

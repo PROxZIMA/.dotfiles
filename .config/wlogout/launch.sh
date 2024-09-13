@@ -4,7 +4,10 @@ LAYOUT="$HOME/.config/wlogout/layout"
 STYLE="$HOME/.config/wlogout/style.css"
 
 if [[ ! `pidof wlogout` ]]; then
-    wlogout --layout ${LAYOUT} --css ${STYLE} \
+    wlogout --no-span \
+        --protocol xdg \
+        --layout ${LAYOUT} \
+        --css ${STYLE} \
         --buttons-per-row 3 \
         --column-spacing 50 \
         --row-spacing 50 \

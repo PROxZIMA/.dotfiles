@@ -1,100 +1,77 @@
-function getOffset(el) {
-  const rect = el.getBoundingClientRect();
-  return {
-    left: rect.left + window.scrollX,
-    top: rect.top + window.scrollY,
-  };
-}
+// document.addEventListener('DOMContentLoaded', function () {
+  console.info("VS Code Script Loaded");
+  const checkElement = setInterval(() => {
+    const commandDialog = document.querySelector(".quick-input-widget");
+    if (commandDialog) {
 
-const prevOffset = {};
+      // Create an DOM observer to 'listen' for changes in element's attribute.
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+            if (commandDialog.style.display === 'none') {
+              handleEscape();
+            } else {
+              // If the .quick-input-widget element (command palette) is in the DOM
+              // but no inline style display: none, show the backdrop blur.
+              runMyScript();
+            }
+          }
+        });
+      });
+      console.info("Command dialog found. Setting observer...", commandDialog);
+      observer.observe(commandDialog, { attributes: true });
 
-const displayEffect = (event) => {
-  if (prevOffset.top === undefined) {
-    let initialOffset = getOffset(document.getElementsByClassName("cursor")[0]);
-    prevOffset.top = initialOffset.top;
-    prevOffset.left = initialOffset.left;
+      // Clear the interval once the observer is set
+      clearInterval(checkElement);
+    } else {
+      console.info("Command dialog not found yet. Retrying...");
+    }
+  }, 500); // Check every 500ms
+
+  // Execute when command palette was launched.
+  document.addEventListener('keydown', function (event) {
+    if ((event.metaKey || event.ctrlKey) && event.key === 'p') {
+      event.preventDefault();
+      runMyScript();
+    } else if (event.key === 'Escape' || event.key === 'Esc') {
+      event.preventDefault();
+      handleEscape();
+    }
+  });
+
+  // Ensure the escape key event listener is at the document level
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' || event.key === 'Esc') {
+      handleEscape();
+    }
+  }, true);
+
+  function runMyScript() {
+    const targetDiv = document.querySelector(".monaco-workbench");
+
+    // Remove existing element if it already exists
+    const existingElement = document.getElementById("command-blur");
+    if (existingElement) {
+      existingElement.remove();
+    }
+
+    // Create and configure the new element
+    const newElement = document.createElement("div");
+    newElement.setAttribute('id', 'command-blur');
+
+    newElement.addEventListener('click', function () {
+      newElement.remove();
+    });
+
+    // Append the new element as a child of the targetDiv
+    targetDiv.appendChild(newElement);
   }
 
-  const existingRect = document.getElementById("myRect");
-  if (existingRect !== null) {
-    existingRect.remove();
+  // Remove the backdrop blur from the DOM when esc key is pressed.
+  function handleEscape() {
+    const element = document.getElementById("command-blur");
+    if (element) {
+      element.click();
+    }
   }
-
-  setTimeout(function () {
-    const currOffset = getOffset(document.getElementsByClassName("cursor")[0]);
-    const top = prevOffset.top;
-    const left = prevOffset.left;
-    const rect = document.createElement("div");
-
-    // console.log("prev: ", top, left);
-    // console.log("curr: ", currOffset.top, currOffset.left);
-
-    rect.id = "myRect";
-    rect.style.cssText = `
-      position:absolute;
-      top:${top}px;
-      left:${left}px;
-      width:9px;
-      height:20px;
-      z-index:10;
-      background-color:red;
-      opacity: 0.5;
-    `;
-    rect.animate(
-      [
-        // keyframes
-        { transform: "scale(1) skew(10deg)" },
-        { transform: "scale(0) skew(10deg)" },
-      ],
-      {
-        // timing options
-        duration: 500,
-        easing: "ease-in-out",
-        direction: "alternate",
-        iterations: Infinity,
-      }
-    );
-
-    document.body.appendChild(rect);
-    prevOffset.top = currOffset.top;
-    prevOffset.left = currOffset.left;
-  }, 24);
-};
-
-// NOTE: First enable editor.cursorSmoothCaretAnimation.
-// NOTE: Uncomment this to get a cursor trail effect.
-// document.addEventListener("keydown", displayEffect);
-
-const windowControls = document.createElement('div');
-windowControls.className = 'window-controls-container';
-const minimize = document.createElement('div');
-minimize.classList.add('window-icon', 'window-minimize', 'codicon', 'codicon-chrome-minimize');
-const restore = document.createElement('div');
-restore.classList.add('window-icon', 'window-max-restore', 'codicon', 'codicon-chrome-restore');
-const close = document.createElement('div');
-close.classList.add('window-icon', 'window-close', 'codicon', 'codicon-chrome-close');
-windowControls.appendChild(minimize);
-windowControls.appendChild(restore);
-windowControls.appendChild(close);
-// const html = '<div class="window-controls-container"><div class="window-icon window-minimize codicon codicon-chrome-minimize"></div><div class="window-icon window-max-restore codicon codicon-chrome-restore"></div><div class="window-icon window-close codicon codicon-chrome-close"></div></div>';
-// template.innerHTML = html;
-// const windowControls = template.content.firstChild;
-
-var observer = new MutationObserver(function (mutations, me) {
-  console.warn('Observing if window controls present');
-  // const windowControls = document.querySelector(".window-controls-container");
-  const tabContainer = document.querySelector(".tabs-and-actions-container");
-
-  if (windowControls && tabContainer) {
-    tabContainer.appendChild(windowControls);
-    console.warn('Observing completed');
-    me.disconnect();
-    return;
-  }
-});
-
-
-// observer.observe(document, {
-//   childList: true,
-//   subtree: true
 // });

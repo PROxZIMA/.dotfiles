@@ -18,7 +18,7 @@ scripts=~/.scripts
 
 # gsettings
 gsettings set org.gnome.desktop.interface gtk-theme 'Tokyonight-Dark-BL-LB'
-gsettings set org.gnome.desktop.interface font-name 'CaskaydiaCove Nerd Font 9'
+gsettings set org.gnome.desktop.interface font-name 'SF Pro Text 9'
 gsettings set org.gnome.desktop.interface icon-theme 'Tokyonight-Moon'
 gsettings set org.gnome.desktop.interface cursor-theme 'Sweet-cursors'
 
@@ -27,6 +27,9 @@ gsettings set org.cinnamon.desktop.default-applications.terminal exec kitty
 
 # notification daemon
 swaync &
+
+# lock/suspend when idle
+hypridle &
 
 # waybar
 $scripts/launch_waybar &
@@ -58,9 +61,9 @@ libinput-gestures-setup start &
 # hyprctl dispatch movetoworkspacesilent 2,com.github.neithern.g4music
 
 
-sleep 1
-killall xdg-desktop-portal-hyprland
-killall xdg-desktop-portal
-/usr/lib/xdg-desktop-portal-hyprland &
-sleep 2
-/usr/lib/xdg-desktop-portal &
+# sleep 1
+# killall xdg-desktop-portal-hyprland
+# killall xdg-desktop-portal
+# /usr/lib/xdg-desktop-portal-hyprland &
+# sleep 2
+# /usr/lib/xdg-desktop-portal &
